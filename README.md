@@ -1,0 +1,2 @@
+# hangman
+Bekanntes Wörterratespiel
