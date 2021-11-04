@@ -1,6 +1,7 @@
 # hangman
 **Informatik II & Software Engineering - Projekt**
-Bekanntes Wörterratespiel
+
+Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, Romain Bornex
 
 
 ## Inhaltsverzeichnis
