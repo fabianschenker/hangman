@@ -1,8 +1,9 @@
 # hangman
+**Informatik II & Software Engineering - Projekt**
 Bekanntes Wörterratespiel
 
 
-# Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 1. Einleitung 
 2. Ziele
