@@ -1,4 +1,4 @@
-package com.example.hangman;
+package com.example.hangman1;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
