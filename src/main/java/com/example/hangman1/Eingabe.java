@@ -11,4 +11,8 @@ public class Eingabe {
     public Eingabe(){
         eingabe = scanner.next().charAt(0);
     }
+
+    public char getEingabe() {
+        return eingabe;
+    }
 }
