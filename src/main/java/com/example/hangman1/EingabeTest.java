@@ -4,8 +4,8 @@ public class EingabeTest {
     public static void main(String[] args) {
 
         System.out.println("Eingabe: ");
-        Eingabe eingabe = new Eingabe();
+        Eingabe e = new Eingabe();
 
-        System.out.println("Eingegebenes Zeichen: " + eingabe.getEingabe());
+        System.out.println("Eingegebenes Zeichen: " + e.getEingabe());
     }
 }
