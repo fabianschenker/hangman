@@ -15,7 +15,7 @@ public class Wort {
             char[] c = new char[(int) file.length()];
             fileReader.read(c);
             String s = new String(c);
-            strArray = s.split("\n");
+            strArray = s.split("\r\n");
 
         }catch(Exception e){
             System.err.println("Fehler beim Einlesen der Datei.");
