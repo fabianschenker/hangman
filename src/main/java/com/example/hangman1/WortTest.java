@@ -6,9 +6,11 @@ public class WortTest {
 
         Wort wort = new Wort();
 
-        String testWort = wort.selectRandomWord();
+        char[][] testWort = new char[2][];
+        testWort[0] = wort.selectRandomWord();
+        testWort[1] = wort.buildUnderlines(testWort[0]);
 
-        System.out.println(testWort);
-        System.out.println(wort.printUnderlines(testWort));
+        wort.printWord(testWort[0]);
+        wort.printUnterline(testWort[1]);
     }
 }

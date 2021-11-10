@@ -2,7 +2,6 @@ package com.example.hangman1;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.Random;
 
 public class Wort {
 
@@ -24,18 +23,35 @@ public class Wort {
         return strArray;
     }
 
-    public String selectRandomWord(){
+    public char[] selectRandomWord(){
         String[] s = readWordFile();
         int zufall = (int) (Math.random()*s.length);
-        String wort = s[zufall];
-        return wort;
+        String wortString = s[zufall];
+
+        char[] wortCharArray = new char[wortString.length()];
+        for( int i=0; i<wortString.length(); i++){
+            wortCharArray[i] = wortString.charAt(i);
+        }
+
+        return wortCharArray;
     }
 
-    public String printUnderlines(String w){
-        String underline = "";
-        for (int i=0; i<w.length(); i++){
-            underline += "_";
+    public char[] buildUnderlines(char[] w){
+        char[] underline = new char[w.length];
+        for (int i=0; i<w.length; i++){
+            underline[i] = '_';
         }
         return underline;
+    }
+
+    public void printWord(char[] c){
+        String wordStr = new String(c);
+        System.out.println(wordStr);
+    }
+
+
+    public void printUnterline(char[] c){
+        String unterlineStr = new String(c);
+        System.out.println(unterlineStr);
     }
 }
