@@ -15,7 +15,7 @@
         <TextField fx:id="meineEingabe" layoutX="30.0" layoutY="389.0" prefHeight="25.0" prefWidth="122.0" promptText="Buchstabe eingaben" AnchorPane.leftAnchor="25.0" />
         <Button fx:id="enter" layoutX="147.0" layoutY="389.0" mnemonicParsing="false" onAction="#readEingabe" prefHeight="25.0" prefWidth="47.0" text="Enter" />
         <Label layoutX="30.0" layoutY="66.0" text="Zu erratenes Wort" AnchorPane.leftAnchor="25.0" />
-        <TextField fx:id="erraten" editable="false" layoutX="30.0" layoutY="84.0" mouseTransparent="true" prefHeight="25.0" prefWidth="240.0" AnchorPane.leftAnchor="25.0" />
+        <TextField fx:id="wort" editable="false" layoutX="30.0" layoutY="84.0" mouseTransparent="true" prefHeight="25.0" prefWidth="240.0" AnchorPane.leftAnchor="25.0" />
         <Label layoutX="30.0" layoutY="170.0" text="Falsch geratene Buchstaben" AnchorPane.leftAnchor="25.0" />
         <TextField fx:id="falscheBuchstaben" editable="false" layoutX="5.0" layoutY="188.0" mouseTransparent="true" prefHeight="95.0" prefWidth="147.0" AnchorPane.leftAnchor="25.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="87.0" layoutX="535.0" layoutY="77.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" width="12.0" />
@@ -29,5 +29,19 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="53.0" layoutX="439.0" layoutY="257.0" rotate="10.0" stroke="BLACK" strokeType="INSIDE" width="14.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="40.0" layoutX="491.0" layoutY="402.0" stroke="BLACK" strokeType="INSIDE" width="156.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="53.0" layoutX="467.0" layoutY="257.0" rotate="-10.0" stroke="BLACK" strokeType="INSIDE" width="14.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="444.0" layoutY="162.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="444.0" layoutY="162.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="472.0" layoutY="162.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="472.0" layoutY="162.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+      <TextArea id="verlohren" accessibleRole="PROGRESS_INDICATOR" blendMode="DARKEN" layoutX="100.0" layoutY="100.0" prefHeight="181.0" prefWidth="636.0" text="Verloren" visible="false" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Impact" size="96.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="333.0" layoutY="422.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="122.0" text="Play Again" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
