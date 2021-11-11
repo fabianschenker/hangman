@@ -29,12 +29,18 @@ public class HelloController {
         String e = meineEingabe.getText();
         char ein = e.charAt(0);
         ein = grossBuchstaben(ein);
-        ein = eingabeKontrollieren(ein);
+        boolean kontrolle = eingabeKontrollieren(ein);
         meineEingabe.setText("");
     }
-    public char eingabeKontrollieren(char e){
+    public boolean eingabeKontrollieren(char e){
+        int eingabeAscii = (int)e;
+        if (eingabeAscii > 64 && eingabeAscii < 91){
+            return true;
+        }
+        else {
+            return false;
+        }
 
-        return e;
     }
     public char grossBuchstaben(char e){
         int eingabeAscii = (int)e;
