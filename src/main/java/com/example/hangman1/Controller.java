@@ -11,7 +11,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-public class HelloController {
+public class Controller {
 
     Stage primaryStage;
     @FXML
@@ -40,13 +40,15 @@ public class HelloController {
     @FXML
     public void readEingabe(ActionEvent actionEvent) {
         System.out.println("Enter gedrückt");
-        String e = meineEingabe.getText();
-        ein = e.charAt(0);
-        ein = grossBuchstaben(ein);
-        boolean kontrolle = eingabeKontrollieren(ein);
-        meineEingabe.setText("");
-        enterCounter++;
-        progres();
+        if (enterCounter < 12) {
+            String e = meineEingabe.getText();
+            ein = e.charAt(0);
+            ein = grossBuchstaben(ein);
+            boolean kontrolle = eingabeKontrollieren(ein);
+            meineEingabe.setText("");
+            enterCounter++;
+            progres();
+        }
     }
 
 
@@ -125,12 +127,12 @@ public class HelloController {
 
     private void makeVisibleR(Rectangle r) {
         r.visibleProperty().set(true);
-    }
-    private void makeVisibleC(Circle c) {
+    }private void makeVisibleC(Circle c) {
         c.visibleProperty().set(true);
-    }
-    private void makeVisibleL(Label l) {
+    }private void makeVisibleL(Label l) {
         l.visibleProperty().set(true);
+    }private void makeVisibleB(Button b) {
+        b.visibleProperty().set(true);
     }
     private void makeInvisibleR(Rectangle r) {
         r.visibleProperty().set(false);
@@ -138,6 +140,8 @@ public class HelloController {
         c.visibleProperty().set(false);
     }private void makeInvisibleL(Label l) {
         l.visibleProperty().set(false);
+    }private void makeInvisibleB(Button b) {
+        b.visibleProperty().set(false);
     }
     private void progres() {
         if(enterCounter == 1){
@@ -167,6 +171,7 @@ public class HelloController {
             makeVisibleR(hangmanD3);
             makeVisibleR(hangmanD4);
             makeVisibleL(verloren);
+            makeVisibleB(playAgainKnopf);
 
         }
     }
@@ -190,7 +195,11 @@ public class HelloController {
         makeInvisibleL(verloren);
         makeInvisibleL(gewonnen);
         makeInvisibleL(ungueltigeEingabe);
+        makeInvisibleB(playAgainKnopf);
     }
 
-
+    //Getter
+    public char getEin() {
+        return ein;
+    }
 }
