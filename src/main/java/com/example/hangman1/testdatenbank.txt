@@ -1,3 +1,6 @@
+Änderungen an diesem Dokument dürfen gemacht werden. Form einhalten, trennen der Wörter mit einem Zeilenumbruch, alle
+Buchstaben gross geschrieben, ausschliesslich die 26 Standardbuchstaben des Alphabets, diese 3 Zeilen stehen lassen.
+--------------------------------------------------------------------------------------------------------------
 INFORMATIK
 BACH
 MANN
