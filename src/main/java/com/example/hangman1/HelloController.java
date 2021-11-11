@@ -1,17 +1,47 @@
 package com.example.hangman1;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
+    Stage primaryStage;
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextField meineEingabe;
+    @FXML
+    private Button enter;
+    @FXML
+    private TextField erraten;
+
+    public void init(Stage primaryStage, Scene mainScene) {
+        this.primaryStage = primaryStage;
     }
 
+
     @FXML
-    protected void onOkButtonClick() {System.out.println("OK Button clicked!");}
+    public void readEingabe(ActionEvent actionEvent) {
+        System.out.println("Enter gedrückt");
+        String e = meineEingabe.getText();
+        char ein = e.charAt(0);
+        ein = grossBuchstaben(ein);
+        ein = eingabeKontrollieren(ein);
+        meineEingabe.setText("");
+    }
+    public char eingabeKontrollieren(char e){
+
+        return e;
+    }
+    public char grossBuchstaben(char e){
+        int eingabeAscii = (int)e;
+        if (eingabeAscii > 96 && eingabeAscii < 123){
+            e = (char) (eingabeAscii - 32);
+        }
+        return e;
+    }
+
 }
