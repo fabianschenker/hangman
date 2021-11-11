@@ -54,9 +54,12 @@ public class HelloController {
     public boolean eingabeKontrollieren(char e){
         int eingabeAscii = (int)e;
         if (eingabeAscii > 64 && eingabeAscii < 91){
+            makeInvisibleL(ungueltigeEingabe);
             return true;
         }
         else {
+            makeVisibleL(ungueltigeEingabe);
+            enterCounter--;
             return false;
 
         }
@@ -73,6 +76,8 @@ public class HelloController {
     @FXML
     public void restart(ActionEvent actionEvent) {
         resetProgres();
+        wort.setText("");
+        falscheBuchstaben.setText("");
     }
 
 
@@ -114,6 +119,8 @@ public class HelloController {
     private Label gewonnen;
     @FXML
     private Label verloren;
+    @FXML
+    private Label ungueltigeEingabe;
 
 
     private void makeVisibleR(Rectangle r) {
@@ -182,6 +189,7 @@ public class HelloController {
         makeInvisibleR(hangmanD4);
         makeInvisibleL(verloren);
         makeInvisibleL(gewonnen);
+        makeInvisibleL(ungueltigeEingabe);
     }
 
 
