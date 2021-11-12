@@ -25,7 +25,7 @@ public class Controller {
     @FXML
     private Button playAgainKnopf;
     @FXML
-    private TextField wort;
+    private TextField erratenesWort;
 
     private char ein;
     public int enterCounter = 0;
@@ -60,6 +60,7 @@ public class Controller {
         int eingabeAscii = (int)e;
         if (eingabeAscii > 64 && eingabeAscii < 91){
             makeInvisibleL(ungueltigeEingabe);
+           // doppelteBuchstaben();
         }
         else {
             makeVisibleL(ungueltigeEingabe);
@@ -67,6 +68,19 @@ public class Controller {
         }
 
     }
+
+   /* private void doppelteBuchstaben() {
+
+
+        String userEin = String.valueOf(ein);
+        
+        if ( String.valueOf(charUnderline).contains(userEin) ||
+                String.valueOf(charFalscheBuchstaben).contains(userEin)) {
+            makeVisibleL(doppelteEingabe);}
+        else {makeInvisibleL(doppelteEingabe);}
+        }
+         */
+
     public char grossBuchstaben(char e){
         int eingabeAscii = (int)e;
         if (eingabeAscii > 96 && eingabeAscii < 123){
@@ -78,7 +92,7 @@ public class Controller {
     @FXML
     public void restart(ActionEvent actionEvent) {
         resetProgres();
-        wort.setText("");
+        erratenesWort.setText("");
         falscheBuchstaben.setText("");
     }
 
