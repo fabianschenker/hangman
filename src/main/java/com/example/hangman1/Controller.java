@@ -27,7 +27,7 @@ public class Controller {
     @FXML
     private TextField wort;
 
-    char ein;
+    private char ein;
     public int enterCounter = 0;
 
 
@@ -50,6 +50,7 @@ public class Controller {
             meineEingabe.setText("");
             enterCounter++;
             progres();
+
         }
     }
 
@@ -203,6 +204,10 @@ public class Controller {
     //Getter
     public char getEin() {
         return ein;
+    }
+
+    public int getEnterCounter() {
+        return enterCounter;
     }
 
     public void showHelp(ActionEvent actionEvent) {
