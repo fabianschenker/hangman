@@ -123,6 +123,9 @@ public class Controller {
     private Label verloren;
     @FXML
     private Label ungueltigeEingabe;
+    @FXML
+    private Label doppelteEingabe;
+
 
 
     private void makeVisibleR(Rectangle r) {
