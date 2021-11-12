@@ -26,7 +26,6 @@ public class Vergleich{
         for (int i = 0; i < w.length; i++) {
             if (c.equals(w[i])) {
                 position.add(i);
-
             }
         }
         return position;
