@@ -25,7 +25,7 @@ public class Controller {
     @FXML
     private Button playAgainKnopf;
     @FXML
-    private TextField wort;
+    private TextField erratenesWort;
 
     private char ein;
     public int enterCounter = 0;
@@ -37,20 +37,17 @@ public class Controller {
     }
 
 
-
-
     @FXML
     public void readEingabe(ActionEvent actionEvent) {
         System.out.println("Enter gedrückt");
         if (enterCounter < 12) {
             String e = meineEingabe.getText();
+            e = e.toUpperCase();
             ein = e.charAt(0);
-            ein = grossBuchstaben(ein);
             eingabeKontrollieren(ein);
             meineEingabe.setText("");
             enterCounter++;
             progres();
-
         }
     }
 
@@ -67,18 +64,11 @@ public class Controller {
         }
 
     }
-    public char grossBuchstaben(char e){
-        int eingabeAscii = (int)e;
-        if (eingabeAscii > 96 && eingabeAscii < 123){
-            e = (char) (eingabeAscii - 32);
-        }
-        return e;
-    }
 
     @FXML
     public void restart(ActionEvent actionEvent) {
         resetProgres();
-        wort.setText("");
+        erratenesWort.setText("");
         falscheBuchstaben.setText("");
     }
 
@@ -210,6 +200,7 @@ public class Controller {
         return enterCounter;
     }
 
+    //Menu bar
     public void showHelp(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
