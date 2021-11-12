@@ -46,7 +46,7 @@ public class Controller {
             String e = meineEingabe.getText();
             ein = e.charAt(0);
             ein = grossBuchstaben(ein);
-            boolean kontrolle = eingabeKontrollieren(ein);
+            eingabeKontrollieren(ein);
             meineEingabe.setText("");
             enterCounter++;
             progres();
@@ -56,17 +56,14 @@ public class Controller {
 
 
 
-    public boolean eingabeKontrollieren(char e){
+    public void eingabeKontrollieren(char e){
         int eingabeAscii = (int)e;
         if (eingabeAscii > 64 && eingabeAscii < 91){
             makeInvisibleL(ungueltigeEingabe);
-            return true;
         }
         else {
             makeVisibleL(ungueltigeEingabe);
             enterCounter--;
-            return false;
-
         }
 
     }
