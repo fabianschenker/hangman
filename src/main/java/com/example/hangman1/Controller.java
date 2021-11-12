@@ -1,18 +1,20 @@
 package com.example.hangman1;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class Controller {
 
+    public Button playAgainKnopfMenu;
+    public Button helpKnopfMenu;
+    public Button rulesKnopfMenu;
+    public Button closeKnopfMenu;
     Stage primaryStage;
     @FXML
     private TextField meineEingabe;
@@ -201,5 +203,27 @@ public class Controller {
     //Getter
     public char getEin() {
         return ein;
+    }
+
+    public void showHelp(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Help is here");
+        alert.setHeaderText("You need help");
+        alert.setContentText("don't contact us");
+
+        alert.showAndWait();
+    }
+
+    public void showRules(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Rules");
+        alert.setHeaderText("Rules here");
+        alert.setContentText("Here are the Rules");
+
+        alert.showAndWait();
+    }
+
+    public void closeApp(ActionEvent actionEvent) {
+        Platform.exit();
     }
 }
