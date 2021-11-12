@@ -44,13 +44,12 @@ public class Controller {
         System.out.println("Enter gedrückt");
         if (enterCounter < 12) {
             String e = meineEingabe.getText();
+            e = e.toUpperCase();
             ein = e.charAt(0);
-            ein = grossBuchstaben(ein);
             eingabeKontrollieren(ein);
             meineEingabe.setText("");
             enterCounter++;
             progres();
-
         }
     }
 
@@ -60,7 +59,7 @@ public class Controller {
         int eingabeAscii = (int)e;
         if (eingabeAscii > 64 && eingabeAscii < 91){
             makeInvisibleL(ungueltigeEingabe);
-           // doppelteBuchstaben();
+            // doppelteBuchstaben();
         }
         else {
             makeVisibleL(ungueltigeEingabe);
@@ -70,24 +69,14 @@ public class Controller {
     }
 
    /* private void doppelteBuchstaben() {
-
-
         String userEin = String.valueOf(ein);
-        
+
         if ( String.valueOf(charUnderline).contains(userEin) ||
                 String.valueOf(charFalscheBuchstaben).contains(userEin)) {
             makeVisibleL(doppelteEingabe);}
         else {makeInvisibleL(doppelteEingabe);}
         }
          */
-
-    public char grossBuchstaben(char e){
-        int eingabeAscii = (int)e;
-        if (eingabeAscii > 96 && eingabeAscii < 123){
-            e = (char) (eingabeAscii - 32);
-        }
-        return e;
-    }
 
     @FXML
     public void restart(ActionEvent actionEvent) {
