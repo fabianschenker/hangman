@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
     <children>
         <Label layoutX="74.0" layoutY="14.0" prefHeight="53.0" prefWidth="147.0" text="Hangman" textFill="#8a0000" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="566.0" AnchorPane.topAnchor="14.0">
             <font>
@@ -23,7 +15,7 @@
         <TextField fx:id="meineEingabe" layoutX="25.0" layoutY="399.0" prefHeight="25.0" prefWidth="122.0" promptText="Buchstabe eingaben" AnchorPane.leftAnchor="25.0" />
         <Button fx:id="enter" layoutX="147.0" layoutY="399.0" mnemonicParsing="false" onAction="#readEingabe" prefHeight="25.0" prefWidth="47.0" text="Enter" />
         <Label layoutX="27.0" layoutY="104.0" text="Zu erratenes Wort" AnchorPane.leftAnchor="27.0" />
-        <TextField fx:id="wort" editable="false" layoutX="27.0" layoutY="122.0" mouseTransparent="true" prefHeight="25.0" prefWidth="240.0" AnchorPane.leftAnchor="27.0" />
+        <TextField fx:id="erratenesWort" editable="false" layoutX="27.0" layoutY="122.0" mouseTransparent="true" prefHeight="25.0" prefWidth="240.0" AnchorPane.leftAnchor="27.0" />
         <Label layoutX="25.0" layoutY="204.0" text="Falsch geratene Buchstaben" AnchorPane.leftAnchor="25.0" />
         <TextField fx:id="falscheBuchstaben" editable="false" layoutX="25.0" layoutY="222.0" mouseTransparent="true" prefHeight="95.0" prefWidth="147.0" AnchorPane.leftAnchor="25.0" />
         <Rectangle fx:id="hangman4" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="87.0" layoutX="595.0" layoutY="66.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="12.0" />
