@@ -10,20 +10,21 @@ public static String [] buildHidden(int wordLength){
     return hiddenWord;
 }
 
-    public static String buildFalse(Vector<String> falseVector) {
+    public static String buildFalse(Vector<Character> falseVector) {
         return falseVector.toString();
     }
+
     public static boolean [] visible (boolean [] visible, Vector<Integer> position){
     for (int i = 0; i<position.size(); i++){
         visible[position.get(i)] = true;
     }
-
     return visible;
 
     }
 
-    public static String buildTrue(String[] w,String c, Vector<Integer> position, StringBuilder str) {
-        String [] wordDisplay= new String[w.length];
+
+    public static String buildTrue(char[] w, char c, Vector<Integer> position, StringBuilder str) {
+        char [] wordDisplay = new char[w.length];
         for (int i = 0; i < position.size(); i++) {
             wordDisplay[position.get(i)] = c;
         }
@@ -32,8 +33,7 @@ public static String [] buildHidden(int wordLength){
             str.append(wordDisplay[i]);
         }
 
-       return str.toString();
+        return str.toString();
     }
-
 
 }

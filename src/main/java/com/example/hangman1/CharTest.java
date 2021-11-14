@@ -1,10 +1,10 @@
 package com.example.hangman1;
 
 public class CharTest {
-    protected String g;
+    protected char g;
     protected String wordTrue;
     protected String wordFalse;
-    public CharTest(String c, String t, String f) {
+    public CharTest(char c, String t, String f) {
        g = c;
        wordTrue = t;
        wordFalse = f;
@@ -12,7 +12,7 @@ public class CharTest {
     }
 
 
-    public String getG() {
+    public Character getG() {
         return g;
     }
 
@@ -24,7 +24,7 @@ public class CharTest {
         return wordFalse;
     }
 
-    public void setG(String g) {
+    public void setG(char g) {
         this.g = g;
     }
 
