@@ -36,7 +36,7 @@ public class Wort {
         return wortCharArray;
     }
 
-    public char[] buildUnderlines(char[] w){
+    public static char[] buildUnderlines(char[] w){
         char[] underline = new char[w.length];
         for (int i=0; i<w.length; i++){
             underline[i] = '_';
