@@ -1,30 +1,30 @@
 package com.example.hangman1;
 
 
+import java.util.Objects;
 import java.util.Vector;
 
-public class Vergleich{
+public class Vergleich {
 
 
-    public static boolean vergleich(String [] w, String c) {
+    public static boolean vergleich(char[] w, char c) {
         int counter = 0;
         for (int i = 0; i < w.length; i++) {
-            if (c.equals(w[i])) {
+            if (Objects.equals(c, w[i])) {
                 counter++;
             }
         }
-       if (counter>0){
-           return true;
-       }
-       else{
-           return false;
-       }
+        if (counter > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public static Vector<Integer> position (String [] w, String c){
+    public static Vector<Integer> position(char[] w, char c) {
         Vector<Integer> position = new Vector<Integer>();
         for (int i = 0; i < w.length; i++) {
-            if (c.equals(w[i])) {
+            if (Objects.equals(c, w[i])) {
                 position.add(i);
             }
         }
