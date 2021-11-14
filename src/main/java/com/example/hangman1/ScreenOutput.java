@@ -27,4 +27,5 @@ public static String [] buildHidden(int wordLength){
        return str.toString();
     }
 
+
 }
