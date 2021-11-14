@@ -13,6 +13,14 @@ public static String [] buildHidden(int wordLength){
     public static String buildFalse(Vector<String> falseVector) {
         return falseVector.toString();
     }
+    public static boolean [] visible (boolean [] visible, Vector<Integer> position){
+    for (int i = 0; i<position.size(); i++){
+        visible[position.get(i)] = true;
+    }
+
+    return visible;
+
+    }
 
     public static String buildTrue(String[] w,String c, Vector<Integer> position, StringBuilder str) {
         String [] wordDisplay= new String[w.length];
