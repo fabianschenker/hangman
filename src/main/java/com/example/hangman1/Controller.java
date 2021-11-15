@@ -27,7 +27,7 @@ public class Controller {
     @FXML
     private TextField erratenesWort;
 
-    private char ein;
+    private static char ein;
     public int enterCounter = 0;
 
 
@@ -205,7 +205,7 @@ public class Controller {
     }
 
     //Getter
-    public char getEin() {
+    public static char getEin() {
         return ein;
     }
 
@@ -234,4 +234,5 @@ public class Controller {
     public void closeApp(ActionEvent actionEvent) {
         Platform.exit();
     }
+
 }

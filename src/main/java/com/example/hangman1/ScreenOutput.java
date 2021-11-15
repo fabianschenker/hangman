@@ -23,7 +23,7 @@ public class ScreenOutput {
     }
 
 
-    public static String buildTrue(char[] w, char c, Vector<Integer> position, StringBuilder str) {
+    public static String buildTrue(char[] w, Character c, Vector<Integer> position, StringBuilder str) {
         char [] wordDisplay = new char[w.length];
         for (int i = 0; i < position.size(); i++) {
             wordDisplay[position.get(i)] = c;
