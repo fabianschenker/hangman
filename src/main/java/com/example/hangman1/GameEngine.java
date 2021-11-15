@@ -1,41 +1,58 @@
 package com.example.hangman1;
 
+import java.util.Scanner;
 import java.util.Vector;
+
+import static javafx.application.Platform.exit;
 
 public class GameEngine {
     public void GameEngine (){
-        //Word generation
         Wort wort = new Wort();
         char[][] wordToGuess = new char[2][];
         wordToGuess[0] = wort.selectRandomWord();
         wordToGuess[1] = Wort.buildUnderlines(wordToGuess[0]);
 
-        //add function to showcase the Underscores into the text field wort
+        Vector <Integer> position;
+        Vector<Character> falseLetters = new Vector();
+        char [] trueLetters = new char[wordToGuess[0].length];
 
         //build boolean to show vicotry
-        boolean [] visible = new boolean[wordToGuess.length];
+        boolean [] visible = new boolean[wordToGuess[0].length];
         boolean gameOver = false;
         boolean victory = false;
-
-        //build vectors to count false and true letters
-        Vector<Character> falseLetters = new Vector();
-        Vector<Character> trueLetters = new Vector();
+        char input;
 
         //Loop to run the game
-        while(!gameOver || !victory){
+        while(!gameOver && !victory){
+
             //get input from INPUT-Class TBD
-            char input = Controller.getEin();
+            Scanner inputKey = new Scanner(System.in);
+            String key = inputKey.next();
+            input = key.charAt(0);
+
+
 
             if (Vergleich.vergleich(wordToGuess[0], input)){
-                trueLetters.add(input);
-                Vector position = Vergleich.position (wordToGuess[0], input);
+                position = Vergleich.position (wordToGuess[0], input);
 
                 visible =  ScreenOutput.visible(visible, position);
+               trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
 
                 //add build true once it is done
 
-                if (trueLetters.size()== wordToGuess.length){
-                    victory = true;
+
+                for (int i = 0; i< visible.length; i++){
+                    if(visible[i]){
+                        victory = true;
+                    }
+                    else{
+                        victory = false;
+                        break;
+                    }
+                }
+                if (victory){
+                    System.out.println("Victory!");
+                    exit();
                 }
 
             }
@@ -43,13 +60,16 @@ public class GameEngine {
             else {
                 falseLetters.add(input);
                 //add vector to Textfield falsche Buchstaben
-                String falscheBuchstaben = ScreenOutput.buildFalse(falseLetters);
+                String mistakes = ScreenOutput.buildFalse(falseLetters);
+
 
                 //add function to increment hangman
                 //to be added later
 
-                if(falseLetters.size()>11){
+                if(falseLetters.size()==11){
                     gameOver = true;
+                    System.out.println("Game Over!");
+                    exit();
                 }
             }
         }

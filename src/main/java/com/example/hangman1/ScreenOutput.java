@@ -2,16 +2,19 @@ package com.example.hangman1;
 import java.util.*;
 public class ScreenOutput {
 
-    public static String [] buildHidden(int wordLength){
-        String [] hiddenWord = new String [wordLength];
-        for(int i = 0; i < wordLength; i++){
-            hiddenWord [i] = "_";
-        }
-        return hiddenWord;
-    }
+    public static String buildFalse (Vector<Character> falseVector) {
+        StringBuilder f = new StringBuilder();
 
-    public static String buildFalse(Vector<Character> falseVector) {
-        return falseVector.toString();
+        for (int i = 0; i< falseVector.size(); i++){
+            f.append(falseVector.get(i));
+            if(falseVector.size()>1){
+            if(i < falseVector.size()-1){
+            f.append(", ");
+                }
+            }
+        }
+
+        return f.toString();
     }
 
     public static boolean [] visible (boolean [] visible, Vector<Integer> position){
@@ -23,17 +26,14 @@ public class ScreenOutput {
     }
 
 
-    public static String buildTrue(char[] w, Character c, Vector<Integer> position, StringBuilder str) {
-        char [] wordDisplay = new char[w.length];
-        for (int i = 0; i < position.size(); i++) {
-            wordDisplay[position.get(i)] = c;
-        }
+    public static char[] buildTrue(char[][] wordToGuess, boolean[] visible) {
 
-        for (int i = 0; i < wordDisplay.length; i++){
-            str.append(wordDisplay[i]);
+        for (int i = 0; i < wordToGuess[0].length; i++) {
+            if (visible[i]){
+                wordToGuess[1][i]= wordToGuess[0][i];
+            }
         }
-
-        return str.toString();
+        return wordToGuess[1];
     }
 
 }
