@@ -15,6 +15,11 @@ public class GameTest {
         String [] wortWahr = test1.getWordTrue().split(",");
         String[] wortFalsch = test1.getWordFalse().split(",");
 
+        char [] c = new char[wortWahr.length()];
+        for(int i=0; i<wortWahr.length();i++){
+            c[i] = test1.getWordTrue().charAt(i);
+        }
+        char [] a = new char[wortFalsch.length()];
 
 
         /*System.out.println(hidden[0]);
