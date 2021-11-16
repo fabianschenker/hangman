@@ -216,17 +216,29 @@ public class Controller {
     public void showHelp(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
-        alert.setHeaderText("You need help");
-        alert.setContentText("don't contact us");
+        alert.setHeaderText("Du brauchst Hilfe?");
+        alert.setContentText("""
+                Versuche häufige Buchstaben als erstes einzugeben. Warum nicht mit den Buchstaben des eigenen Namens anfangen?
+
+                Als Sonderzeichen gelten alle Zeichen ausser a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z in Gross- wie Kleinschreibung. ä,ö und ü werden durch ae, oe und ue ersetzt.""");
 
         alert.showAndWait();
     }
 
     public void showRules(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Rules");
-        alert.setHeaderText("Rules here");
-        alert.setContentText("Here are the Rules");
+        alert.setTitle("Regeln");
+        alert.setHeaderText("Die Spielregeln:");
+        alert.setContentText("""
+                1. Der Spieler darf alle 26 Buchstaben des Standart-Alphabets eingeben. Gross- und Kleinschreibung ist dabei irrelevant.
+
+                2. Ein falscher Buchstabe zeichnet einen Teil der Hangman-Figur.
+
+                3. Versuchen Sie, das Wort zu erraten,bevor die Hangman-Figur fertig ist.
+
+                4. Sonderzeichen werden nicht akzeptiert.
+
+                """);
 
         alert.showAndWait();
     }
