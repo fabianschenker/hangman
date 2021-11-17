@@ -28,8 +28,11 @@ public class Controller {
     private TextField erratenesWort;
 
     private static char ein;
-    public int enterCounter = 0;
-
+    private static int enterCounter = 0;
+    private static Wort wort = new Wort();
+    private static char[] random = wort.selectRandomWord();
+    private static char[] underlines = wort.buildUnderlines(random);
+    private static boolean fertig = false;
 
 
     public void init(Stage primaryStage, Scene mainScene) {
@@ -48,11 +51,26 @@ public class Controller {
             ein = e.charAt(0);
             eingabeKontrollieren(ein);
             meineEingabe.setText("");
+            GameEngine.test();
             enterCounter++;
-            progres();
+            progresImage();
+            erratenesWort.setText(GameEngine.richtig);
+            falscheBuchstaben.setText(GameEngine.falsch);
+            gewonnen();
         }
     }
 
+    private void gewonnen() {
+        fertig = GameEngine.victory;
+        if (erratenesWort.getText().equals(random)){
+            makeVisibleL(gewonnen);
+            enterCounter = 12;
+        }
+        if (fertig){
+            makeVisibleL(gewonnen);
+            enterCounter = 12;
+        }
+    }
 
 
     public void eingabeKontrollieren(char e){
@@ -80,6 +98,8 @@ public class Controller {
 
     @FXML
     public void restart(ActionEvent actionEvent) {
+        random = wort.selectRandomWord();
+        underlines = wort.buildUnderlines(random);
         resetProgres();
         erratenesWort.setText("");
         falscheBuchstaben.setText("");
@@ -149,7 +169,7 @@ public class Controller {
     }private void makeInvisibleB(Button b) {
         b.visibleProperty().set(false);
     }
-    private void progres() {
+    private void progresImage() {
         if(enterCounter == 1){
             makeVisibleR(hangman1);
         }else if(enterCounter == 2){
@@ -209,8 +229,33 @@ public class Controller {
         return ein;
     }
 
-    public int getEnterCounter() {
+    public static int getEnterCounter() {
         return enterCounter;
+    }
+
+    public static Wort getWort() {
+        return wort;
+    }
+
+    public static char[] getRandom() {
+        return random;
+    }
+
+    public static char[] getUnderlines() {
+        return underlines;
+    }
+
+    //Setter
+    public static void setEnterCounter(int e) {
+        enterCounter = enterCounter - e;
+    }
+
+    public static void setUnderlines(char[] underlines) {
+        Controller.underlines = underlines;
+    }
+
+    public static void setVictory(boolean v) {
+        fertig = v;
     }
 
     public void showHelp(ActionEvent actionEvent) {
