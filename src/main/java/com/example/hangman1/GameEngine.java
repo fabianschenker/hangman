@@ -8,8 +8,7 @@ import static javafx.application.Platform.exit;
 public class GameEngine {
 
     public static String falsch = "";
-    public static String richtig = "";
-    public static boolean victory;
+    public static String richtig = Controller.getRichtig();
 
     public static void test() {
         Wort wort = Controller.getWort();
@@ -23,13 +22,9 @@ public class GameEngine {
         Vector<Character> falseLetters = new Vector();
         char [] trueLetters = new char[wordToGuess[0].length];
 
-        //build boolean to show vicotry
         boolean [] visible = new boolean[wordToGuess[0].length];
-        boolean gameOver = false;
         char input;
-        //Loop to run the game
 
-            //get input from INPUT-Class TBD
             input = Controller.getEin();
 
             System.out.println(input);
@@ -41,43 +36,30 @@ public class GameEngine {
                 trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
                 System.out.println(trueLetters);
                 richtig = new String(trueLetters);
-                Controller.setEnterCounter(1);
-
-
-                //add build true once it is done
-
-
-                for (int i = 0; i< visible.length; i++){
-                    if(visible[i]){
-                        victory = true;
-                    }
-                    else{
-                        victory = false;
-                        break;
-                    }
-                }
-                Controller.setVictory(victory);
-                if (victory){
-                    System.out.println("Victory!");
-                }
+                Controller.setEnterCounter(-1);
 
             }
 
             else {
                 falseLetters.add(input);
-                //add vector to Textfield falsche Buchstaben
                 falsch += ScreenOutput.buildFalse(falseLetters) + " ";
                System.out.println(ScreenOutput.buildFalse(falseLetters));
-
-                System.out.println(falseLetters.size());
-                //add function to increment hangman
-                //to be added later
-
-                if(falseLetters.size()==11){
-                    gameOver = true;
-                    System.out.println("Game Over!");
-                }
             }
 
+    }
+    static boolean gewonnen(){
+        boolean rueckgabe = false;
+        for (int i = 0; i < richtig.length(); i++){
+            char at = richtig.charAt(i);
+
+            if (at == '_'){
+                rueckgabe = false;
+                break;
+            }
+            else {
+                rueckgabe = true;
+            }
+        }
+        return rueckgabe;
     }
 }

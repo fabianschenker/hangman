@@ -19,13 +19,14 @@ public class Controller {
     @FXML
     private TextField meineEingabe;
     @FXML
-    private Button enter;
-    @FXML
     private TextField falscheBuchstaben;
     @FXML
     private Button playAgainKnopf;
     @FXML
+    private Button StartButton;
+    @FXML
     private TextField erratenesWort;
+
 
     private static char ein;
     private static int enterCounter = 0;
@@ -33,6 +34,8 @@ public class Controller {
     private static char[] random = wort.selectRandomWord();
     private static char[] underlines = wort.buildUnderlines(random);
     private static boolean fertig = false;
+    private static String richtig;
+    boolean startProgramm = false;
 
 
     public void init(Stage primaryStage, Scene mainScene) {
@@ -41,11 +44,10 @@ public class Controller {
 
 
 
-
     @FXML
     public void readEingabe(ActionEvent actionEvent) {
         System.out.println("Enter gedrückt");
-        if (enterCounter < 12) {
+        if (enterCounter < 12 && startProgramm && !fertig) {
             String e = meineEingabe.getText();
             e = e.toUpperCase();
             ein = e.charAt(0);
@@ -56,19 +58,7 @@ public class Controller {
             progresImage();
             erratenesWort.setText(GameEngine.richtig);
             falscheBuchstaben.setText(GameEngine.falsch);
-            gewonnen();
-        }
-    }
-
-    private void gewonnen() {
-        fertig = GameEngine.victory;
-        if (erratenesWort.getText().equals(random)){
-            makeVisibleL(gewonnen);
-            enterCounter = 12;
-        }
-        if (fertig){
-            makeVisibleL(gewonnen);
-            enterCounter = 12;
+            fertig = GameEngine.gewonnen();
         }
     }
 
@@ -96,12 +86,22 @@ public class Controller {
         }
          */
 
+    public void start(ActionEvent actionEvent){
+        startProgramm = true;
+        random = wort.selectRandomWord();
+        underlines = wort.buildUnderlines(random);
+        richtig = new String(underlines);
+        erratenesWort.setText(richtig);
+        meineEingabe.setText("");
+        makeInvisibleB(StartButton);
+    }
+
     @FXML
     public void restart(ActionEvent actionEvent) {
         random = wort.selectRandomWord();
         underlines = wort.buildUnderlines(random);
         resetProgres();
-        erratenesWort.setText("");
+        erratenesWort.setText(new String(underlines));
         falscheBuchstaben.setText("");
     }
 
@@ -198,6 +198,7 @@ public class Controller {
             makeVisibleR(hangmanD4);
             makeVisibleL(verloren);
             makeVisibleB(playAgainKnopf);
+            enterCounter++;
 
         }
     }
@@ -229,10 +230,6 @@ public class Controller {
         return ein;
     }
 
-    public static int getEnterCounter() {
-        return enterCounter;
-    }
-
     public static Wort getWort() {
         return wort;
     }
@@ -245,18 +242,15 @@ public class Controller {
         return underlines;
     }
 
+    public static String getRichtig() {
+        return richtig;
+    }
+
     //Setter
     public static void setEnterCounter(int e) {
-        enterCounter = enterCounter - e;
+        enterCounter = enterCounter + e;
     }
 
-    public static void setUnderlines(char[] underlines) {
-        Controller.underlines = underlines;
-    }
-
-    public static void setVictory(boolean v) {
-        fertig = v;
-    }
 
     public void showHelp(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
