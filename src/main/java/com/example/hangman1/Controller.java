@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -15,6 +16,7 @@ public class Controller {
     public Button helpKnopfMenu;
     public Button rulesKnopfMenu;
     public Button closeKnopfMenu;
+    public Button closeKnopf;
     Stage primaryStage;
     @FXML
     private TextField meineEingabe;
@@ -26,6 +28,8 @@ public class Controller {
     private Button StartButton;
     @FXML
     private TextField erratenesWort;
+    @FXML
+    private Label WelcomeLable;
 
 
     private static char ein;
@@ -58,7 +62,15 @@ public class Controller {
             progresImage();
             erratenesWort.setText(GameEngine.richtig);
             falscheBuchstaben.setText(GameEngine.falsch);
-            fertig = GameEngine.gewonnen();
+            victory();
+
+        }
+    }
+
+    private void victory() {
+        fertig = GameEngine.gewonnen();
+        if (fertig){
+            makeVisibleL(gewonnen);
         }
     }
 
@@ -86,6 +98,7 @@ public class Controller {
         }
          */
 
+    //start und restart des programms
     public void start(ActionEvent actionEvent){
         startProgramm = true;
         random = wort.selectRandomWord();
@@ -93,16 +106,23 @@ public class Controller {
         richtig = new String(underlines);
         erratenesWort.setText(richtig);
         meineEingabe.setText("");
-        makeInvisibleB(StartButton);
+        makeInvisibleP();
     }
 
     @FXML
     public void restart(ActionEvent actionEvent) {
+        startProgramm = true;
         random = wort.selectRandomWord();
         underlines = wort.buildUnderlines(random);
         resetProgres();
-        erratenesWort.setText(new String(underlines));
+        richtig = new String(underlines);
+        erratenesWort.setText(richtig);
         falscheBuchstaben.setText("");
+        GameEngine.counter = 0;
+        GameEngine.falsch = "";
+        GameEngine.richtig = richtig;
+        makeInvisibleB(StartButton);
+        makeInvisibleP();
     }
 
 
@@ -168,6 +188,10 @@ public class Controller {
         l.visibleProperty().set(false);
     }private void makeInvisibleB(Button b) {
         b.visibleProperty().set(false);
+    }private void makeInvisibleP() {
+        StartButton.visibleProperty().set(false);
+        closeKnopf.visibleProperty().set(false);
+        WelcomeLable.visibleProperty().set(false);
     }
     private void progresImage() {
         if(enterCounter == 1){

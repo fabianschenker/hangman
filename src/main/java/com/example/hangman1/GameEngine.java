@@ -9,6 +9,7 @@ public class GameEngine {
 
     public static String falsch = "";
     public static String richtig = Controller.getRichtig();
+    public static int counter = 0;
 
     public static void test() {
         Wort wort = Controller.getWort();
@@ -37,7 +38,7 @@ public class GameEngine {
                 System.out.println(trueLetters);
                 richtig = new String(trueLetters);
                 Controller.setEnterCounter(-1);
-
+                counter++;
             }
 
             else {
@@ -49,16 +50,8 @@ public class GameEngine {
     }
     static boolean gewonnen(){
         boolean rueckgabe = false;
-        for (int i = 0; i < richtig.length(); i++){
-            char at = richtig.charAt(i);
-
-            if (at == '_'){
-                rueckgabe = false;
-                break;
-            }
-            else {
-                rueckgabe = true;
-            }
+        if(richtig.length()==counter){
+            rueckgabe = true;
         }
         return rueckgabe;
     }

@@ -103,9 +103,19 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="343.0" layoutY="434.0" mnemonicParsing="false" onAction="#start" prefHeight="40.0" prefWidth="122.0" text="Start" textAlignment="CENTER">
+      <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Impact" size="64.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeKnopf" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="443.0" layoutY="324.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER" AnchorPane.rightAnchor="160.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="183.0" text="Start" textAlignment="CENTER" AnchorPane.leftAnchor="160.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
          </font>
       </Button>
     </children>
