@@ -13,3 +13,8 @@ Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, R
 5. Kurze Bedienungsanleitung
 6. User Stories
 7. Releaseplan
+8. Dokumentation Sprint 1
+
+##Einleitung
+
+Dieses Git-Repository wurde zur Dokumentation und Zusammenarbeit 
