@@ -10,6 +10,7 @@ public class GameEngine {
     public static String falsch = "";
     public static String richtig = Controller.getRichtig();
     public static int counter = 0;
+    public static boolean [] visible;
 
     public static void test() {
         Wort wort = Controller.getWort();
@@ -19,11 +20,12 @@ public class GameEngine {
         System.out.println(wordToGuess[0]);
         System.out.println(wordToGuess[1]);
 
+
         Vector <Integer> position;
         Vector<Character> falseLetters = new Vector();
         char [] trueLetters = new char[wordToGuess[0].length];
 
-        boolean [] visible = new boolean[wordToGuess[0].length];
+        visible = new boolean[wordToGuess[0].length];
         char input;
 
             input = Controller.getEin();
@@ -51,6 +53,7 @@ public class GameEngine {
                 falsch += ScreenOutput.buildFalse(falseLetters) + " ";
                System.out.println(ScreenOutput.buildFalse(falseLetters));
             }
+            System.out.println(counter);
 
     }
     static boolean gewonnen(){
@@ -60,5 +63,13 @@ public class GameEngine {
             rueckgabe = true;
         }
         return rueckgabe;
+    }
+    static void doppelt(){
+        for (int i = 0; i< visible.length; i++){
+            if(visible[i]){
+                counter--;
+                Controller.setEnterCounter(1);
+            }
+        }
     }
 }

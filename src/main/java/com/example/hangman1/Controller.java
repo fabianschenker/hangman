@@ -33,7 +33,9 @@ public class Controller {
 
 
     private static char ein;
+    private static int counter;
     private static int enterCounter = 0;
+    public static int counterDoppelt = 0;
     private static Wort wort = new Wort();
     private static char[] random = wort.selectRandomWord();
     private static char[] underlines = wort.buildUnderlines(random);
@@ -51,19 +53,18 @@ public class Controller {
     @FXML
     public void readEingabe(ActionEvent actionEvent) {
         System.out.println("Enter gedrückt");
-        if (enterCounter < 12 && startProgramm && !fertig) {
+        if (counter < 11 && startProgramm && !fertig) {
             String e = meineEingabe.getText();
             e = e.toUpperCase();
             ein = e.charAt(0);
+            enterCounter++;
             eingabeKontrollieren(ein);
             meineEingabe.setText("");
-            GameEngine.test();
-            enterCounter++;
+            counter = enterCounter - counterDoppelt;
             progresImage();
             erratenesWort.setText(GameEngine.richtig);
             falscheBuchstaben.setText(GameEngine.falsch);
             victory();
-
         }
     }
 
@@ -80,7 +81,8 @@ public class Controller {
         int eingabeAscii = (int)e;
         if (eingabeAscii > 64 && eingabeAscii < 91){
             makeInvisibleL(ungueltigeEingabe);
-            // doppelteBuchstaben();
+            doppelteBuchstaben();
+            GameEngine.test();
         }
         else {
             makeVisibleL(ungueltigeEingabe);
@@ -89,15 +91,18 @@ public class Controller {
 
     }
 
-   /* private void doppelteBuchstaben() {
+   private void doppelteBuchstaben() {
         String userEin = String.valueOf(ein);
 
-        if ( String.valueOf(charUnderline).contains(userEin) ||
-                String.valueOf(charFalscheBuchstaben).contains(userEin)) {
+        if (String.valueOf(GameEngine.richtig).contains(userEin) ||
+                String.valueOf(GameEngine.falsch).contains(userEin)) {
+            counterDoppelt++;
+            if (String.valueOf(GameEngine.richtig).contains(userEin)){
+            GameEngine.doppelt();}
             makeVisibleL(doppelteEingabe);}
         else {makeInvisibleL(doppelteEingabe);}
         }
-         */
+
 
     //start und restart des programms
     public void start(ActionEvent actionEvent){
@@ -115,9 +120,6 @@ public class Controller {
         start(actionEvent);
         resetProgres();
         falscheBuchstaben.setText("");
-        GameEngine.counter = 0;
-        GameEngine.falsch = "";
-        GameEngine.richtig = richtig;
         fertig = false;
         makeInvisibleB(StartButton);
         }
@@ -191,27 +193,27 @@ public class Controller {
         WelcomeLable.visibleProperty().set(false);
     }
     private void progresImage() {
-        if(enterCounter == 1){
+        if(counter == 1){
             makeVisibleR(hangman1);
-        }else if(enterCounter == 2){
+        }else if(counter == 2){
             makeVisibleR(hangman2);
-        }else if(enterCounter == 3){
+        }else if(counter == 3){
             makeVisibleR(hangman3);
-        }else if(enterCounter == 4){
+        }else if(counter == 4){
             makeVisibleR(hangman4);
-        }else if(enterCounter == 5){
+        }else if(counter == 5){
             makeVisibleR(hangman5);
-        }else if(enterCounter == 6){
+        }else if(counter == 6){
             makeVisibleC(hangman6);
-        }else if(enterCounter == 7){
+        }else if(counter == 7){
             makeVisibleR(hangman7);
-        }else if(enterCounter == 8){
+        }else if(counter == 8){
             makeVisibleR(hangman8);
-        }else if(enterCounter == 9){
+        }else if(counter == 9){
             makeVisibleR(hangman9);
-        }else if(enterCounter == 10){
+        }else if(counter == 10){
             makeVisibleR(hangman10);
-        }else if(enterCounter == 11){
+        }else if(counter == 11){
             makeVisibleR(hangman11);
             makeVisibleR(hangmanD1);
             makeVisibleR(hangmanD2);
@@ -219,12 +221,13 @@ public class Controller {
             makeVisibleR(hangmanD4);
             makeVisibleL(verloren);
             makeVisibleB(playAgainKnopf);
-            enterCounter++;
-
         }
     }
+
     private void resetProgres() {
         enterCounter = 0;
+        counter = 0;
+        counterDoppelt = 0;
         makeInvisibleR(hangman1);
         makeInvisibleR(hangman2);
         makeInvisibleR(hangman3);
@@ -244,6 +247,9 @@ public class Controller {
         makeInvisibleL(gewonnen);
         makeInvisibleL(ungueltigeEingabe);
         makeInvisibleB(playAgainKnopf);
+        GameEngine.counter = 0;
+        GameEngine.falsch = "";
+        GameEngine.richtig = richtig;
     }
 
     //Getter
