@@ -48,3 +48,30 @@ Build-Automatisierung: Maven
 Repository: Github
 
 Der Aufwand des Projektes wird gleichmässig auf alle Studierenden verteilt.
+
+## User Storys
+
+
+
+## Releaseplan
+
+|  Release 1 | Release 2  |
+|------------|------------|
+|    US 3    |    US 7    |
+|    US 4    |    US 8    |
+|    US 5    |    US 12   |
+|    US 6    |    US 30   |
+|    US 10   |    US 31   |
+|    US 11   |    US 32   |
+|    US 20   |    US 65   |
+
+US = Userstorys
+
+
+
+
+
+
+
+
+
