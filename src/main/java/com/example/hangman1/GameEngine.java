@@ -38,7 +38,12 @@ public class GameEngine {
                 System.out.println(trueLetters);
                 richtig = new String(trueLetters);
                 Controller.setEnterCounter(-1);
-                counter++;
+
+                for (int i = 0; i< visible.length; i++){
+                    if(visible[i]){
+                        counter++;
+                    }
+                }
             }
 
             else {
@@ -49,6 +54,7 @@ public class GameEngine {
 
     }
     static boolean gewonnen(){
+
         boolean rueckgabe = false;
         if(richtig.length()==counter){
             rueckgabe = true;

@@ -71,6 +71,7 @@ public class Controller {
         fertig = GameEngine.gewonnen();
         if (fertig){
             makeVisibleL(gewonnen);
+            makeVisibleB(playAgainKnopf);
         }
     }
 
@@ -111,19 +112,15 @@ public class Controller {
 
     @FXML
     public void restart(ActionEvent actionEvent) {
-        startProgramm = true;
-        random = wort.selectRandomWord();
-        underlines = wort.buildUnderlines(random);
+        start(actionEvent);
         resetProgres();
-        richtig = new String(underlines);
-        erratenesWort.setText(richtig);
         falscheBuchstaben.setText("");
         GameEngine.counter = 0;
         GameEngine.falsch = "";
         GameEngine.richtig = richtig;
+        fertig = false;
         makeInvisibleB(StartButton);
-        makeInvisibleP();
-    }
+        }
 
 
 
