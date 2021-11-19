@@ -65,10 +65,9 @@ public class GameEngine {
         return rueckgabe;
     }
     static void doppelt(){
-        for (int i = 0; i< visible.length; i++){
-            if(visible[i]){
+        for (int i = 0; i < richtig.length(); i++){
+            if (richtig.charAt(i) == Controller.getEin()){
                 counter--;
-                Controller.setEnterCounter(1);
             }
         }
     }

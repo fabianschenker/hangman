@@ -34,12 +34,12 @@ public class Controller {
 
     private static char ein;
     private static int counter;
-    private static int enterCounter = 0;
-    public static int counterDoppelt = 0;
+    private static int enterCounter;
+    public static int counterDoppelt;
     private static Wort wort = new Wort();
-    private static char[] random = wort.selectRandomWord();
-    private static char[] underlines = wort.buildUnderlines(random);
-    private static boolean fertig = false;
+    private static char[] random;
+    private static char[] underlines;
+    private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false;
 
@@ -106,6 +106,9 @@ public class Controller {
 
     //start und restart des programms
     public void start(ActionEvent actionEvent){
+        enterCounter = 0;
+        counter = 0;
+        counterDoppelt = 0;
         startProgramm = true;
         random = wort.selectRandomWord();
         underlines = wort.buildUnderlines(random);
@@ -113,6 +116,9 @@ public class Controller {
         erratenesWort.setText(richtig);
         meineEingabe.setText("");
         makeInvisibleP();
+        random = wort.selectRandomWord();
+        underlines = wort.buildUnderlines(random);
+        fertig = false;
     }
 
     @FXML
@@ -120,8 +126,10 @@ public class Controller {
         start(actionEvent);
         resetProgres();
         falscheBuchstaben.setText("");
-        fertig = false;
-        makeInvisibleB(StartButton);
+        GameEngine.falsch = "";
+        GameEngine.counter = 0;
+        //fertig = false;
+        //makeInvisibleB(StartButton);
         }
 
 
