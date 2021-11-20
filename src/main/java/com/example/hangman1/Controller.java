@@ -71,7 +71,6 @@ public class Controller {
         falscheBuchstaben.setText("");
         GameEngine.falsch = "";
         GameEngine.counter = 0;
-        GameEngine.falseLetters = new Vector();
     }
 
 
