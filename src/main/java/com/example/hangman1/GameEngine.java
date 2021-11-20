@@ -11,9 +11,9 @@ public class GameEngine {
     public static String richtig = Controller.getRichtig();
     public static int counter = 0;
     public static boolean [] visible;
+    public static Vector<Character> falseLetters = new Vector();
 
     public static void test() {
-        Wort wort = Controller.getWort();
         char[][] wordToGuess = new char[2][];
         wordToGuess[0] = Controller.getRandom();
         wordToGuess[1] = Controller.getUnderlines();
@@ -22,7 +22,6 @@ public class GameEngine {
 
 
         Vector <Integer> position;
-        Vector<Character> falseLetters = new Vector();
         char [] trueLetters = new char[wordToGuess[0].length];
 
         visible = new boolean[wordToGuess[0].length];
@@ -39,7 +38,6 @@ public class GameEngine {
                 trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
                 System.out.println(trueLetters);
                 richtig = new String(trueLetters);
-                Controller.setEnterCounter(-1);
 
                 for (int i = 0; i< visible.length; i++){
                     if(visible[i]){
@@ -49,8 +47,12 @@ public class GameEngine {
             }
 
             else {
+                if (!falsch.contains(Character.toString(input))){
+                    Controller.setEnterCounter();
+                }
                 falseLetters.add(input);
-                falsch += ScreenOutput.buildFalse(falseLetters) + " ";
+                falsch = ScreenOutput.buildFalse(falseLetters);
+
                System.out.println(ScreenOutput.buildFalse(falseLetters));
             }
             System.out.println(counter);

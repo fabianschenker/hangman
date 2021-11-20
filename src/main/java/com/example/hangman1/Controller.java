@@ -34,8 +34,6 @@ public class Controller {
 
     private static char ein;
     private static int counter;
-    private static int enterCounter;
-    public static int counterDoppelt;
     private static Wort wort = new Wort();
     private static char[] random;
     private static char[] underlines;
@@ -57,14 +55,13 @@ public class Controller {
             String e = meineEingabe.getText();
             e = e.toUpperCase();
             ein = e.charAt(0);
-            enterCounter++;
             eingabeKontrollieren(ein);
             meineEingabe.setText("");
-            counter = enterCounter - counterDoppelt;
             progresImage();
             erratenesWort.setText(GameEngine.richtig);
             falscheBuchstaben.setText(GameEngine.falsch);
             victory();
+            System.out.println("counter: " + counter);
         }
     }
 
@@ -86,7 +83,7 @@ public class Controller {
         }
         else {
             makeVisibleL(ungueltigeEingabe);
-            enterCounter--;
+            makeInvisibleL(doppelteEingabe);
         }
 
     }
@@ -96,19 +93,17 @@ public class Controller {
 
         if (String.valueOf(GameEngine.richtig).contains(userEin) ||
                 String.valueOf(GameEngine.falsch).contains(userEin)) {
-            counterDoppelt++;
             if (String.valueOf(GameEngine.richtig).contains(userEin)){
             GameEngine.doppelt();}
             makeVisibleL(doppelteEingabe);}
-        else {makeInvisibleL(doppelteEingabe);}
+        else {makeInvisibleL(doppelteEingabe);
+        }
         }
 
 
     //start und restart des programms
     public void start(ActionEvent actionEvent){
-        enterCounter = 0;
         counter = 0;
-        counterDoppelt = 0;
         startProgramm = true;
         random = wort.selectRandomWord();
         underlines = wort.buildUnderlines(random);
@@ -116,8 +111,6 @@ public class Controller {
         erratenesWort.setText(richtig);
         meineEingabe.setText("");
         makeInvisibleP();
-        random = wort.selectRandomWord();
-        underlines = wort.buildUnderlines(random);
         fertig = false;
     }
 
@@ -233,9 +226,7 @@ public class Controller {
     }
 
     private void resetProgres() {
-        enterCounter = 0;
         counter = 0;
-        counterDoppelt = 0;
         makeInvisibleR(hangman1);
         makeInvisibleR(hangman2);
         makeInvisibleR(hangman3);
@@ -282,8 +273,8 @@ public class Controller {
     }
 
     //Setter
-    public static void setEnterCounter(int e) {
-        enterCounter = enterCounter + e;
+    public static void setEnterCounter() {
+        counter++;
     }
 
 
