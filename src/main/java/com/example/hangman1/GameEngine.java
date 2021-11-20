@@ -3,8 +3,6 @@ package com.example.hangman1;
 
 import java.util.*;
 
-import static javafx.application.Platform.exit;
-
 public class GameEngine {
 
     public static String falsch = "";
@@ -22,7 +20,7 @@ public class GameEngine {
 
 
         Vector <Integer> position;
-        char [] trueLetters = new char[wordToGuess[0].length];
+        char [] trueLetters;
 
         visible = new boolean[wordToGuess[0].length];
         char input;
@@ -34,13 +32,13 @@ public class GameEngine {
             if (Vergleich.vergleich(wordToGuess[0], input)){
                 position = Vergleich.position (wordToGuess[0], input);
 
-                visible =  ScreenOutput.visible(visible, position);
+                ScreenOutput.visible(visible, position);
                 trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
                 System.out.println(trueLetters);
                 richtig = new String(trueLetters);
 
-                for (int i = 0; i< visible.length; i++){
-                    if(visible[i]){
+                for (boolean b : visible) {
+                    if (b) {
                         counter++;
                     }
                 }
@@ -48,7 +46,7 @@ public class GameEngine {
 
             else {
                 if (!falsch.contains(Character.toString(input))){
-                    Controller.setEnterCounter();
+                    Controller.setCounter();
                 }
                 falseLetters.add(input);
                 falsch = ScreenOutput.buildFalse(falseLetters);
@@ -60,11 +58,7 @@ public class GameEngine {
     }
     static boolean gewonnen(){
 
-        boolean rueckgabe = false;
-        if(richtig.length()==counter){
-            rueckgabe = true;
-        }
-        return rueckgabe;
+        return richtig.length() == counter;
     }
     static void doppelt(){
         for (int i = 0; i < richtig.length(); i++){
