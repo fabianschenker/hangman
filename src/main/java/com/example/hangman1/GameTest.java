@@ -2,60 +2,79 @@ package com.example.hangman1;
 
 
 import java.util.*;
+
+import static javafx.application.Platform.exit;
+
 public class GameTest {
 
 
     public static void main(String[] args) {
+        Wort wort = new Wort();
+        char[][] wordToGuess = new char[2][];
+        wordToGuess[0] = wort.selectRandomWord();
+        wordToGuess[1] = Wort.buildUnderlines(wordToGuess[0]);
+        System.out.println(wordToGuess[0]);
+        System.out.println(wordToGuess[1]);
+
+        Vector <Integer> position;
         Vector<Character> falseLetters = new Vector();
-        Vector<Character> trueLetters = new Vector();
-        CharTest test1 = new CharTest('G', "Gen", "Zur");
+        String trueLetters;
 
-        String wortFalsch = test1.getWordFalse();
-        String wortWahr = test1.getWordTrue();
+        //build boolean to show vicotry
+        boolean [] visible = new boolean[wordToGuess[0].length];
+        boolean gameOver = false;
+        boolean victory = false;
+        char input;
+        //Loop to run the game
+        while(!gameOver && !victory){
+            //get input from INPUT-Class TBD
+            Scanner inputKey = new Scanner(System.in);
+            String key = inputKey.next();
+            input = key.charAt(0);
 
-        char [] c = new char[wortWahr.length()];
-        for(int i=0; i<wortWahr.length();i++){
-            c[i] = test1.getWordTrue().charAt(i);
+            System.out.println(input);
+
+            if (Vergleich.vergleich(wordToGuess[0], input)){
+                position = Vergleich.position (wordToGuess[0], input);
+
+                visible =  ScreenOutput.visible(visible, position);
+                trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
+                System.out.println(trueLetters);
+
+                //add build true once it is done
+
+
+                for (int i = 0; i< visible.length; i++){
+                    if(visible[i]){
+                        victory = true;
+                    }
+                    else{
+                        victory = false;
+                        break;
+                    }
+                }
+                if (victory){
+                    System.out.println("Victory!");
+                    exit();
+                }
+
+            }
+
+            else {
+                falseLetters.add(input);
+                //add vector to Textfield falsche Buchstaben
+                System.out.println(ScreenOutput.buildFalse(falseLetters));
+
+                System.out.println(falseLetters.size());
+                //add function to increment hangman
+                //to be added later
+
+                if(falseLetters.size()==11){
+                    gameOver = true;
+                    System.out.println("Game Over!");
+                    exit();
+                }
+            }
         }
-        char [] a = new char[wortFalsch.length()];
-
-        for(int i=0; i<wortFalsch.length();i++){
-            a[i] = test1.getWordFalse().charAt(i);
-        }
-        System.out.println(a);
-        System.out.println(c);
-
-
-
-        /*System.out.println(hidden[0]);
-        hidden[0]= hidden[0].replace("_","a");
-        System.out.println(hidden[0]);*/
-        boolean compare1 = Vergleich.vergleich(c, test1.getG());
-        boolean compare2 = Vergleich.vergleich(a, test1.getG());
-
-        if (compare1) {
-            trueLetters.add(test1.getG());
-        } else {
-            falseLetters.add(test1.getG());
-        }
-        if (compare2) {
-            trueLetters.add(test1.getG());
-        } else {
-            falseLetters.add(test1.getG());
-        }
-        StringBuilder str = new StringBuilder();
-
-        System.out.println(c[0]+c[1]+c[2]);
-        System.out.println(trueLetters);
-        System.out.println(a[0]+a[1]+a[2]);
-        System.out.println(falseLetters);
-        System.out.println(Vergleich.position(c, test1.getG()).get(0));
-        System.out.println(ScreenOutput.buildFalse(falseLetters));
-
-        System.out.println(ScreenOutput.buildTrue(c, test1.getG(), Vergleich.position(c, test1.getG()), str));
-        System.out.println(ScreenOutput.buildTrue(c, 'e', Vergleich.position(c, 'e'), str));
-
-
-
     }
 }
