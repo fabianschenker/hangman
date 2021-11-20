@@ -9,7 +9,7 @@ public class ScreenOutput {
             f.append(falseVector.get(i));
             if(falseVector.size()>1){
             if(i < falseVector.size()-1){
-            f.append(", ");
+            f.append(" ");
                 }
             }
         }

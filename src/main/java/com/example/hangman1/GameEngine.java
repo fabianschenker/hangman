@@ -48,19 +48,20 @@ public class GameEngine {
             else {
                 if (!falsch.contains(Character.toString(input))){
                     Controller.setCounter();
+                    falseLetters.add(input);
+                    falsch = ScreenOutput.buildFalse(falseLetters);
                 }
-                falseLetters.add(input);
-                falsch = ScreenOutput.buildFalse(falseLetters);
-
                System.out.println(ScreenOutput.buildFalse(falseLetters));
             }
             System.out.println(counter);
 
     }
+
     static boolean gewonnen(){
 
         return richtig.length() == counter;
     }
+
     static void doppelt(){
         for (int i = 0; i < richtig.length(); i++){
             if (richtig.charAt(i) == Controller.getEin()){
