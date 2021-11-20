@@ -18,7 +18,7 @@ public class GameTest {
 
         Vector <Integer> position;
         Vector<Character> falseLetters = new Vector();
-        char [] trueLetters = new char[wordToGuess[0].length];
+        String trueLetters;
 
         //build boolean to show vicotry
         boolean [] visible = new boolean[wordToGuess[0].length];
