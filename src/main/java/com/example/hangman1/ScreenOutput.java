@@ -26,14 +26,15 @@ public class ScreenOutput {
     }
 
 
-    public static char[] buildTrue(char[][] wordToGuess, boolean[] visible) {
+    public static String buildTrue(char[][] wordToGuess, boolean[] visible) {
 
-        for (int i = 0; i < wordToGuess[0].length; i++) {
-            if (visible[i]){
-                wordToGuess[1][i]= wordToGuess[0][i];
+        for (int i = 0; i < wordToGuess[0].length;i++){
+            if(visible[i]){
+                wordToGuess[1][i] = wordToGuess[0][i];
             }
         }
-        return wordToGuess[1];
+
+        return new String(wordToGuess[1]);
     }
 
 }

@@ -119,6 +119,7 @@ public class Controller {
         start(actionEvent);
         resetProgres();
         falscheBuchstaben.setText("");
+        GameEngine.falseLetters.clear();
         GameEngine.falsch = "";
         GameEngine.counter = 0;
         //fertig = false;

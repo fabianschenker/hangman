@@ -22,7 +22,7 @@ public class GameEngine {
 
 
         Vector <Integer> position;
-        char [] trueLetters = new char[wordToGuess[0].length];
+        String trueLetters;
 
         visible = new boolean[wordToGuess[0].length];
         char input;
@@ -37,7 +37,7 @@ public class GameEngine {
                 visible =  ScreenOutput.visible(visible, position);
                 trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
                 System.out.println(trueLetters);
-                richtig = new String(trueLetters);
+                richtig = trueLetters;
 
                 for (int i = 0; i< visible.length; i++){
                     if(visible[i]){
