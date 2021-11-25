@@ -3,13 +3,18 @@ package com.example.hangman1;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.util.Vector;
 
 public class Controller {
@@ -20,6 +25,7 @@ public class Controller {
     public Button rulesKnopfMenu;
     public Button closeKnopfMenu;
     public Button closeKnopf;
+    public Button wortEingabeButton;
     Stage primaryStage;
     @FXML
     private TextField meineEingabe;
@@ -53,7 +59,7 @@ public class Controller {
 
     //start und restart des programms
     @FXML
-    public void start(ActionEvent actionEvent){
+    public void start(ActionEvent actionEvent) {
         counter = 0;
         startProgramm = true;
         random = wort.selectRandomWord();
@@ -64,6 +70,7 @@ public class Controller {
         makeInvisibleP();
         fertig = false;
     }
+
     @FXML
     public void restart(ActionEvent actionEvent) {
         start(actionEvent);
@@ -95,37 +102,37 @@ public class Controller {
 
     private void victory() {
         fertig = GameEngine.gewonnen();
-        if (fertig){
+        if (fertig) {
             makeVisibleL(gewonnen);
             makeVisibleB(playAgainKnopf);
         }
     }
 
-    public void eingabeKontrollieren(char e){
-        if ((int)e > 64 && (int)e < 91){
+    public void eingabeKontrollieren(char e) {
+        if ((int) e > 64 && (int) e < 91) {
             makeInvisibleL(ungueltigeEingabe);
             doppelteBuchstaben();
             GameEngine.test();
-        }
-        else {
+        } else {
             makeVisibleL(ungueltigeEingabe);
             makeInvisibleL(doppelteEingabe);
         }
     }
 
-   private void doppelteBuchstaben() {
+    private void doppelteBuchstaben() {
         String userEin = String.valueOf(ein);
 
         if (String.valueOf(GameEngine.richtig).contains(userEin) ||
                 String.valueOf(GameEngine.falsch).contains(userEin)) {
-            if (String.valueOf(GameEngine.richtig).contains(userEin)){
-            GameEngine.doppelt();}
-            makeVisibleL(doppelteEingabe);}
-            else {makeInvisibleL(doppelteEingabe);}
+            if (String.valueOf(GameEngine.richtig).contains(userEin)) {
+                GameEngine.doppelt();
+            }
+            makeVisibleL(doppelteEingabe);
+        } else {
+            makeInvisibleL(doppelteEingabe);
         }
+    }
 
-
-   
 
     //Varablen für das Updaten der Hangmanfigur
     @FXML
@@ -168,52 +175,68 @@ public class Controller {
     private Label doppelteEingabe;
 
 
-//Methoden für ein- und ausblenden der verschiedenen Objektarten
+    //Methoden für ein- und ausblenden der verschiedenen Objektarten
     private void makeVisibleR(Rectangle r) {
         r.visibleProperty().set(true);
-    }private void makeVisibleC(Circle c) {
+    }
+
+    private void makeVisibleC(Circle c) {
         c.visibleProperty().set(true);
-    }private void makeVisibleL(Label l) {
+    }
+
+    private void makeVisibleL(Label l) {
         l.visibleProperty().set(true);
-    }private void makeVisibleB(Button b) {
+    }
+
+    private void makeVisibleB(Button b) {
         b.visibleProperty().set(true);
     }
+
     private void makeInvisibleR(Rectangle r) {
         r.visibleProperty().set(false);
-    }private void makeInvisibleC(Circle c) {
+    }
+
+    private void makeInvisibleC(Circle c) {
         c.visibleProperty().set(false);
-    }private void makeInvisibleL(Label l) {
+    }
+
+    private void makeInvisibleL(Label l) {
         l.visibleProperty().set(false);
-    }private void makeInvisibleB(Button b) {
+    }
+
+    private void makeInvisibleB(Button b) {
         b.visibleProperty().set(false);
-    }private void makeInvisibleP() {
+    }
+
+    private void makeInvisibleP() {
         StartButton.visibleProperty().set(false);
         closeKnopf.visibleProperty().set(false);
         WelcomeLable.visibleProperty().set(false);
     }
+
     //Updaten der Hangmanfigur, abhängig vom counter
     private void progresImage() {
-        if(counter == 1){
+        if (counter == 1) {
             makeVisibleR(hangman1);
-        }else if(counter == 2){
+        } else if (counter == 2) {
             makeVisibleR(hangman2);
-        }else if(counter == 3){
+        } else if (counter == 3) {
             makeVisibleR(hangman3);
-        }else if(counter == 4){
+        } else if (counter == 4) {
             makeVisibleR(hangman4);
-        }else if(counter == 5){
+        } else if (counter == 5) {
             makeVisibleR(hangman5);
-        }else if(counter == 6){
+        } else if (counter == 6) {
             makeVisibleC(hangman6);
-        }else if(counter == 7){
+        } else if (counter == 7) {
             makeVisibleR(hangman7);
-        }else if(counter == 8){
+        } else if (counter == 8) {
             makeVisibleR(hangman8);
-        }else if(counter == 9){
+        } else if (counter == 9) {
             makeVisibleR(hangman9);
-        }else if(counter == 10){
+        } else if (counter == 10) {
             makeVisibleR(hangman10);
-        }else if(counter == 11){
+        } else if (counter == 11) {
             makeVisibleR(hangman11);
             makeVisibleR(hangmanD1);
             makeVisibleR(hangmanD2);
@@ -308,4 +331,19 @@ public class Controller {
         Platform.exit();
     }
 
+    public void onWortEingabeClicked(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("worteingabe.fxml"));
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initStyle(StageStyle.DECORATED);
+            stage.setTitle("");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
