@@ -84,7 +84,7 @@
             <Font name="Impact" size="48.0" />
          </font>
       </Label>
-      <Accordion prefHeight="179.0" prefWidth="202.0" visible="false">
+      <Accordion prefHeight="179.0" prefWidth="202.0">
         <panes>
           <TitledPane animated="false" prefHeight="137.0" prefWidth="172.0" text="Menu">
             <content>
@@ -132,17 +132,17 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000" visible="false">
+      <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="Impact" size="64.0" />
          </font>
       </Label>
-      <Button fx:id="closeKnopf" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="443.0" layoutY="324.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER" visible="false" AnchorPane.rightAnchor="160.0">
+      <Button fx:id="closeKnopf" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="443.0" layoutY="324.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER" AnchorPane.rightAnchor="160.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="183.0" text="Start" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="160.0">
+      <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="183.0" text="Start" textAlignment="CENTER" AnchorPane.leftAnchor="160.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
