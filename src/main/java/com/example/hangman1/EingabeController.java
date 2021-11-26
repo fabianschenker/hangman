@@ -34,7 +34,7 @@ public class EingabeController {
             String s = new String(c);
             String[] result = s.split("\r\n");
 
-            for (int i = 0; i < result.length - 1; i++) {
+            for (int i = 0; i < result.length; i++) {
                 stringList.add(result[i]);
             }
             System.out.println("File \"" + file.getName() + "\" erfolgreich eingelesen.");
@@ -47,6 +47,7 @@ public class EingabeController {
     }
 
     public void onSaveButtonClicked(ActionEvent actionEvent) {
+        stringList.clear();
         readList();
         if (readEingabefeld()) {
             stringList.add(eingabefeld.getText().toUpperCase(Locale.ROOT));
@@ -79,6 +80,8 @@ public class EingabeController {
             eingabefeld.setText(sonder);
             return false;
         } else {
+            stringList.add(eingabe);
+            System.out.println(stringList.size() + " Eintraege generiert.");
             return true;
         }
     }
