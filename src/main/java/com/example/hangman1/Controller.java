@@ -212,6 +212,7 @@ public class Controller {
         StartButton.visibleProperty().set(false);
         closeKnopf.visibleProperty().set(false);
         WelcomeLable.visibleProperty().set(false);
+        wortEingabeButton.visibleProperty().set(false);
     }
 
     //Updaten der Hangmanfigur, abhängig vom counter
