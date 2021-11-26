@@ -14,21 +14,19 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+import java.util.Vector;
+
 public class Controller {
 
     //Deklaration der Variablen aus der hangman.fxml Datei
-    @FXML
     public Button playAgainKnopfMenu;
-    @FXML
     public Button helpKnopfMenu;
-    @FXML
     public Button rulesKnopfMenu;
-    @FXML
     public Button closeKnopfMenu;
-    @FXML
     public Button closeKnopf;
-    @FXML
     public Button wortEingabeButton;
+    Stage primaryStage;
     @FXML
     private TextField meineEingabe;
     @FXML
@@ -50,6 +48,12 @@ public class Controller {
     private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false; //setzen des StartButton gedrückt auf nicht wahr
+
+
+    public void init(Stage primaryStage, Scene mainScene) {
+        this.primaryStage = primaryStage;
+    }
+
 
     //start und restart des programms
     @FXML
