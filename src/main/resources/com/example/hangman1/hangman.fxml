@@ -55,6 +55,7 @@
         <Rectangle fx:id="hangman8" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="510.0" layoutY="256.0" rotate="12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="7.0" />
         <Rectangle fx:id="hangman1" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="40.0" layoutX="551.0" layoutY="391.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="156.0" />
         <Rectangle fx:id="hangman9" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="529.0" layoutY="256.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="7.0" />
+
       <Rectangle fx:id="hangmanD1" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="512.0" layoutY="144.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
       <Rectangle fx:id="hangmanD2" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="512.0" layoutY="144.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
       <Rectangle fx:id="hangmanD3" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="532.0" layoutY="143.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
