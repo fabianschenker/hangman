@@ -8,8 +8,8 @@ public class Wort {
     public String[] readWordFile(){
         String[] strArray = null;
         try{
-            File file = new File("src/main/java/com/example/hangman1/testdatenbank.txt");
-            FileReader fileReader = new FileReader("src/main/java/com/example/hangman1/testdatenbank.txt");
+            File file = new File("src/main/java/com/example/hangman1/wortdatenbank.txt");
+            FileReader fileReader = new FileReader("src/main/java/com/example/hangman1/wortdatenbank.txt");
 
             char[] c = new char[(int) file.length()];
             fileReader.read(c);
@@ -25,7 +25,7 @@ public class Wort {
 
     public char[] selectRandomWord(){
         String[] s = readWordFile();
-        int zufall = (int) (Math.random()*(s.length-3))+3;
+        int zufall = (int) (Math.random()*(s.length-1));
         String wortString = s[zufall];
 
         char[] wortCharArray = new char[wortString.length()];
