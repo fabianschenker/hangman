@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
+<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
     <children>
         <Label layoutX="74.0" layoutY="14.0" prefHeight="53.0" prefWidth="147.0" text="Hangman" textFill="#8a0000" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="566.0" AnchorPane.topAnchor="14.0">
             <font>
@@ -111,7 +111,7 @@
                 </TitledPane>
             </panes>
         </Accordion>
-        <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000">
+        <Label fx:id="welcomeLable" alignment="CENTER" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000">
             <font>
                 <Font name="Impact" size="64.0" />
             </font>
@@ -121,12 +121,12 @@
                 <Font name="System Bold" size="24.0" />
             </font>
         </Button>
-        <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="180.0" text="Start" textAlignment="CENTER" AnchorPane.leftAnchor="40.0">
+        <Button fx:id="startButton" alignment="CENTER" defaultButton="true" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="180.0" text="Start" textAlignment="CENTER" AnchorPane.leftAnchor="40.0">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Button>
-        <Button fx:id="wortEingabeButton" alignment="CENTER" defaultButton="true" layoutX="317.0" layoutY="324.0" mnemonicParsing="false" onAction="#onWortEingabeClicked" prefHeight="75.0" prefWidth="260.0" text="Wörter eingeben" textAlignment="CENTER" AnchorPane.leftAnchor="270.0">
+        <Button fx:id="wortEingabeButton" alignment="CENTER" defaultButton="true" layoutX="270.0" layoutY="324.0" mnemonicParsing="false" onAction="#onWortEingabeClicked" prefHeight="75.0" prefWidth="260.0" text="Wörter eingeben" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
