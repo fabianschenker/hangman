@@ -48,7 +48,7 @@
         <Rectangle fx:id="hangman2" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="361.0" layoutX="615.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="28.0" />
         <Rectangle fx:id="hangman3" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="183.0" layoutX="582.0" layoutY="-10.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" AnchorPane.bottomAnchor="309.0" AnchorPane.topAnchor="-10.0" />
         <Rectangle fx:id="hangman5" arcHeight="5.0" arcWidth="5.0" fill="#ebe7e4" height="53.0" layoutX="519.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
-        <Circle fx:id="hangman6" fill="WHITE" layoutX="523.0" layoutY="152.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" AnchorPane.topAnchor="125.0" />
+        <Circle fx:id="hangman6" fill="WHITE" layoutX="523.0" layoutY="152.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
         <Rectangle fx:id="hangman7" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="518.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
         <Rectangle fx:id="hangman10" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="502.0" layoutY="182.0" rotate="25.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="6.0" />
         <Rectangle fx:id="hangman11" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="538.0" layoutY="182.0" rotate="-25.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="6.0" />
