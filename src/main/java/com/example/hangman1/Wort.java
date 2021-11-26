@@ -25,7 +25,7 @@ public class Wort {
 
     public char[] selectRandomWord(){
         String[] s = readWordFile();
-        int zufall = (int) (Math.random()*(s.length-3))+3;
+        int zufall = (int) (Math.random()*(s.length-1));
         String wortString = s[zufall];
 
         char[] wortCharArray = new char[wortString.length()];
