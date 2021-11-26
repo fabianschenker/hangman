@@ -133,7 +133,7 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <AnchorPane fx:id="StartPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="startPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
