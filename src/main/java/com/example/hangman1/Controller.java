@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Modality;
@@ -35,11 +36,10 @@ public class Controller {
     @FXML
     private Button playAgainKnopf;
     @FXML
-    private Button startButton;
-    @FXML
     private TextField erratenesWort;
     @FXML
-    private Label welcomeLable;
+    private Pane StartPane;
+
 
     //Deklaration von benötigten Variablen
     private static char ein;
@@ -203,10 +203,7 @@ public class Controller {
     }
 
     private void makeInvisibleP() {
-        startButton.visibleProperty().set(false);
-        closeKnopf.visibleProperty().set(false);
-        welcomeLable.visibleProperty().set(false);
-        wortEingabeButton.visibleProperty().set(false);
+        StartPane.visibleProperty().set(false);
     }
 
     //Updaten der Hangmanfigur, abhängig vom counter
