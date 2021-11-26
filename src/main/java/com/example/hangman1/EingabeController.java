@@ -24,8 +24,31 @@ public class EingabeController {
     @FXML
     public GridPane eingabefenster;
 
-    public void onSaveButtonClicked(ActionEvent actionEvent) {
+    public void readList() {
+        try {
+            File file = new File(filePath);
+            FileReader f = new FileReader(filePath);
 
+            char[] c = new char[(int) file.length()];
+            f.read(c);
+            String s = new String(c);
+            String[] result = s.split("\r\n");
+
+            for (int i = 0; i < result.length; i++) {
+                stringList.add(result[i]);
+            }
+            System.out.println("File \"" + file.getName() + "\" erfolgreich eingelesen.");
+            System.out.println(stringList.size() + " Eintraege generiert.");
+
+        } catch (IOException e) {
+            System.err.println("Fehler beim Einlesen der Datei.");
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public void onSaveButtonClicked(ActionEvent actionEvent) {
+        stringList.clear();
+        readList();
         if (readEingabefeld()) {
             stringList.add(eingabefeld.getText().toUpperCase(Locale.ROOT));
             try {
@@ -57,6 +80,8 @@ public class EingabeController {
             eingabefeld.setText(sonder);
             return false;
         } else {
+            stringList.add(eingabe);
+            System.out.println(stringList.size() + " Eintraege generiert.");
             return true;
         }
     }
