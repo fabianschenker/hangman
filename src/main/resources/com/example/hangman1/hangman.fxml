@@ -13,8 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
+<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
     <children>
         <Label layoutX="295.0" layoutY="22.0" prefHeight="60.0" prefWidth="197.0" text="Hangman" textFill="#8a0000" AnchorPane.topAnchor="22.0">
             <font>
@@ -133,20 +132,29 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font name="Impact" size="64.0" />
-         </font>
-      </Label>
-      <Button fx:id="closeKnopf" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="443.0" layoutY="324.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER" AnchorPane.rightAnchor="160.0">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Button>
-      <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="183.0" text="Start" textAlignment="CENTER" AnchorPane.leftAnchor="160.0">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Button>
+      <AnchorPane fx:id="StartPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="WelcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Impact" size="64.0" />
+               </font>
+            </Label>
+            <Button fx:id="closeKnopf" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="552.0" layoutY="337.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="StartButton" alignment="CENTER" defaultButton="true" layoutX="65.0" layoutY="337.0" mnemonicParsing="false" onAction="#start" prefHeight="75.0" prefWidth="183.0" text="Start" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="wortEingabeButton" alignment="CENTER" defaultButton="true" layoutX="268.0" layoutY="337.0" mnemonicParsing="false" onAction="#onWortEingabeClicked" prefHeight="75.0" prefWidth="265.0" text="Wörter hinzufügen" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

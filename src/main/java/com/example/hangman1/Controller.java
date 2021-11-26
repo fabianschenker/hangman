@@ -34,11 +34,9 @@ public class Controller {
     @FXML
     private Button playAgainKnopf;
     @FXML
-    private Button StartButton;
-    @FXML
     private TextField erratenesWort;
     @FXML
-    private Label WelcomeLable;
+    private Pane StartPane;
 
 
     //Deklaration von benötigten Variablen
@@ -209,9 +207,7 @@ public class Controller {
     }
 
     private void makeInvisibleP() {
-        StartButton.visibleProperty().set(false);
-        closeKnopf.visibleProperty().set(false);
-        WelcomeLable.visibleProperty().set(false);
+        StartPane.visibleProperty().set(false);
     }
 
     //Updaten der Hangmanfigur, abhängig vom counter
