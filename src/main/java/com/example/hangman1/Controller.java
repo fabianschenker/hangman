@@ -7,27 +7,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+import java.util.Vector;
+
 public class Controller {
 
     //Deklaration der Variablen aus der hangman.fxml Datei
-    @FXML
     public Button playAgainKnopfMenu;
-    @FXML
     public Button helpKnopfMenu;
-    @FXML
     public Button rulesKnopfMenu;
-    @FXML
     public Button closeKnopfMenu;
-    @FXML
     public Button closeKnopf;
-    @FXML
     public Button wortEingabeButton;
+    Stage primaryStage;
     @FXML
     private TextField meineEingabe;
     @FXML
@@ -35,11 +34,12 @@ public class Controller {
     @FXML
     private Button playAgainKnopf;
     @FXML
-    private Button startButton;
+    private Button StartButton;
     @FXML
     private TextField erratenesWort;
     @FXML
-    private Label welcomeLable;
+    private Label WelcomeLable;
+
 
     //Deklaration von benötigten Variablen
     private static char ein;
@@ -50,6 +50,12 @@ public class Controller {
     private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false; //setzen des StartButton gedrückt auf nicht wahr
+
+
+    public void init(Stage primaryStage, Scene mainScene) {
+        this.primaryStage = primaryStage;
+    }
+
 
     //start und restart des programms
     @FXML
@@ -203,10 +209,9 @@ public class Controller {
     }
 
     private void makeInvisibleP() {
-        startButton.visibleProperty().set(false);
+        StartButton.visibleProperty().set(false);
         closeKnopf.visibleProperty().set(false);
-        welcomeLable.visibleProperty().set(false);
-        wortEingabeButton.visibleProperty().set(false);
+        WelcomeLable.visibleProperty().set(false);
     }
 
     //Updaten der Hangmanfigur, abhängig vom counter
