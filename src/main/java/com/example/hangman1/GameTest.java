@@ -40,11 +40,7 @@ public class GameTest {
                 trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
                 System.out.println(trueLetters);
 
-
-
-
-
-                for (boolean shown : visible){
+         for (boolean shown : visible){
                     if(shown){
                         victory = true;
                     }
@@ -62,11 +58,8 @@ public class GameTest {
 
             else {
                 falseLetters.add(input);
-
                 System.out.println(ScreenOutput.buildFalse(falseLetters));
-
                 System.out.println(falseLetters.size());
-
 
                 if(falseLetters.size()==11){
                     gameOver = true;

@@ -5,7 +5,6 @@ import java.util.Vector;
 
 public class Vergleich {
 
-
     public static boolean vergleich(char[] w, char c) {
         int counter = 0;
         for (char test : w) {
