@@ -12,7 +12,7 @@ public class RunGame extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RunGame.class.getResource("hangman.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 787, 482);
+        Scene scene = new Scene(fxmlLoader.load(), 1280, 860);
         stage.setScene(scene);
         stage.show();
     }
