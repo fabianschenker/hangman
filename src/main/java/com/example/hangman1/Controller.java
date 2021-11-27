@@ -17,18 +17,25 @@ import javafx.stage.StageStyle;
 public class Controller {
 
     //Deklaration der Variablen aus der hangman.fxml Datei
+    
     @FXML
-    public Button playAgainKnopfMenu;
+    public Button wortEingabeButton;
     @FXML
-    public Button helpKnopfMenu;
+    public MenuItem wortEingabeButton2;
     @FXML
-    public Button rulesKnopfMenu;
+    public MenuItem playAgainKnopfMenu;
     @FXML
-    public Button closeKnopfMenu;
+    public MenuItem closeKnopfMenu;
+    @FXML
+    public MenuItem helpKnopfMenu;
+    @FXML
+    public MenuItem rulesKnopfMenu;
     @FXML
     public Button closeKnopf;
     @FXML
-    public Button wortEingabeButton;
+    public Button startButton;
+    @FXML
+    public Button enter;
     @FXML
     private TextField meineEingabe;
     @FXML
@@ -336,6 +343,5 @@ public class Controller {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
