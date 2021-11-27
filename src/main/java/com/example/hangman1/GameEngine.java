@@ -5,9 +5,9 @@ import java.util.*;
 
 public class GameEngine {
 
-    public static String falsch = "";
+    public static String falsch;
     public static String richtig = Controller.getRichtig();
-    public static int counter = 0;
+    public static int counter;
     public static boolean [] visible;
     public static Vector<Character> falseLetters = new Vector();
 
