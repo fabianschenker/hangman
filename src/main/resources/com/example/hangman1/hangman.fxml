@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="860.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
+<BorderPane prefHeight="860.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman1.Controller">
    <center>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
           <children>
@@ -28,7 +28,7 @@
                   <Font size="24.0" />
                </font>
             </TextField>
-              <Button fx:id="enter" layoutX="315.0" layoutY="730.0" mnemonicParsing="false" onAction="#readEingabe" prefHeight="51.0" prefWidth="100.0" text="Enter">
+              <Button fx:id="enterButton" layoutX="315.0" layoutY="730.0" mnemonicParsing="false" onAction="#readEingabe" prefHeight="51.0" prefWidth="100.0" text="Enter">
                <font>
                   <Font size="24.0" />
                </font>
@@ -57,55 +57,59 @@
                <children>
                     <Rectangle fx:id="hangman4" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="87.0" layoutX="342.0" layoutY="40.0" rotate="-45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="12.0" />
                     <Rectangle fx:id="hangman2" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="361.0" layoutX="408.0" layoutY="184.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="28.0" />
+                    <Rectangle fx:id="hangman1" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="40.0" layoutX="344.0" layoutY="665.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="156.0" />
                     <Rectangle fx:id="hangman3" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="183.0" layoutX="277.0" layoutY="-67.0" rotate="90.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
                     <Rectangle fx:id="hangman5" arcHeight="5.0" arcWidth="5.0" fill="#ebe7e4" height="53.0" layoutX="140.0" layoutY="30.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
                     <Circle fx:id="hangman6" fill="WHITE" layoutX="142.0" layoutY="154.0" radius="27.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
                     <Rectangle fx:id="hangman7" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="138.0" layoutY="246.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="10.0" />
-                    <Rectangle fx:id="hangman10" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="108.0" layoutY="256.0" rotate="25.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="6.0" />
-                    <Rectangle fx:id="hangman11" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="169.0" layoutY="256.0" rotate="-25.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="6.0" />
                     <Rectangle fx:id="hangman8" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="123.0" layoutY="380.0" rotate="12.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="7.0" />
-                    <Rectangle fx:id="hangman1" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="40.0" layoutX="344.0" layoutY="665.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="156.0" />
                     <Rectangle fx:id="hangman9" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="159.0" layoutY="380.0" rotate="-12.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="7.0" />
-            
-                  <Rectangle fx:id="hangmanD1" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="160.0" layoutY="130.0" rotate="45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
-                  <Rectangle fx:id="hangmanD2" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="124.0" layoutY="130.0" rotate="-45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
-                  <Rectangle fx:id="hangmanD3" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="124.0" layoutY="130.0" rotate="45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
-                  <Rectangle fx:id="hangmanD4" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="160.0" layoutY="130.0" rotate="-45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="5.0" />
+                    <Rectangle fx:id="hangman10" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="108.0" layoutY="256.0" rotate="25.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="6.0" />
+                  <AnchorPane fx:id="hangman11" layoutX="116.94364929199219" layoutY="122.94364929199219" visible="false">
+                     <children>
+                  
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="41.0" layoutY="7.0" rotate="45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutY="7.071075439453125" rotate="-45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutY="7.0" rotate="45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="40.0" layoutY="7.071075439453125" rotate="-45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="55.0" layoutY="133.0" rotate="-25.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" width="6.0" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
-            <Label fx:id="gewonnen" layoutX="469.0" layoutY="397.0" text="Gewonnen" textAlignment="CENTER" textFill="#00d315" visible="false">
+            <Label fx:id="gewonnen" layoutX="386.0" layoutY="377.0" text="Gewonnen" textAlignment="CENTER" textFill="#00d315" visible="false">
+               <font>
+                  <Font name="Impact" size="130.0" />
+               </font>
+            </Label>
+            <Label fx:id="verloren" layoutX="408.0" layoutY="377.0" text="Verloren" textAlignment="CENTER" textFill="#fc3306" visible="false">
+               <font>
+                  <Font name="Impact" size="130.0" />
+               </font>
+            </Label>
+            <Label fx:id="ungueltigeEingabe" layoutX="502.0" layoutY="398.0" text="Ungültige Eingabe" textAlignment="CENTER" textFill="#dd0000" visible="false">
                <font>
                   <Font name="Impact" size="96.0" />
                </font>
             </Label>
-            <Label fx:id="ungueltigeEingabe" layoutX="499.0" layoutY="427.0" text="Ungültige Eingabe" textAlignment="CENTER" textFill="#dd0000" visible="false">
-               <font>
-                  <Font name="Impact" size="48.0" />
-               </font>
-            </Label>
-            <Label fx:id="doppelteEingabe" layoutX="506.0" layoutY="427.0" text="Doppelte Eingabe" textAlignment="CENTER" textFill="#dd0000" visible="false">
-               <font>
-                  <Font name="Impact" size="48.0" />
-               </font>
-            </Label>
-            <Label fx:id="verloren" layoutX="495.0" layoutY="397.0" text="Verloren" textAlignment="CENTER" textFill="#fc3306" visible="false">
+            <Label fx:id="doppelteEingabe" layoutX="517.0" layoutY="398.0" text="Doppelte Eingabe" textAlignment="CENTER" textFill="#dd0000" visible="false">
                <font>
                   <Font name="Impact" size="96.0" />
                </font>
             </Label>
-            <Button fx:id="playAgainKnopf" alignment="CENTER" defaultButton="true" layoutX="596.0" layoutY="730.0" mnemonicParsing="false" onAction="#restart" prefHeight="51.0" text="Play Again" textAlignment="CENTER" visible="false">
+            <Button fx:id="playAgainButton" alignment="CENTER" defaultButton="true" layoutX="553.0" layoutY="717.0" mnemonicParsing="false" onAction="#start" prefHeight="51.0" text="Play Again" textAlignment="CENTER" visible="false">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Button>
-            <AnchorPane fx:id="startPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="startPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Label fx:id="welcomeLable" alignment="CENTER" prefHeight="482.0" prefWidth="787.0" style="-fx-background-color: black;" text="Wilkommen zu Hangman" textFill="#8a0000" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="welcomeLable" alignment="CENTER" layoutX="106.0" layoutY="323.0" prefHeight="190.0" prefWidth="1070.0" text="Wilkommen zu Hangman" textFill="#8a0000">
                      <font>
                         <Font name="Impact" size="96.0" />
                      </font>
                   </Label>
-                  <Button fx:id="closeKnopf" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="792.0" layoutY="600.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER">
+                  <Button fx:id="closeButton" alignment="CENTER" cancelButton="true" defaultButton="true" layoutX="792.0" layoutY="600.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="75.0" prefWidth="183.0" text="Close" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -130,7 +134,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
-                  <MenuItem fx:id="playAgainKnopfMenu" mnemonicParsing="false" onAction="#restart" text="Restart">
+                  <MenuItem fx:id="playAgainKnopfMenu" mnemonicParsing="false" onAction="#start" text="Restart">
                      <accelerator>
                         <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator>
@@ -145,7 +149,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem fx:id="wortEingabeButton2" mnemonicParsing="false" onAction="#onWortEingabeClicked" text="Worteingabe">
+              <MenuItem fx:id="wortEingabeKnopfMenu" mnemonicParsing="false" onAction="#onWortEingabeClicked" text="Worteingabe">
                      <accelerator>
                         <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator>
