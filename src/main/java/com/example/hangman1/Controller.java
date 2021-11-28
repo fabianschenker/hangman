@@ -30,11 +30,11 @@ public class Controller {
 
 
     //Deklaration von benötigten Variablen
-    private static char ein;
-    private static int counter;
+    public static char ein;
+    public static int counter;
     private static Wort wort = new Wort();
-    private static char[] random;
-    private static char[] underlines;
+    public static char[] random;
+    public static char[] underlines;
     private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false; //setzen des StartButton gedrückt auf nicht wahr
@@ -230,29 +230,8 @@ public class Controller {
         GameEngine.richtig = richtig;
     }
 
-    //Getter
-    public static char getEin() {
-        return ein;
-    }
 
-    public static char[] getRandom() {
-        return random;
-    }
-
-    public static char[] getUnderlines() {
-        return underlines;
-    }
-
-    public static String getRichtig() {
-        return richtig;
-    }
-
-    //Setter
-    public static void setCounter() {
-        counter++;
-    }
-
-
+    //Menu Fenster und Close und Wörter hinzufügen Funktion
     public void showHelp(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
