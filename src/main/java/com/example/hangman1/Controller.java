@@ -232,7 +232,7 @@ public class Controller {
         GameEngine.richtig = richtig;
     }
 
-    //Menu Fenster und Close und Wörter hinzufügen Funktion
+    //Menu Fenster um die Hilfen anzuzeigen
     public void showHelp() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
@@ -244,7 +244,7 @@ public class Controller {
 
         alert.showAndWait();
     }
-
+    //Menu Fenster um die Regeln anzuzeigen
     public void showRules() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Regeln");
@@ -262,11 +262,11 @@ public class Controller {
 
         alert.showAndWait();
     }
-
+    //Menu Option um die Applikation zu schliessen
     public void closeApp() {
         Platform.exit();
     }
-
+    //Startet das Menu zur Worteingabe
     public void onWortEingabeClicked() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("worteingabe.fxml"));

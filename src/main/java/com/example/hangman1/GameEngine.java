@@ -10,7 +10,7 @@ public class GameEngine {
     public static int counter;
     public static boolean[] visible;
     public static Vector<Character> falseLetters = new Vector<>();
-
+    //Testen des eingegebenen Buchstabens gegen das gesuchte Wort
     public static void test() {
         char[][] wordToGuess = new char[2][];
         wordToGuess[0] = Controller.random;
@@ -40,11 +40,11 @@ public class GameEngine {
             }
         }
     }
-
+    //Gibt true aus, falls das Spiel gewonnen wurde
     static boolean gewonnen() {
         return richtig.length() == counter;
     }
-
+    //Überprüfung ob der eingegebene Buchstabe bereits vorhanden ist
     static void doppelt() {
         for (int i = 0; i < richtig.length(); i++) {
             if (richtig.charAt(i) == Controller.ein) {

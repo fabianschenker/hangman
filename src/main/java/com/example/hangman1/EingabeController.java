@@ -24,7 +24,7 @@ public class EingabeController {
     public TextField eingabefeld;
     @FXML
     public GridPane eingabefenster;
-
+    //Einlesen der .txt Datei
     public void readList() {
         try {
             File file = new File(filePath);
@@ -44,7 +44,7 @@ public class EingabeController {
             System.err.println(e.getMessage());
         }
     }
-
+    //Speichern des eingegebenen Wörter in der .txt Datei
     public void onSaveButtonClicked() {
         stringList.clear();
         readList();
@@ -58,7 +58,7 @@ public class EingabeController {
         }
 
     }
-
+    //Zwischenspeichern eines einzelnen eingegebenen Worts in einem Array
     public boolean readEingabefeld() {
         String eingabe = eingabefeld.getText().toUpperCase(Locale.ROOT);
         String doppel = "-- doppelter Eintrag --";
@@ -84,7 +84,7 @@ public class EingabeController {
             return true;
         }
     }
-
+    //Exception für das Speichern der eingegebenen Wörter
     public void saveToTxt() throws IOException {
 
         try(FileWriter fw = new FileWriter(filePath, true);
@@ -99,7 +99,7 @@ public class EingabeController {
             System.err.println(e.getMessage());
         }
     }
-
+    //Schliessen des Fensters, resp. zurück zum Hauptmenü
     public void onBackButtonClicked(ActionEvent actionEvent) {
         final Node source = (Node) actionEvent.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
