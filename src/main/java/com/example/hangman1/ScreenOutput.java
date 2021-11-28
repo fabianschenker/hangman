@@ -7,13 +7,8 @@ public class ScreenOutput {
 
         for (int i = 0; i< falseVector.size(); i++){
             f.append(falseVector.get(i));
-            if(falseVector.size()>1){
-            if(i < falseVector.size()-1){
-            f.append(" ");
-                }
-            }
+            if(falseVector.size()>1) if (i < falseVector.size() - 1) f.append(" ");
         }
-
         return f.toString();
     }
     //Macht die entsprechende Position eines richtig erratenen bBuchstabens sichtbar
@@ -22,8 +17,8 @@ public class ScreenOutput {
             visible[position.get(i)] = true;
         }
         return visible;
-
     }
+
     //Gibt einen String aus richtig geratenen Buchstaben zurück
     public static String buildTrue(char[][] wordToGuess, boolean[] visible) {
 
@@ -32,8 +27,6 @@ public class ScreenOutput {
                 wordToGuess[1][i] = wordToGuess[0][i];
             }
         }
-
         return new String(wordToGuess[1]);
     }
-
 }

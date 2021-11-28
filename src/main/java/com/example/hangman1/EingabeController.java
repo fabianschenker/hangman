@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -16,8 +17,8 @@ import java.util.regex.Pattern;
 
 public class EingabeController {
 
-    private static List<String> stringList = new ArrayList<>();
-    private String filePath = "src/main/java/com/example/hangman1/wortdatenbank.txt";
+    private static final List<String> stringList = new ArrayList<>();
+    private final String filePath = "src/main/java/com/example/hangman1/wortdatenbank.txt";
 
     @FXML
     public TextField eingabefeld;
@@ -34,9 +35,7 @@ public class EingabeController {
             String s = new String(c);
             String[] result = s.split("\r\n");
 
-            for (int i = 0; i < result.length; i++) {
-                stringList.add(result[i]);
-            }
+            stringList.addAll(Arrays.asList(result));
             System.out.println("File \"" + file.getName() + "\" erfolgreich eingelesen.");
             System.out.println(stringList.size() + " Eintraege generiert.");
 
@@ -45,8 +44,9 @@ public class EingabeController {
             System.err.println(e.getMessage());
         }
     }
+
     //Hinzufügen der Wörter zur eingelesenen .txt Datei
-    public void onSaveButtonClicked(ActionEvent actionEvent) {
+    public void onSaveButtonClicked() {
         stringList.clear();
         readList();
         if (readEingabefeld()) {

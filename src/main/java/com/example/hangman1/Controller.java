@@ -1,12 +1,14 @@
 package com.example.hangman1;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -18,58 +20,47 @@ public class Controller {
 
     //Deklaration der Variablen aus der hangman.fxml Datei
     @FXML
-    public Button playAgainKnopfMenu;
-    @FXML
-    public Button helpKnopfMenu;
-    @FXML
-    public Button rulesKnopfMenu;
-    @FXML
-    public Button closeKnopfMenu;
-    @FXML
-    public Button closeKnopf;
-    @FXML
-    public Button wortEingabeButton;
-    @FXML
     private TextField meineEingabe;
     @FXML
     private TextField falscheBuchstaben;
     @FXML
-    private Button playAgainKnopf;
-    @FXML
     private TextField erratenesWort;
+    @FXML
+    private Button playAgainButton;
     @FXML
     private Pane startPane;
 
 
     //Deklaration von benötigten Variablen
-    private static char ein;
-    private static int counter;
-    private static Wort wort = new Wort();
-    private static char[] random;
-    private static char[] underlines;
+    public static char ein;
+    public static int counter;
+    private static final Wort wort = new Wort();
+    public static char[] random;
+    public static char[] underlines;
     private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false; //setzen des StartButton gedrückt auf nicht wahr
 
+
     //start und restart des programms
     @FXML
-    public void start(ActionEvent actionEvent) {
+    public void start() {
+        makeInvisibleB(playAgainButton);
+        makeInvisibleP(startPane);
         counter = 0;
         startProgramm = true;
         random = wort.selectRandomWord();
-        underlines = wort.buildUnderlines(random);
+        underlines = Wort.buildUnderlines(random);
         richtig = new String(underlines);
         erratenesWort.setText(richtig);
-        meineEingabe.setText("");
-        makeInvisibleP();
         fertig = false;
+        setGameEngine();
+        resetProgres();
+        falscheBuchstaben.setText("");
     }
 
     @FXML
-    public void restart(ActionEvent actionEvent) {
-        start(actionEvent);
-        resetProgres();
-        falscheBuchstaben.setText("");
+    public void setGameEngine() {
         GameEngine.falseLetters.clear();
         GameEngine.falsch = "";
         GameEngine.counter = 0;
@@ -78,19 +69,44 @@ public class Controller {
 
     //Aktion wenn Enter gedrückt wird
     @FXML
-    public void readEingabe(ActionEvent actionEvent) {
+    public void readEingabe() {
         System.out.println("Enter gedrückt");
         if (counter < 11 && startProgramm && !fertig) {
-            String e = meineEingabe.getText();
-            e = e.toUpperCase();
+            String e = meineEingabe.getText().toUpperCase();
             ein = e.charAt(0);
-            eingabeKontrollieren(ein);
-            meineEingabe.setText("");
+            aufraeumen();
+            eingabeKontrollieren();
             progresImage();
             erratenesWort.setText(GameEngine.richtig);
             falscheBuchstaben.setText(GameEngine.falsch);
             victory();
-            System.out.println("counter: " + counter);
+        }
+    }
+
+    private void aufraeumen() {
+        makeInvisibleL(doppelteEingabe);
+        makeInvisibleL(ungueltigeEingabe);
+        meineEingabe.setText("");
+    }
+
+    //Anzeige gültiger/ungültiger Eingabe
+    public void eingabeKontrollieren() {
+        if ((int) ein > 64 && (int) ein < 91) {
+            doppelteBuchstaben();
+            GameEngine.test();
+        } else {
+            makeVisibleL(ungueltigeEingabe);
+        }
+    }
+    //Anzeige doppelter Eingabe
+    private void doppelteBuchstaben() {
+        String userEin = String.valueOf(ein);
+        if (String.valueOf(GameEngine.richtig).contains(userEin) ||
+                String.valueOf(GameEngine.falsch).contains(userEin)) {
+            if (String.valueOf(GameEngine.richtig).contains(userEin)) {
+                GameEngine.doppelt();
+            }
+            makeVisibleL(doppelteEingabe);
         }
     }
 
@@ -98,32 +114,7 @@ public class Controller {
         fertig = GameEngine.gewonnen();
         if (fertig) {
             makeVisibleL(gewonnen);
-            makeVisibleB(playAgainKnopf);
-        }
-    }
-    //Anzeige gültiger/ungültiger Eingabe
-    public void eingabeKontrollieren(char e) {
-        if ((int) e > 64 && (int) e < 91) {
-            makeInvisibleL(ungueltigeEingabe);
-            doppelteBuchstaben();
-            GameEngine.test();
-        } else {
-            makeVisibleL(ungueltigeEingabe);
-            makeInvisibleL(doppelteEingabe);
-        }
-    }
-    //Anzeige doppelter Eingabe
-    private void doppelteBuchstaben() {
-        String userEin = String.valueOf(ein);
-
-        if (String.valueOf(GameEngine.richtig).contains(userEin) ||
-                String.valueOf(GameEngine.falsch).contains(userEin)) {
-            if (String.valueOf(GameEngine.richtig).contains(userEin)) {
-                GameEngine.doppelt();
-            }
-            makeVisibleL(doppelteEingabe);
-        } else {
-            makeInvisibleL(doppelteEingabe);
+            makeVisibleB(playAgainButton);
         }
     }
 
@@ -150,15 +141,7 @@ public class Controller {
     @FXML
     private Rectangle hangman10;
     @FXML
-    private Rectangle hangman11;
-    @FXML
-    private Rectangle hangmanD1;
-    @FXML
-    private Rectangle hangmanD4;
-    @FXML
-    private Rectangle hangmanD3;
-    @FXML
-    private Rectangle hangmanD2;
+    private Pane hangman11;
     @FXML
     private Label gewonnen;
     @FXML
@@ -173,37 +156,32 @@ public class Controller {
     private void makeVisibleR(Rectangle r) {
         r.visibleProperty().set(true);
     }
-
     private void makeVisibleC(Circle c) {
         c.visibleProperty().set(true);
     }
-
     private void makeVisibleL(Label l) {
         l.visibleProperty().set(true);
     }
-
     private void makeVisibleB(Button b) {
         b.visibleProperty().set(true);
     }
-
+    private void makeVisibleP(Pane p) {
+        p.visibleProperty().set(true);
+    }
     private void makeInvisibleR(Rectangle r) {
         r.visibleProperty().set(false);
     }
-
     private void makeInvisibleC(Circle c) {
         c.visibleProperty().set(false);
     }
-
     private void makeInvisibleL(Label l) {
         l.visibleProperty().set(false);
     }
-
     private void makeInvisibleB(Button b) {
         b.visibleProperty().set(false);
     }
-
-    private void makeInvisibleP() {
-        startPane.visibleProperty().set(false);
+    private void makeInvisibleP(Pane p) {
+        p.visibleProperty().set(false);
     }
 
     //Updaten der Hangmanfigur, abhängig vom counter
@@ -229,19 +207,14 @@ public class Controller {
         } else if (counter == 10) {
             makeVisibleR(hangman10);
         } else if (counter == 11) {
-            makeVisibleR(hangman11);
-            makeVisibleR(hangmanD1);
-            makeVisibleR(hangmanD2);
-            makeVisibleR(hangmanD3);
-            makeVisibleR(hangmanD4);
+            makeVisibleP(hangman11);
             makeVisibleL(verloren);
-            makeVisibleB(playAgainKnopf);
+            makeVisibleB(playAgainButton);
         }
     }
 
     //Zurücksetzen des Fensters
     private void resetProgres() {
-        counter = 0;
         makeInvisibleR(hangman1);
         makeInvisibleR(hangman2);
         makeInvisibleR(hangman3);
@@ -252,44 +225,16 @@ public class Controller {
         makeInvisibleR(hangman8);
         makeInvisibleR(hangman9);
         makeInvisibleR(hangman10);
-        makeInvisibleR(hangman11);
-        makeInvisibleR(hangmanD1);
-        makeInvisibleR(hangmanD2);
-        makeInvisibleR(hangmanD3);
-        makeInvisibleR(hangmanD4);
+        makeInvisibleP(hangman11);
         makeInvisibleL(verloren);
         makeInvisibleL(gewonnen);
-        makeInvisibleL(ungueltigeEingabe);
-        makeInvisibleB(playAgainKnopf);
         GameEngine.counter = 0;
         GameEngine.falsch = "";
         GameEngine.richtig = richtig;
     }
 
-    //Getter
-    public static char getEin() {
-        return ein;
-    }
-
-    public static char[] getRandom() {
-        return random;
-    }
-
-    public static char[] getUnderlines() {
-        return underlines;
-    }
-
-    public static String getRichtig() {
-        return richtig;
-    }
-
-    //Setter
-    public static void setCounter() {
-        counter++;
-    }
-
-    //Foolgende Hilfestellungen werden angezeigt bei Bedarf
-    public void showHelp(ActionEvent actionEvent) {
+    //Menu Fenster und Close und Wörter hinzufügen Funktion
+    public void showHelp() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
         alert.setHeaderText("Du brauchst Hilfe?");
@@ -300,8 +245,10 @@ public class Controller {
 
         alert.showAndWait();
     }
+
     //Folgende Regeln werden angezeigt bei Bedarf
-    public void showRules(ActionEvent actionEvent) {
+    public void showRules() {
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Regeln");
         alert.setHeaderText("Die Spielregeln:");
@@ -318,24 +265,27 @@ public class Controller {
 
         alert.showAndWait();
     }
+
     //Schliessen des Spiels
-    public void closeApp(ActionEvent actionEvent) {
+    public void closeApp() {
         Platform.exit();
     }
+      
     //Aufrufen der zusätzlichen Worteingabe
-    public void onWortEingabeClicked(ActionEvent actionEvent) {
+    public void onWortEingabeClicked() {
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("worteingabe.fxml"));
             Parent root1 = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.initStyle(StageStyle.DECORATED);
-            stage.setTitle("");
-            stage.setScene(new Scene(root1));
-            stage.show();
+            Stage eingabeStage = new Stage();
+            eingabeStage.initModality(Modality.WINDOW_MODAL);
+            eingabeStage.initStyle(StageStyle.DECORATED);
+            eingabeStage.setTitle("");
+            eingabeStage.setScene(new Scene(root1));
+            eingabeStage.show();
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

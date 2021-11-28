@@ -29,23 +29,19 @@ public class GameTest {
         while(!gameOver && !victory){
             //get input from INPUT-Class TBD
             Scanner inputKey = new Scanner(System.in);
-            String key = inputKey.next();
+            String key = inputKey.next().toUpperCase();
             input = key.charAt(0);
-
             System.out.println(input);
 
             if (Vergleich.vergleich(wordToGuess[0], input)){
                 position = Vergleich.position (wordToGuess[0], input);
-
+                System.out.println(position);
                 visible =  ScreenOutput.visible(visible, position);
                 trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
                 System.out.println(trueLetters);
 
-                //add build true once it is done
-
-
-                for (int i = 0; i< visible.length; i++){
-                    if(visible[i]){
+         for (boolean shown : visible){
+                    if(shown){
                         victory = true;
                     }
                     else{
@@ -62,12 +58,8 @@ public class GameTest {
 
             else {
                 falseLetters.add(input);
-                //add vector to Textfield falsche Buchstaben
                 System.out.println(ScreenOutput.buildFalse(falseLetters));
-
                 System.out.println(falseLetters.size());
-                //add function to increment hangman
-                //to be added later
 
                 if(falseLetters.size()==11){
                     gameOver = true;

@@ -25,7 +25,9 @@ public class Wort {
     public char[] selectRandomWord(){
         //Methode zur Auswahl eines zufälligen Worts aus "strArray" von readWordFile
         String[] s = readWordFile();
-        int zufall = (int) (Math.random()*(s.length-1));
+        /* Generierung ganzer Zahl zwischen 0 und 99 durch abrunden
+            int zufallsZahl1 = (int)(Math.random()*100); */
+        int zufall = (int) (Math.random()*(s.length));
         String wortString = s[zufall];
         //Speicherung des zufällig ausgewählten Worts in einem char-Array
         char[] wortCharArray = new char[wortString.length()];
@@ -43,16 +45,5 @@ public class Wort {
             underline[i] = '_';
         }
         return underline;
-    }
-
-    public void printWord(char[] c){
-        String wordStr = new String(c);
-        System.out.println(wordStr);
-    }
-
-
-    public void printUnterline(char[] c){
-        String unterlineStr = new String(c);
-        System.out.println(unterlineStr);
     }
 }
