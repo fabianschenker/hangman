@@ -89,7 +89,6 @@ public class Controller {
         meineEingabe.setText("");
     }
 
-    //Anzeige gültiger/ungültiger Eingabe
     public void eingabeKontrollieren() {
         if ((int) ein > 64 && (int) ein < 91) {
             doppelteBuchstaben();
@@ -98,7 +97,7 @@ public class Controller {
             makeVisibleL(ungueltigeEingabe);
         }
     }
-    //Anzeige doppelter Eingabe
+
     private void doppelteBuchstaben() {
         String userEin = String.valueOf(ein);
         if (String.valueOf(GameEngine.richtig).contains(userEin) ||
@@ -246,9 +245,7 @@ public class Controller {
         alert.showAndWait();
     }
 
-    //Folgende Regeln werden angezeigt bei Bedarf
     public void showRules() {
-
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Regeln");
         alert.setHeaderText("Die Spielregeln:");
@@ -266,14 +263,11 @@ public class Controller {
         alert.showAndWait();
     }
 
-    //Schliessen des Spiels
     public void closeApp() {
         Platform.exit();
     }
-      
-    //Aufrufen der zusätzlichen Worteingabe
-    public void onWortEingabeClicked() {
 
+    public void onWortEingabeClicked() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("worteingabe.fxml"));
             Parent root1 = fxmlLoader.load();
