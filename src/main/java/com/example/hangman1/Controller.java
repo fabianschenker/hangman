@@ -1,12 +1,14 @@
 package com.example.hangman1;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -30,11 +32,11 @@ public class Controller {
 
 
     //Deklaration von benötigten Variablen
-    public static char ein;
-    public static int counter;
-    private static Wort wort = new Wort();
-    public static char[] random;
-    public static char[] underlines;
+    private static char ein;
+    private static int counter;
+    private static final Wort wort = new Wort();
+    private static char[] random;
+    private static char[] underlines;
     private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false; //setzen des StartButton gedrückt auf nicht wahr
@@ -42,13 +44,13 @@ public class Controller {
 
     //start und restart des programms
     @FXML
-    public void start(ActionEvent actionEvent) {
+    public void start() {
         makeInvisibleB(playAgainButton);
         makeInvisibleP(startPane);
         counter = 0;
         startProgramm = true;
         random = wort.selectRandomWord();
-        underlines = wort.buildUnderlines(random);
+        underlines = Wort.buildUnderlines(random);
         richtig = new String(underlines);
         erratenesWort.setText(richtig);
         fertig = false;
@@ -67,7 +69,7 @@ public class Controller {
 
     //Aktion wenn Enter gedrückt wird
     @FXML
-    public void readEingabe(ActionEvent actionEvent) {
+    public void readEingabe() {
         System.out.println("Enter gedrückt");
         if (counter < 11 && startProgramm && !fertig) {
             String e = meineEingabe.getText().toUpperCase();
@@ -230,9 +232,8 @@ public class Controller {
         GameEngine.richtig = richtig;
     }
 
-
     //Menu Fenster und Close und Wörter hinzufügen Funktion
-    public void showHelp(ActionEvent actionEvent) {
+    public void showHelp() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
         alert.setHeaderText("Du brauchst Hilfe?");
@@ -244,7 +245,7 @@ public class Controller {
         alert.showAndWait();
     }
 
-    public void showRules(ActionEvent actionEvent) {
+    public void showRules() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Regeln");
         alert.setHeaderText("Die Spielregeln:");
@@ -262,20 +263,21 @@ public class Controller {
         alert.showAndWait();
     }
 
-    public void closeApp(ActionEvent actionEvent) {
+    public void closeApp() {
         Platform.exit();
     }
 
-    public void onWortEingabeClicked(ActionEvent actionEvent) {
+    public void onWortEingabeClicked() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("worteingabe.fxml"));
             Parent root1 = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.initModality(Modality.WINDOW_MODAL);
-            stage.initStyle(StageStyle.DECORATED);
-            stage.setTitle("");
-            stage.setScene(new Scene(root1));
-            stage.show();
+            Stage eingabeStage = new Stage();
+            eingabeStage.initModality(Modality.WINDOW_MODAL);
+            eingabeStage.initStyle(StageStyle.DECORATED);
+            eingabeStage.setTitle("");
+            eingabeStage.setScene(new Scene(root1));
+            eingabeStage.show();
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
