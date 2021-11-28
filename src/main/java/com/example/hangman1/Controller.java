@@ -101,7 +101,7 @@ public class Controller {
             makeVisibleB(playAgainKnopf);
         }
     }
-
+    //Anzeige gültiger/ungültiger Eingabe
     public void eingabeKontrollieren(char e) {
         if ((int) e > 64 && (int) e < 91) {
             makeInvisibleL(ungueltigeEingabe);
@@ -112,7 +112,7 @@ public class Controller {
             makeInvisibleL(doppelteEingabe);
         }
     }
-
+    //Anzeige doppelter Eingabe
     private void doppelteBuchstaben() {
         String userEin = String.valueOf(ein);
 
@@ -288,7 +288,7 @@ public class Controller {
         counter++;
     }
 
-
+    //Foolgende Hilfestellungen werden angezeigt bei Bedarf
     public void showHelp(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");
@@ -300,7 +300,7 @@ public class Controller {
 
         alert.showAndWait();
     }
-
+    //Folgende Regeln werden angezeigt bei Bedarf
     public void showRules(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Regeln");
@@ -318,11 +318,11 @@ public class Controller {
 
         alert.showAndWait();
     }
-
+    //Schliessen des Spiels
     public void closeApp(ActionEvent actionEvent) {
         Platform.exit();
     }
-
+    //Aufrufen der zusätzlichen Worteingabe
     public void onWortEingabeClicked(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("worteingabe.fxml"));
