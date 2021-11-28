@@ -32,11 +32,11 @@ public class Controller {
 
 
     //Deklaration von benötigten Variablen
-    private static char ein;
-    private static int counter;
+    public static char ein;
+    public static int counter;
     private static final Wort wort = new Wort();
-    private static char[] random;
-    private static char[] underlines;
+    public static char[] random;
+    public static char[] underlines;
     private static boolean fertig;
     private static String richtig;
     boolean startProgramm = false; //setzen des StartButton gedrückt auf nicht wahr
