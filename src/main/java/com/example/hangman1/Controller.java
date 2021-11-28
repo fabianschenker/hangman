@@ -232,29 +232,7 @@ public class Controller {
         GameEngine.richtig = richtig;
     }
 
-    //Getter
-    public static char getEin() {
-        return ein;
-    }
-
-    public static char[] getRandom() {
-        return random;
-    }
-
-    public static char[] getUnderlines() {
-        return underlines;
-    }
-
-    public static String getRichtig() {
-        return richtig;
-    }
-
-    //Setter
-    public static void setCounter() {
-        counter++;
-    }
-
-
+    //Menu Fenster und Close und Wörter hinzufügen Funktion
     public void showHelp() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Help is here");

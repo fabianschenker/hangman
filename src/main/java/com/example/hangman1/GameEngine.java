@@ -6,65 +6,48 @@ import java.util.*;
 public class GameEngine {
 
     public static String falsch;
-    public static String richtig = Controller.getRichtig();
+    public static String richtig;
     public static int counter;
-    public static boolean [] visible;
-    public static Vector<Character> falseLetters = new Vector();
+    public static boolean[] visible;
+    public static Vector<Character> falseLetters = new Vector<>();
 
     public static void test() {
         char[][] wordToGuess = new char[2][];
-        wordToGuess[0] = Controller.getRandom();
-        wordToGuess[1] = Controller.getUnderlines();
-        System.out.println(wordToGuess[0]);
-        System.out.println(wordToGuess[1]);
-
-
-        Vector <Integer> position;
-        String trueLetters;
-
+        wordToGuess[0] = Controller.random;
+        wordToGuess[1] = Controller.underlines;
+        Vector<Integer> position;
+            System.out.println(wordToGuess[0]); //Konsole
+            System.out.println(wordToGuess[1]); //Konsole
 
         visible = new boolean[wordToGuess[0].length];
-        char input;
+        char input = Controller.ein;
 
-            input = Controller.getEin();
+        if (Vergleich.vergleich(wordToGuess[0], input)) {
+            position = Vergleich.position(wordToGuess[0], input);
 
-            System.out.println(input);
-
-            if (Vergleich.vergleich(wordToGuess[0], input)){
-                position = Vergleich.position (wordToGuess[0], input);
-
-                ScreenOutput.visible(visible, position);
-                trueLetters = ScreenOutput.buildTrue(wordToGuess, visible);
-                System.out.println(trueLetters);
-                richtig = trueLetters;
-
-                for (boolean b : visible) {
-                    if (b) {
-                        counter++;
-                    }
+            ScreenOutput.visible(visible, position);
+            richtig = ScreenOutput.buildTrue(wordToGuess, visible);
+            for (boolean b : visible) {
+                if (b) {
+                    counter++;
                 }
             }
-
-            else {
-                if (!falsch.contains(Character.toString(input))){
-                    Controller.setCounter();
-                    falseLetters.add(input);
-                    falsch = ScreenOutput.buildFalse(falseLetters);
-                }
-               System.out.println(ScreenOutput.buildFalse(falseLetters));
+        } else {
+            if (!falsch.contains(Character.toString(input))) {
+                Controller.counter++;
+                falseLetters.add(input);
+                falsch = ScreenOutput.buildFalse(falseLetters);
             }
-            System.out.println(counter);
-
+        }
     }
 
-    static boolean gewonnen(){
-
+    static boolean gewonnen() {
         return richtig.length() == counter;
     }
 
-    static void doppelt(){
-        for (int i = 0; i < richtig.length(); i++){
-            if (richtig.charAt(i) == Controller.getEin()){
+    static void doppelt() {
+        for (int i = 0; i < richtig.length(); i++) {
+            if (richtig.charAt(i) == Controller.ein) {
                 counter--;
             }
         }
