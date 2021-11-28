@@ -4,7 +4,7 @@ package com.example.hangman1;
 import java.util.*;
 
 public class GameEngine {
-
+  
     public static String falsch;
     public static String richtig;
     public static int counter;
@@ -20,6 +20,7 @@ public class GameEngine {
             System.out.println(wordToGuess[1]); //Konsole
 
         visible = new boolean[wordToGuess[0].length];
+
         char input = Controller.ein;
 
         if (Vergleich.vergleich(wordToGuess[0], input)) {
@@ -32,6 +33,7 @@ public class GameEngine {
                     counter++;
                 }
             }
+        //Bei falscher Eingabe wird der Buchstabe dem Vektor mit falschen Buchstaben hinzugefügt
         } else {
             if (!falsch.contains(Character.toString(input))) {
                 Controller.counter++;
@@ -41,10 +43,12 @@ public class GameEngine {
         }
     }
 
+    //gibt true zurück, falls die Anzahl richtiger Buchstaben und die Länge des Worts gleich sind
     static boolean gewonnen() {
         return richtig.length() == counter;
     }
-
+    //Anpassen des counters falls der eingegebene Buchstabe bereits im Array richtig eingegebener Buchstaben ist
+    //aka, bei doppelter Eingabe
     static void doppelt() {
         for (int i = 0; i < richtig.length(); i++) {
             if (richtig.charAt(i) == Controller.ein) {
