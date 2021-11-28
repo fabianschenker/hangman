@@ -235,8 +235,8 @@ public class Controller {
     //Menu Fenster um die Hilfen anzuzeigen
     public void showHelp() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Help is here");
-        alert.setHeaderText("Du brauchst Hilfe?");
+        alert.setTitle("Du brauchst Hilfe?");
+        alert.setHeaderText("Hier gibt's Hilfe!");
         alert.setContentText("""
                 Versuche häufige Buchstaben als erstes einzugeben. Warum nicht mit den Buchstaben des eigenen Namens anfangen?
 
