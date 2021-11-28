@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Vector;
 
 public class Vergleich {
-
+    //vergleicht den eingegebenen Char mit dem Wort
     public static boolean vergleich(char[] w, char c) {
         int counter = 0;
         for (char test : w) {
@@ -12,7 +12,7 @@ public class Vergleich {
         }
         return counter > 0;
     }
-
+    //gibt die Position des eingegebenen chars im Wort aus
     public static Vector<Integer> position(char[] w, char c) {
         Vector<Integer> position = new Vector<>();
         //classical for-loop because of use of the index

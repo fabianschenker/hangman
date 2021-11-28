@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 
 public class Wort {
-
+    //Einlesen der .txt Datei
     public String[] readWordFile(){
         String[] strArray = null;
         try{
@@ -22,7 +22,7 @@ public class Wort {
         }
         return strArray;
     }
-
+    //Aussuchen eines random Worts aus der .txt Datei
     public char[] selectRandomWord(){
         String[] s = readWordFile();
         /* Generierung ganzer Zahl zwischen 0 und 99 durch abrunden
@@ -37,7 +37,7 @@ public class Wort {
 
         return wortCharArray;
     }
-
+    //Erstellen des char-Arrays mit der richtigen Anzahl Underlines
     public static char[] buildUnderlines(char[] w){
         char[] underline = new char[w.length];
         for (int i=0; i<w.length; i++){
