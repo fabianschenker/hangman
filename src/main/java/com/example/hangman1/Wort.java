@@ -2,7 +2,7 @@ package com.example.hangman1;
 
 import java.io.File;
 import java.io.FileReader;
-
+//Klasse zur Erstellung des zu erratenden Worts
 public class Wort {
     //Einlesen der .txt Datei
     public String[] readWordFile(){

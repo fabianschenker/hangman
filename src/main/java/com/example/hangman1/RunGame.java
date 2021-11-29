@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+//Main Klasse
 public class RunGame extends Application {
     @Override
     public void start(Stage mainStage) throws IOException {

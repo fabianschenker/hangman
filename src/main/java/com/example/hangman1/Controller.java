@@ -16,6 +16,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+//Diese Klasse steuert den Hauptablauf des Programms, sorgt für die Anzeige der Hangman Figur u
+// nd beinhaltet die Funktionen sämtlicher Schaltflächen der Benutzeroberfläche
 public class Controller {
 
     //Deklaration der Variablen aus der hangman.fxml Datei

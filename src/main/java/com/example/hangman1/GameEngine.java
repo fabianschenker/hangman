@@ -1,8 +1,8 @@
 package com.example.hangman1;
 
-
 import java.util.*;
 
+//Klasse die den Ablauf, das Gewinnen und die Einabe doppelter Buchstaben steuert
 public class GameEngine {
 
     public static String falsch;
