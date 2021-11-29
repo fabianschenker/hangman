@@ -6,15 +6,15 @@ Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, R
 
 ## Inhaltsverzeichnis
 
-1. Einleitung 
-2. Ziele
-3. Randbedingungen
-4. Build-Anleitung
-5. Kurze Bedienungsanleitung
-6. User Stories
-7. Releaseplan
-8. Dokumentation Sprint 1
-9. Dokumentation Sprint 2
+1. [Einleitung]()
+2. [Ziele]()
+3. [Randbedingungen]()
+4. [Build-Anleitung]()
+5. [Kurze Bedienungsanleitung]()
+6. [User Stories]()
+7. [Releaseplan]()
+8. [Dokumentation Sprint 1]()
+9. [Dokumentation Sprint 2]()
 
 ## 1. Einleitung
 
@@ -57,34 +57,35 @@ Der Aufwand des Projektes wird gleichmässig auf alle Studierenden verteilt.
 
 ## Kurze Bedienungsanleitung
 
-Das 
+Das Ziel des Spiels Hangman ist es, ein unbekanntes Wort zu erraten. Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht.
+
 
 ## 6. User Storys
 
 | US | Beschreibung | Akzeptanz Kriterien | Priorität | Story Points |
 |----|----|----|----|----|
-| 03 | Als Kunde möchte ich eine Anzeige der Wortlänge haben. | Damit der Spieler von Beginn an das Wort abschätzen kann. | hoch | 5 |
-| 04 | Als Kunde möchte ich Buchstaben eingeben können, um die richtigen Buchstaben zu erraten. | Damit der Spieler mit dem Buchstaben eine Unterlinie ersetzten kann. | hoch | 5 |
-| 05 | Als Kunde möchte ich korrekte Buchstaben anstelle des Platzhalters angezeigt bekommen. | Damit der Spieler sehen kann an welchen Positionen sich dieser Buchstaben im Wort befindet. | hoch | 10 |
+| 03 | Als Kunde möchte ich eine Anzeige der Wortlänge haben. | Damit der Spieler von Beginn an das Wort abschätzen kann. | hoch | 4 |
+| 04 | Als Kunde möchte ich Buchstaben eingeben können, um die richtigen Buchstaben zu erraten. | Damit der Spieler mit dem Buchstaben eine Unterlinie ersetzten kann. | hoch | 8 |
+| 05 | Als Kunde möchte ich korrekte Buchstaben anstelle des Platzhalters angezeigt bekommen. | Damit der Spieler sehen kann an welchen Positionen sich dieser Buchstaben im Wort befindet. | hoch | 9 |
 | 06 | Als Kunde möchte ich falsche Buchstaben aufgelistet bekommen. | Damit der Spieler sehen kann welche nicht richtigen er schon verwendet hat. | hoch | 10 |
-| 07 | Als Kunde möchte ich meinen Fortschritt durch eine Hangman Figur angezeigt bekommen. | Damit man sieht wie viele Fehlversuche man schon hatte. | hoch | 10 |
-| 08 | Als Kunde möchte ich eine Meldung bekommen, wenn ich das Spiel gewonnen/verloren habe. | Damit der Spieler den Endstatus des Spiels angezeigt bekommt. | mittel | 10 |
-| 09 | Als Supporter möchte ich eine hinterlegte Wort-Datenbank die angepasst werden kann. | Damit der Bearbeiter seine Wörter im Spiel ändern kann. | mittel | 5 |
+| 07 | Als Kunde möchte ich meinen Fortschritt durch eine Hangman Figur angezeigt bekommen. | Damit man sieht wie viele Fehlversuche man schon hatte. | hoch | 8 |
+| 08 | Als Kunde möchte ich eine Meldung bekommen, wenn ich das Spiel gewonnen/verloren habe. | Damit der Spieler den Endstatus des Spiels angezeigt bekommt. | mittel | 6 |
+| 09 | Als Supporter möchte ich eine hinterlegte Wort-Datenbank die angepasst werden kann. | Damit der Bearbeiter seine Wörter im Spiel ändern kann. | mittel | 4 |
 | 10 | Als User möchte ich eine Meldung bei doppelter/ungültiger Dateneingabe. | Um zu sehen dass das Zeichen nicht geht oder schon benutzt worden ist. | mittel | 5 |
-| 11 | Als User möchte ich als Spielsprache DEUTSCH definieren. | Damit die Wortwahl in der Wortliste sicher eindeutig ist.  | mittel | 5 |
-| 12 | Als User möchte ich als Fehler-Anzahl für die Hangman Darstellung 11 definieren. Hügel, Pfahl, Pfahl, Querstrebe, Seil, Kopf, Körper, Arm, Arm, Bein, Bein | Damit klar ist wie viele Punkte dem Spieler noch fehlen. | mittel | 10 |
-| 20 | Erstellen eines Maven Projekts mit einer HelloWorld Anwendung. | If the player wins, a new window shall open. | hoch | 10 |
-| 30 | Die verwendeten Buchstaben soll in einem Feld dargestellt werden. | Art der Umsetzung von US 06. | hoch | 10 |
-| 31 | Die Hangman Grafik soll Schrittweise in 11 Elementen auf dem Bildschirm dargestellt werden. | Art der Umsetzung von US 07. | mittel | 10 |
-| 32 | Die Darstellung der Buchstabenfelder soll durch ein Wort in Grossbuchstaben in einem Feld dargestellt werden | Art der Umsetzung von US 05. | hoch | 5 |
-| 65 | Spagetti Code Aufräumen | Comments, logical structure. | tief | 10 |
+| 11 | Als User möchte ich als Spielsprache DEUTSCH definieren. | Damit die Wortwahl in der Wortliste sicher eindeutig ist.  | mittel | 2 |
+| 12 | Als User möchte ich als Fehler-Anzahl für die Hangman Darstellung 11 definieren. Hügel, Pfahl, Pfahl, Querstrebe, Seil, Kopf, Körper, Arm, Arm, Bein, Bein | Damit klar ist wie viele Punkte dem Spieler noch fehlen. | mittel | 9 |
+| 20 | Erstellen eines Maven Projekts mit einer HelloWorld Anwendung. |  | hoch | 7 |
+| 30 | Die verwendeten Buchstaben soll in einem Feld dargestellt werden. | Art der Umsetzung von US 06. | hoch | 8 |
+| 31 | Die Hangman Grafik soll Schrittweise in 11 Elementen auf dem Bildschirm dargestellt werden. | Art der Umsetzung von US 07. | mittel | 6 |
+| 32 | Die Darstellung der Buchstabenfelder soll durch ein Wort in Grossbuchstaben in einem Feld dargestellt werden | Art der Umsetzung von US 05. | hoch | 6 |
+| 65 | Spagetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | tief | 8 |
 
 
 
 ## 7. Releaseplan
 
-|  Release 1 | Release 2  |
-|------------|------------|
+|  Release 1 | Release 2  | Ausbaustufe 1 | Ausbaustufe 2 |
+|------------|------------|---------------|---------------|
 |    US 03   |    US 07   |
 |    US 04   |    US 08   |
 |    US 05   |    US 12   |
@@ -92,7 +93,9 @@ Das
 |    US 09   |    US 31   |
 |    US 10   |    US 32   |
 |    US 11   |    US 65   |
-|    US 20   |      -     |
+|    US 20   |            |
+|      -     |            |
+|      -     |            |
 
 
 US = User Storys
