@@ -18,7 +18,9 @@ import java.util.regex.Pattern;
 public class EingabeController {
 
     private static final List<String> stringList = new ArrayList<>();
-    private final String filePath = "src/main/java/com/example/hangman1/wortdatenbank.txt";
+
+    // Wird in Klasse Wort verwendet
+    public static final String filePath = "src/main/resources/DATA/wortdatenbank.txt";
 
     @FXML
     public TextField eingabefeld;
