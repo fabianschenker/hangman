@@ -6,15 +6,16 @@ Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, R
 
 ## Inhaltsverzeichnis
 
-1. [Einleitung]()
-2. [Ziele]()
-3. [Randbedingungen]()
-4. [Build-Anleitung]()
-5. [Kurze Bedienungsanleitung]()
-6. [User Stories]()
-7. [Releaseplan]()
-8. [Dokumentation Sprint 1]()
-9. [Dokumentation Sprint 2]()
+1. [Einleitung](#1-einleitung)
+2. [Ziele](#2-ziele)
+3. [Randbedingungen](#3-randbedingungen)
+4. [Build-Anleitung](#4-build-anleitung)
+5. [Kurze Bedienungsanleitung](#5-kurze-bedienungsanleitung)
+6. [User Stories](#6-user-storys)
+7. [Releaseplan](#7-releaseplan)
+8. [Dokumentation Sprint 1](#8-dokumentation-sprint-1)
+9. [Dokumentation Sprint 2](#9-dokumentation-sprint-2)
+10. [Fazit](#10-fazit)
 
 ## 1. Einleitung
 
@@ -55,10 +56,13 @@ Der Aufwand des Projektes wird gleichmässig auf alle Studierenden verteilt.
 
 
 
-## Kurze Bedienungsanleitung
+## 5. Kurze Bedienungsanleitung
 
-Das Ziel des Spiels Hangman ist es, ein unbekanntes Wort zu erraten. Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht.
-
+Das Ziel des Spiels Hangman ist es, mit möglichst wenig Versuchen ein unbekanntes Wort zu erraten. Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht.
+Nun kann man versuchen mit den 26 Buchstaben des Alphabets das Wort zu erraten. Wenn man einen richtigen Buchstaben erraten hat, dann wird die Position im Wort mit dem Buchstaben ersetzt.
+Wenn man nun aber einen falschen Buchstaben versucht, so wird ein Teil einer Hangman Figur gezeichnet.
+Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden.
+Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 
 ## 6. User Storys
 
@@ -86,7 +90,7 @@ Das Ziel des Spiels Hangman ist es, ein unbekanntes Wort zu erraten. Dabei wird 
 
 |  Release 1 | Release 2  | Ausbaustufe 1 | Ausbaustufe 2 |
 |------------|------------|---------------|---------------|
-|    US 03   |    US 07   |
+|    US 03   |    US 07   |Wort hinzufügen|
 |    US 04   |    US 08   |
 |    US 05   |    US 12   |
 |    US 06   |    US 30   |
@@ -109,7 +113,18 @@ US = User Storys
 ## 9. Dokumentation Sprint 2
 
 
+Bild 1
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
+Bild 2
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
+
+Bild 3
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
+
+
+
+## 10. Fazit
 
 
 
