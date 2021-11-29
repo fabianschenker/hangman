@@ -1,18 +1,13 @@
 package com.example.hangman1;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
-
-import static org.junit.jupiter.api.Assertions.*;
-
-
+//Testklasse für die Klasse Wort
 class WortTest {
 
-
     @Test
-        //teste ob alle Einträge des Arrays Underscores sind und ob Array Underlines und Wort gleich lang sind
+    //teste ob alle Einträge des Arrays Underscores sind und ob Array Underlines und Wort gleich lang sind
     void buildUnderlines() {
         char[] testchar = "JAVALERNENISTSCHWER".toCharArray();
         char[] underscores = Wort.buildUnderlines(testchar);

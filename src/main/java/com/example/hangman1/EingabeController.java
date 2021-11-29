@@ -15,6 +15,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//Diese Klasse dient dem Hinzufügen neuer Worte zur Datenbank
 public class EingabeController {
 
     private static final List<String> stringList = new ArrayList<>();

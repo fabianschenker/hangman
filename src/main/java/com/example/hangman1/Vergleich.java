@@ -3,6 +3,7 @@ package com.example.hangman1;
 import java.util.Objects;
 import java.util.Vector;
 
+//Klasse zum Vergleich des eingegebenen Buchstabens mit dem zu erratenden Wort
 public class Vergleich {
     //vergleicht den eingegebenen Char mit dem Wort
     public static boolean vergleich(char[] w, char c) {

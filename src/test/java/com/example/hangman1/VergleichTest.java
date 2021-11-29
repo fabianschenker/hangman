@@ -1,23 +1,17 @@
 package com.example.hangman1;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-
 import java.util.Vector;
 
-
-import static org.junit.jupiter.api.Assertions.*;
-
-
+//Testklasse für die Klasse Vergleich
 class VergleichTest {
 
-
+    //Test für die Methode vergleich
     @Test
     void vergleich() {
-        //create Variable to run through vergleich
+        //Variable erstellen, die durch vergleich gejagt werden kann
         //JAVALERNENISTSCHWER soll nach H's abgesucht werden
         //returnvalue der Funktion soll also falsch sein
         //also boolean am Anfang erstellen der bereits falsch ist
@@ -27,11 +21,11 @@ class VergleichTest {
         assertFalse(Vergleich.vergleich(testchar, 'P'), "Testbuchstabe darf es in Testwort nicht geben");
     }
 
-
+    //Test für die Methode position
     @Test
     void position() {
-        //Create a testword to throw in a char, take a letter and note its position in the char
-        //get the size and values of the vektor and add tthe ints in it
+        //Ein testword erstellen, dieses in einen char stecken, einen Buchstaben auswählen und seine Position im Wort notieren
+        //Grösse und Werte des Vektors holen und ints einfügen
         //assertEquals mit Soll-Position und selbst eingegebener Position
         char[] testchar = "HUNDSGEMEIN".toCharArray();
         Vector<Integer> testvector = Vergleich.position(testchar, 'E');

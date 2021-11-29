@@ -1,5 +1,8 @@
 package com.example.hangman1;
+
 import java.util.*;
+
+//Klasse zur Steuerung der auf der Benutzeroberfläche angezeigten Informationen
 public class ScreenOutput {
     //Erstellen eines Vektors mit allen falsch eingegebenen Buchstaben
     public static String buildFalse (Vector<Character> falseVector) {
