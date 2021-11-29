@@ -8,8 +8,8 @@ public class Wort {
     public String[] readWordFile(){
         String[] strArray = null;
         try{
-            File file = new File("src/main/java/com/example/hangman1/wortdatenbank.txt");
-            FileReader fileReader = new FileReader("src/main/java/com/example/hangman1/wortdatenbank.txt");
+            File file = new File(EingabeController.filePath);
+            FileReader fileReader = new FileReader(EingabeController.filePath);
 
             char[] c = new char[(int) file.length()];
             fileReader.read(c);
