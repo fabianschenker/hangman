@@ -160,7 +160,7 @@
             <items>
               <MenuItem fx:id="helpKnopfMenu" mnemonicParsing="false" onAction="#showHelp" text="Hilfe">
                      <accelerator>
-                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
                      </accelerator>
                   </MenuItem>
                   <SeparatorMenuItem mnemonicParsing="false" />
