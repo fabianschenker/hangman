@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JIGSAW</ID>
+  <OriginalElement>com.example.hangman1</OriginalElement>
+  <nodes>
+    <node x="39.625" y="249.0">javafx.base</node>
+    <node x="56.373188405797066" y="334.0">java.desktop</node>
+    <node x="219.25" y="164.0">javafx.graphics</node>
+    <node x="23.625" y="81.0">javafx.controls</node>
+    <node x="497.12499999999994" y="164.0">java.scripting</node>
+    <node x="292.75" y="81.0">javafx.fxml</node>
+    <node x="176.5" y="419.0">java.prefs</node>
+    <node x="137.49818840579707" y="502.0">java.xml</node>
+    <node x="333.125" y="249.0">jdk.unsupported</node>
+    <node x="195.37318840579707" y="334.0">jdk.jfr</node>
+    <node x="177.75" y="0.0">com.example.hangman1</node>
+    <node x="10.5" y="419.0">java.datatransfer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="javafx.base" target="javafx.graphics" relationship="REQUIRES_TRANSITIVE">
+      <point x="0.0" y="-15.5" />
+      <point x="94.125" y="217.0" />
+      <point x="252.75" y="217.0" />
+      <point x="-33.5" y="15.5" />
+    </edge>
+    <edge source="java.datatransfer" target="java.desktop" relationship="REQUIRES_TRANSITIVE">
+      <point x="0.0" y="-15.5" />
+      <point x="83.5" y="397.0" />
+      <point x="41.75" y="397.0" />
+      <point x="41.75" y="387.0" />
+      <point x="86.12318840579707" y="387.0" />
+      <point x="-29.75" y="15.5" />
+    </edge>
+    <edge source="javafx.controls" target="com.example.hangman1" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="89.125" y="56.0" />
+      <point x="276.75" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="java.xml" target="java.prefs" relationship="REQUIRES">
+      <point x="22.5" y="-15.5" />
+      <point x="204.99818840579707" y="481.0" />
+      <point x="325.49818840579707" y="481.0" />
+      <point x="325.49818840579707" y="471.0" />
+      <point x="226.0" y="471.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="jdk.jfr" target="javafx.base" relationship="REQUIRES_STATIC">
+      <point x="0.0" y="-15.5" />
+      <point x="231.87318840579707" y="312.0" />
+      <point x="121.375" y="312.0" />
+      <point x="27.25" y="15.5" />
+    </edge>
+    <edge source="javafx.base" target="javafx.controls" relationship="REQUIRES_TRANSITIVE">
+      <point x="0.0" y="-15.5" />
+      <point x="94.125" y="217.0" />
+      <point x="67.088768115942" y="217.0" />
+      <point x="67.088768115942" y="143.0" />
+      <point x="89.125" y="143.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="java.desktop" target="javafx.graphics" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="115.87318840579707" y="302.0" />
+      <point x="159.125" y="302.0" />
+      <point x="159.125" y="227.0" />
+      <point x="322.625" y="227.0" />
+      <point x="322.625" y="217.0" />
+      <point x="319.75" y="217.0" />
+      <point x="33.5" y="15.5" />
+    </edge>
+    <edge source="jdk.unsupported" target="javafx.graphics" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="404.625" y="227.0" />
+      <point x="322.625" y="227.0" />
+      <point x="322.625" y="217.0" />
+      <point x="319.75" y="217.0" />
+      <point x="33.5" y="15.5" />
+    </edge>
+    <edge source="java.xml" target="javafx.fxml" relationship="REQUIRES">
+      <point x="22.5" y="-15.5" />
+      <point x="204.99818840579707" y="481.0" />
+      <point x="325.49818840579707" y="481.0" />
+      <point x="325.49818840579707" y="471.0" />
+      <point x="486.625" y="471.0" />
+      <point x="486.625" y="133.0" />
+      <point x="373.0" y="133.0" />
+      <point x="26.75" y="15.5" />
+    </edge>
+    <edge source="java.xml" target="java.desktop" relationship="REQUIRES_TRANSITIVE">
+      <point x="-22.5" y="-15.5" />
+      <point x="159.99818840579707" y="481.0" />
+      <point x="0.0" y="481.0" />
+      <point x="0.0" y="397.0" />
+      <point x="41.75" y="397.0" />
+      <point x="41.75" y="387.0" />
+      <point x="86.12318840579707" y="387.0" />
+      <point x="-29.75" y="15.5" />
+    </edge>
+    <edge source="java.xml" target="javafx.graphics" relationship="REQUIRES">
+      <point x="22.5" y="-15.5" />
+      <point x="204.99818840579707" y="481.0" />
+      <point x="325.49818840579707" y="481.0" />
+      <point x="325.49818840579707" y="471.0" />
+      <point x="322.625" y="471.0" />
+      <point x="322.625" y="217.0" />
+      <point x="319.75" y="217.0" />
+      <point x="33.5" y="15.5" />
+    </edge>
+    <edge source="java.scripting" target="javafx.fxml" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="558.625" y="143.0" />
+      <point x="486.625" y="143.0" />
+      <point x="486.625" y="133.0" />
+      <point x="373.0" y="133.0" />
+      <point x="26.75" y="15.5" />
+    </edge>
+    <edge source="java.prefs" target="java.desktop" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="226.0" y="397.0" />
+      <point x="145.62318840579707" y="397.0" />
+      <point x="29.75" y="15.5" />
+    </edge>
+    <edge source="javafx.graphics" target="javafx.controls" relationship="REQUIRES_TRANSITIVE">
+      <point x="-33.5" y="-15.5" />
+      <point x="252.75" y="143.0" />
+      <point x="89.125" y="143.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="javafx.fxml" target="com.example.hangman1" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="346.25" y="56.0" />
+      <point x="276.75" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="javafx.graphics" target="javafx.fxml" relationship="REQUIRES">
+      <point x="33.5" y="-15.5" />
+      <point x="319.75" y="143.0" />
+      <point x="486.625" y="143.0" />
+      <point x="486.625" y="133.0" />
+      <point x="373.0" y="133.0" />
+      <point x="26.75" y="15.5" />
+    </edge>
+    <edge source="java.desktop" target="javafx.base" relationship="REQUIRES">
+      <point x="0.0" y="-15.5" />
+      <point x="115.87318840579707" y="302.0" />
+      <point x="66.875" y="302.0" />
+      <point x="-27.25" y="15.5" />
+    </edge>
+    <edge source="javafx.base" target="javafx.fxml" relationship="REQUIRES_TRANSITIVE">
+      <point x="0.0" y="-15.5" />
+      <point x="94.125" y="217.0" />
+      <point x="111.97644927536231" y="217.0" />
+      <point x="111.97644927536231" y="133.0" />
+      <point x="319.5" y="133.0" />
+      <point x="-26.75" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="310.5" y="248.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+</Diagram>
+
