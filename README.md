@@ -1,4 +1,4 @@
-# hangman
+# Game Hangman
 **Informatik II & Software Engineering - Projekt**
 
 Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, Romain Bornex
@@ -14,7 +14,17 @@ Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, R
 6. [User Stories](#6-user-storys)
 7. [Releaseplan](#7-releaseplan)
 8. [Dokumentation Sprint 1](#8-dokumentation-sprint-1)
+    + Taskliste der User Storys
+    + Anreicherung User Storys
+    + UML Package, Klassen- und Sequenzdiagramm
+    + Dokumentation wichtiger Code Snippets
+    + Herleitung der Testfälle aus den User Storys
 9. [Dokumentation Sprint 2](#9-dokumentation-sprint-2)
+   + Taskliste der User Storys
+   + Anreicherung User Storys
+   + UML Package, Klassen- und Sequenzdiagramm
+   + Dokumentation wichtiger Code Snippets
+   + Herleitung der Testfälle aus den User Storys
 10. [Fazit](#10-fazit)
 
 ## 1. Einleitung
@@ -66,7 +76,7 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 
 ## 6. User Storys
 
-| US | Beschreibung | Akzeptanz Kriterien | Priorität | Story Points |
+| User Story | Beschreibung | Akzeptanz Kriterien | Priorität | Story Points |
 |----|----|----|----|----|
 | 03 | Als Kunde möchte ich eine Anzeige der Wortlänge haben. | Damit der Spieler von Beginn an das Wort abschätzen kann. | hoch | 4 |
 | 04 | Als Kunde möchte ich Buchstaben eingeben können, um die richtigen Buchstaben zu erraten. | Damit der Spieler mit dem Buchstaben eine Unterlinie ersetzten kann. | hoch | 8 |
@@ -78,28 +88,32 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 | 10 | Als User möchte ich eine Meldung bei doppelter/ungültiger Dateneingabe. | Um zu sehen dass das Zeichen nicht geht oder schon benutzt worden ist. | mittel | 5 |
 | 11 | Als User möchte ich als Spielsprache DEUTSCH definieren. | Damit die Wortwahl in der Wortliste sicher eindeutig ist.  | mittel | 2 |
 | 12 | Als User möchte ich als Fehler-Anzahl für die Hangman Darstellung 11 definieren. Hügel, Pfahl, Pfahl, Querstrebe, Seil, Kopf, Körper, Arm, Arm, Bein, Bein | Damit klar ist wie viele Punkte dem Spieler noch fehlen. | mittel | 9 |
-| 20 | Erstellen eines Maven Projekts mit einer HelloWorld Anwendung. |  | hoch | 7 |
+| 20 | Erstellen eines Maven Projekts mit einer HelloWorld Anwendung. |  | hoch | 0 |
 | 30 | Die verwendeten Buchstaben soll in einem Feld dargestellt werden. | Art der Umsetzung von US 06. | hoch | 8 |
 | 31 | Die Hangman Grafik soll Schrittweise in 11 Elementen auf dem Bildschirm dargestellt werden. | Art der Umsetzung von US 07. | mittel | 6 |
 | 32 | Die Darstellung der Buchstabenfelder soll durch ein Wort in Grossbuchstaben in einem Feld dargestellt werden | Art der Umsetzung von US 05. | hoch | 6 |
-| 65 | Spagetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | tief | 8 |
+| 65 | Spaghetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | tief | 0 |
+| 66 | Maven Test Projekt |  | tief | 0 |
+| 67 | Klasse zur Eingabe von neuen Wörtern | Um die Wortdatenbank direkt aus dem Programm erweitern zu können | tief | 0 |
+| 69 | UML |  | tief | 8 |
 
+- Die User Storys Nummerierung wurde zur Übersicht von der fortlaufenden Jira-Nummerierung übernommen.
 
 
 ## 7. Releaseplan
 
 |  Release 1 | Release 2  | Ausbaustufe 1 | Ausbaustufe 2 |
 |------------|------------|---------------|---------------|
-|    US 03   |    US 07   |Wort hinzufügen|
+|    US 03   |    US 07   |     US 67     |Datenbank
 |    US 04   |    US 08   |
 |    US 05   |    US 12   |
 |    US 06   |    US 30   |
 |    US 09   |    US 31   |
 |    US 10   |    US 32   |
 |    US 11   |    US 65   |
-|    US 20   |            |
-|      -     |            |
-|      -     |            |
+|    US 20   |    US 66   |
+|      -     |    US 69   |
+
 
 
 US = User Storys
@@ -108,6 +122,18 @@ US = User Storys
 
 ## 8. Dokumentation Sprint 1
 
+###Task Liste der User Storys
+
+| User Story | Tasks  | Geschätzter Aufwand in Minuten| 
+|------------|------------|---------------|
+|    US 03   |  Klasse Wort erstellen zum auslesen der Datenbank | 210 |
+|    US 04   |  Scanner erstellen, Klein in Grossbuchstaben, Nur erster Buchstabe in Char Einlesen | 120 |
+|    US 05   |  Kontrolle Buchstabe korrekt, Eingabe Buchstabe in unbekanntes Wort | 180 |
+|    US 06   |  Kontrolle Buchstabe falsch, Eingabe Buchstabe in Vektor "Falsch"  | 150 |
+|    US 09   |  .txt file erstellen, zufälliges Auslesen eines Wortes   | 150 |
+|    US 10   |  Vergleich zu Wort/Falsch, Kontrolle Gültig/Ungültig, Ausgabe Fehler  | 60 |
+|    US 11   |  User Sprache Deutsch   | immer |
+|    US 20   |  Erstellen Maven Projekt zur Vorbereitung | 60 |
 
 
 ## 9. Dokumentation Sprint 2
