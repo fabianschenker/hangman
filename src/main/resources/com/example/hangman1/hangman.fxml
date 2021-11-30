@@ -23,12 +23,12 @@
                       <Font name="Impact" size="96.0" />
                   </font>
               </Label>
-              <TextField fx:id="meineEingabe" layoutX="50.0" layoutY="730.0" onAction="#readEingabe" prefWidth="259.0" promptText="Buchstabe eingaben">
+              <TextField fx:id="meineEingabe" layoutX="50.0" layoutY="730.0" onAction="#readEingabe" prefHeight="51.0" prefWidth="450.0" promptText="Buchstabe eingeben">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-              <Button fx:id="enterButton" layoutX="315.0" layoutY="730.0" mnemonicParsing="false" onAction="#readEingabe" prefHeight="51.0" prefWidth="100.0" text="Enter">
+              <Button fx:id="enterButton" layoutX="530.0" layoutY="730.0" mnemonicParsing="false" onAction="#readEingabe" prefHeight="51.0" prefWidth="100.0" text="Enter">
                <font>
                   <Font size="24.0" />
                </font>
@@ -38,7 +38,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-              <TextField fx:id="erratenesWort" editable="false" layoutX="50.0" layoutY="340.0" mouseTransparent="true" prefWidth="380.0">
+              <TextField fx:id="erratenesWort" editable="false" layoutX="50.0" layoutY="340.0" mouseTransparent="true" prefHeight="51.0" prefWidth="580.0">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -48,12 +48,12 @@
                   <Font size="24.0" />
                </font>
             </Label>
-              <TextField fx:id="falscheBuchstaben" editable="false" layoutX="50.0" layoutY="530.0" mouseTransparent="true" prefWidth="380.0">
+              <TextField fx:id="falscheBuchstaben" editable="false" layoutX="50.0" layoutY="530.0" mouseTransparent="true" prefHeight="51.0" prefWidth="450.0">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <AnchorPane layoutX="666.0" layoutY="92.0" prefHeight="729.0" prefWidth="600.0">
+            <AnchorPane layoutX="668.0" layoutY="91.0" prefHeight="729.0" prefWidth="600.0">
                <children>
                     <Rectangle fx:id="hangman4" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="87.0" layoutX="342.0" layoutY="40.0" rotate="-45.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="12.0" />
                     <Rectangle fx:id="hangman2" arcHeight="5.0" arcWidth="5.0" fill="#7c5b4c" height="361.0" layoutX="408.0" layoutY="184.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="28.0" />
@@ -97,11 +97,6 @@
                   <Font name="Impact" size="96.0" />
                </font>
             </Label>
-            <Button fx:id="playAgainButton" alignment="CENTER" defaultButton="true" layoutX="553.0" layoutY="717.0" mnemonicParsing="false" onAction="#start" prefHeight="51.0" text="Noch einmal?" textAlignment="CENTER" visible="false">
-               <font>
-                  <Font name="System Bold" size="36.0" />
-               </font>
-            </Button>
             <AnchorPane fx:id="startPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Label fx:id="welcomeLable" alignment="CENTER" layoutX="157.0" layoutY="359.0" text="Wilkommen zu Hangman" textFill="#8a0000">
@@ -126,6 +121,11 @@
                   </Button>
                </children>
             </AnchorPane>
+            <Button fx:id="playAgainButton" alignment="CENTER" defaultButton="true" layoutX="511.0" layoutY="717.0" mnemonicParsing="false" onAction="#start" prefHeight="77.0" prefWidth="313.0" text="Noch einmal?" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
           </children>
       </AnchorPane>
    </center>
@@ -160,7 +160,7 @@
             <items>
               <MenuItem fx:id="helpKnopfMenu" mnemonicParsing="false" onAction="#showHelp" text="Hilfe">
                      <accelerator>
-                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
                      </accelerator>
                   </MenuItem>
                   <SeparatorMenuItem mnemonicParsing="false" />

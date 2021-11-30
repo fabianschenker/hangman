@@ -19,11 +19,6 @@
     <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="40.0" vgrow="ALWAYS" />
   </rowConstraints>
    <children>
-      <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClicked" text="zurück" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
       <GridPane hgap="7.0" GridPane.rowIndex="1">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -34,12 +29,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+            <TextField fx:id="eingabefeld" onAction="#onSaveButtonClicked" onMouseClicked="#onMouseClicked" GridPane.columnIndex="1" />
             <Label text="Neues Wort:" GridPane.halignment="RIGHT">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="eingabefeld" GridPane.columnIndex="1" />
             <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButtonClicked" text="speichern" GridPane.columnIndex="2">
                <padding>
                   <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
@@ -56,11 +51,17 @@
             <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
          </padding>
       </GridPane>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClicked" text="zurück" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
       <Label alignment="CENTER" text="Wort mit Buchstaben von A-Z eingeben. (auch Kleinbuchstaben, keine Sonderzeichen)" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <Label fx:id="anzahlWoerter" alignment="BOTTOM_LEFT" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
    </children>
    <padding>
       <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />

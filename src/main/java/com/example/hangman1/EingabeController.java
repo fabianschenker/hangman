@@ -3,7 +3,9 @@ package com.example.hangman1;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -19,12 +21,17 @@ import java.util.regex.Pattern;
 public class EingabeController {
 
     private static final List<String> stringList = new ArrayList<>();
-    private final String filePath = "src/main/java/com/example/hangman1/wortdatenbank.txt";
+
+    // Wird in Klasse Wort verwendet
+    public static final String filePath = "src/main/resources/DATA/wortdatenbank.txt";
 
     @FXML
     public TextField eingabefeld;
     @FXML
     public GridPane eingabefenster;
+    @FXML
+    public Label anzahlWoerter;
+
     //Einlesen der .txt Datei
     public void readList() {
         try {
@@ -39,13 +46,14 @@ public class EingabeController {
             stringList.addAll(Arrays.asList(result));
             System.out.println("File \"" + file.getName() + "\" erfolgreich eingelesen.");
             System.out.println(stringList.size() + " Eintraege generiert.");
-
+            printAnzWoerter();
         } catch (IOException e) {
             System.err.println("Fehler beim Einlesen der Datei.");
             System.err.println(e.getMessage());
         }
     }
-    //Speichern des eingegebenen Wörter in der .txt Datei
+    //Schreiben der eingegebenen Wörter in die stringList
+    @FXML
     public void onSaveButtonClicked() {
         stringList.clear();
         readList();
@@ -82,10 +90,11 @@ public class EingabeController {
         } else {
             stringList.add(eingabe);
             System.out.println(stringList.size() + " Eintraege generiert.");
+            printAnzWoerter();
             return true;
         }
     }
-    //Exception für das Speichern der eingegebenen Wörter
+    // Letztes Wort aus stringList in .txt Datei speichern
     public void saveToTxt() throws IOException {
 
         try(FileWriter fw = new FileWriter(filePath, true);
@@ -100,10 +109,21 @@ public class EingabeController {
             System.err.println(e.getMessage());
         }
     }
-    //Schliessen des Fensters, resp. zurück zum Hauptmenü
+    // Schliessen des Fensters, resp. zurück zum Hauptmenü
+    @FXML
     public void onBackButtonClicked(ActionEvent actionEvent) {
         final Node source = (Node) actionEvent.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+    }
+    // Anzahl eingelesener Wörter auf Fenster ausgeben
+    @FXML
+    public void printAnzWoerter(){
+        anzahlWoerter.setText(stringList.size() + " Wörter");
+    }
+    // Löscht Inhalt von eingabefeld, wenn darauf gedrückt
+    @FXML
+    public void onMouseClicked() {
+        eingabefeld.clear();
     }
 }
