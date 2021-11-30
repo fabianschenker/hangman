@@ -178,6 +178,22 @@ US = User Storys
 
 ### - Dokumentation wichtiger Code Snippets
 
+**Aktion wenn Enter gedrückt wird** public void readEingabe() 
+
+      {
+      System.out.println("Enter gedrückt");
+      if (counter < 11 && startProgramm && !fertig) {
+      String e = meineEingabe.getText().toUpperCase();
+      ein = e.charAt(0);
+      aufraeumen();
+      eingabeKontrollieren();
+      progresImage();
+      erratenesWort.setText(GameEngine.richtig);
+      falscheBuchstaben.setText(GameEngine.falsch);
+      victory();
+      }
+      }
+
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
 Bild 1
