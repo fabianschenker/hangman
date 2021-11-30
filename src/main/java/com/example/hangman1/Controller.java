@@ -56,7 +56,7 @@ public class Controller {
         fertig = false;
         setGameEngine();
         resetProgres();
-        falscheBuchstaben.setText("");
+        falscheBuchstaben.clear();
     }
 
     @FXML
@@ -73,20 +73,29 @@ public class Controller {
         System.out.println("Enter gedrückt");
         if (counter < 11 && startProgramm && !fertig) {
             String e = meineEingabe.getText().toUpperCase();
-            ein = e.charAt(0);
-            aufraeumen();
-            eingabeKontrollieren();
-            progresImage();
-            erratenesWort.setText(GameEngine.richtig);
-            falscheBuchstaben.setText(GameEngine.falsch);
-            victory();
+            if(e.equals(String.valueOf(random))){
+                GameEngine.counter = richtig.length();
+                victory();
+                erratenesWort.setText(String.valueOf(random));
+            }else if(e.length()==1){
+                ein = e.charAt(0);
+                aufraeumen();
+                eingabeKontrollieren();
+                erratenesWort.setText(GameEngine.richtig);
+                falscheBuchstaben.setText(GameEngine.falsch);
+                progresImage();
+                victory();
+            }else{
+                makeVisibleL(ungueltigeEingabe);
+                meineEingabe.clear();
+            }
         }
     }
 
     private void aufraeumen() {
         makeInvisibleL(doppelteEingabe);
         makeInvisibleL(ungueltigeEingabe);
-        meineEingabe.setText("");
+        meineEingabe.clear();
     }
 
     public void eingabeKontrollieren() {
@@ -112,6 +121,8 @@ public class Controller {
     private void victory() {
         fertig = GameEngine.gewonnen();
         if (fertig) {
+            makeInvisibleL(ungueltigeEingabe);
+            makeInvisibleL(doppelteEingabe);
             makeVisibleL(gewonnen);
             makeVisibleB(playAgainButton);
         }
@@ -209,6 +220,7 @@ public class Controller {
             makeVisibleP(hangman11);
             makeVisibleL(verloren);
             makeVisibleB(playAgainButton);
+            erratenesWort.setText(String.valueOf(random));
         }
     }
 
@@ -257,6 +269,8 @@ public class Controller {
                 3. Versuchen Sie, das Wort zu erraten,bevor die Hangman-Figur fertig ist.
 
                 4. Sonderzeichen werden nicht akzeptiert.
+                
+                5. Jeweils nur ein Buchstabe pro Versuch, ausser man kennt das Lösungswort.
 
                 """);
 
@@ -274,10 +288,9 @@ public class Controller {
             Stage eingabeStage = new Stage();
             eingabeStage.initModality(Modality.WINDOW_MODAL);
             eingabeStage.initStyle(StageStyle.DECORATED);
-            eingabeStage.setTitle("");
+            eingabeStage.setTitle("Worteingabe");
             eingabeStage.setScene(new Scene(root1));
             eingabeStage.show();
-            
         } catch (Exception e) {
             e.printStackTrace();
         }
