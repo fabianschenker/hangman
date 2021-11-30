@@ -142,10 +142,19 @@ US = User Storys
 
 ### - Dokumentation wichtiger Code Snippets 
 
-**Kontrolle richtiger Buchstabe** public int getRandom() 
+**Überprüfung, ob der eingegebene Buchstabe bereits vorhanden ist** 
 
-      { return random.nextInt(questions.size());
-	}
+      static void doppelt(){
+      for (int i = 0; i < richtig.length(); i++) {
+      if (richtig.charAt(i) == Controller.ein) {
+      counter--;
+      }}}
+
+
+**Überprüfen der Eingabe**
+
+      Pattern p = Pattern.compile("[^a-z]", Pattern.CASE_INSENSITIVE);
+
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
@@ -178,9 +187,9 @@ US = User Storys
 
 ### - Dokumentation wichtiger Code Snippets
 
-**Aktion wenn Enter gedrückt wird** public void readEingabe() 
+**Aktion wenn Enter gedrückt wird** 
 
-      {
+      public void readEingabe(){
       System.out.println("Enter gedrückt");
       if (counter < 11 && startProgramm && !fertig) {
       String e = meineEingabe.getText().toUpperCase();
@@ -191,7 +200,15 @@ US = User Storys
       erratenesWort.setText(GameEngine.richtig);
       falscheBuchstaben.setText(GameEngine.falsch);
       victory();
-      }
+      }}
+
+
+**Fortschritt der Hangman Figur**
+
+      if (!falsch.contains(Character.toString(input))) {
+      Controller.counter++;
+      falseLetters.add(input);
+      falsch = ScreenOutput.buildFalse(falseLetters);
       }
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
