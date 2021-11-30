@@ -13,6 +13,7 @@ public class RunGame extends Application {
     public void start(Stage mainStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RunGame.class.getResource("hangman.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 860);
+        mainStage.setTitle("Hangman");
         mainStage.setScene(scene);
         mainStage.show();
 
