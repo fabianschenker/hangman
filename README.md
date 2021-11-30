@@ -122,7 +122,7 @@ US = User Storys
 
 ## 8. Dokumentation Sprint 1
 
-###Task Liste der User Storys
+### - Task Liste der User Storys
 
 | User Story | Tasks  | Geschätzter Aufwand in Minuten| 
 |------------|------------|---------------|
@@ -136,8 +136,49 @@ US = User Storys
 |    US 20   |  Erstellen Maven Projekt zur Vorbereitung | 60 |
 
 
+### - Anreicherung der User Storys für die Umsetzung
+
+### - UML Package, Klassen- und Sequenzdiagramm
+
+### - Dokumentation wichtiger Code Snippets 
+
+**Kontrolle richtiger Buchstabe** public int getRandom() 
+
+      { return random.nextInt(questions.size());
+	}
+
+### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
+
+
+
+
+
+
+
+
 ## 9. Dokumentation Sprint 2
 
+### Task Liste der User Storys
+
+| User Story | Tasks | Geschätzter Aufwand in Minuten |
+|------------|---------------|---------------|
+|    US 07   |Fehlerzählung und Abfrage Fortschritt | 90 |
+|    US 08   |SceneBuilder gewonnen/verloren kreieren, Abfrage gewonnen/verloren| 90 |
+|    US 12   |Hangman Figur in SceneBuilder kreieren| 60 |
+|    US 30   |SceneBuilder Auflistung verlorene Buchstaben, Abfrage verwendete Buchstaben| 120 |
+|    US 31   |Anzeigebedingungen für Hangman Figur kreieren| 90 |
+|    US 32   |Textfeld und Ausgabe für Wort| 90 |
+|    US 65   |Aufräumen und Kürzen von längeren Code-Zeilen |120|
+|    US 66   |Erstellen von Tests für Programm |210|
+|    US 69   |Generieren von UML - Diagrammen der Programmstruktur|90|
+
+### - Anreicherung der User Storys für die Umsetzung
+
+### - UML Package, Klassen- und Sequenzdiagramm
+
+### - Dokumentation wichtiger Code Snippets
+
+### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
 Bild 1
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
