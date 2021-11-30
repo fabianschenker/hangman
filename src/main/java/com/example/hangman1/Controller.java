@@ -79,6 +79,7 @@ public class Controller {
                 GameEngine.counter = richtig.length();
                 victory();
                 erratenesWort.setText(String.valueOf(random));
+                meineEingabe.clear();
             }else if(e.length()==1){
                 ein = e.charAt(0);
                 aufraeumen();
