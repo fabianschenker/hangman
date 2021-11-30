@@ -1,7 +1,7 @@
 # Game Hangman
-**Informatik II & Software Engineering - Projekt**
+###Informatik II & Software Engineering - Projekt
 
-Team: Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, Romain Bornex
+**Team:** Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, Romain Bornex
 
 
 ## Inhaltsverzeichnis
@@ -96,6 +96,9 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 | 66 | Maven Test Projekt |  | tief | 0 |
 | 67 | Klasse zur Eingabe von neuen Wörtern | Um die Wortdatenbank direkt aus dem Programm erweitern zu können | tief | 0 |
 | 69 | UML |  | tief | 8 |
+| 77 | Build Projekt | Der Spieler soll eine ausführbare .jar Datei erhalten. | high | 8 |
+
+
 
 - Die User Storys Nummerierung wurde zur Übersicht von der fortlaufenden Jira-Nummerierung übernommen.
 
@@ -105,14 +108,15 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 |  Release 1 | Release 2  | Ausbaustufe 1 | Ausbaustufe 2 |
 |------------|------------|---------------|---------------|
 |    US 03   |    US 07   |     US 67     |Datenbank
-|    US 04   |    US 08   |
-|    US 05   |    US 12   |
+|    US 04   |    US 08   |Icon|Advanced Interfaces|
+|    US 05   |    US 12   |-|Animations|
 |    US 06   |    US 30   |
 |    US 09   |    US 31   |
 |    US 10   |    US 32   |
 |    US 11   |    US 65   |
 |    US 20   |    US 66   |
 |      -     |    US 69   |
+|      -     |    US 77   |
 
 
 
@@ -139,6 +143,7 @@ US = User Storys
 ### - Anreicherung der User Storys für die Umsetzung
 
 ### - UML Package, Klassen- und Sequenzdiagramm
+Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#9-dokumentation-sprint-2) für die Dokumentation von Package und Diagrammen.
 
 ### - Dokumentation wichtiger Code Snippets 
 
@@ -157,7 +162,7 @@ US = User Storys
 
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
-
+Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#9-dokumentation-sprint-2) für die Dokumentation der Testfälle.
 
 
 
@@ -184,6 +189,15 @@ US = User Storys
 ### - Anreicherung der User Storys für die Umsetzung
 
 ### - UML Package, Klassen- und Sequenzdiagramm
+
+Bild 1
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
+
+Bild 2
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
+
+Bild 3
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
 
 ### - Dokumentation wichtiger Code Snippets
 
@@ -213,18 +227,15 @@ US = User Storys
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
-Bild 1
-![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
-Bild 2
-![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
-
-Bild 3
-![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
 
 
 
 ## 10. Fazit
 
+Fazit hier
 
 
+
+***
+Projekt Hangman, Mechatronik Trinational, Promotion Franklin, Dez. 2021
