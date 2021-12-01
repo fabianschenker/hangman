@@ -76,7 +76,7 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 6. Kontrollieren Sie dass Sie sich im Terminal auf *C:\HANGMAN* befinden.
 7. Im Terminal, lassen Sie folgende Commands laufen:
     ```Javascript
-        
+   
        mvn clean javafx:jlink
        cd target/hangman-win/bin
        ./java -m com.example.hangman1/com.example.hangman1.RunGame
@@ -214,7 +214,7 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 ### - UML Package, Klassen- und Sequenzdiagramm
 
 Sequenzdiagramm
-![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
+![Sequenzdiagramm](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
 zweites Sequenzdiagramm
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
