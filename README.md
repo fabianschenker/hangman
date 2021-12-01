@@ -87,9 +87,8 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 
 #### Spiel ohne IDE laufen lassen
 1. Erstellen Sie im C:\ einen Ordner mit dem Namen HANGMAN
-2. Laden Sie die Zip Datei von Github herunter und entpacken Sie den Ordner in C:\HANGMAN
-3. Suchen Sie im Ordner C:\HANGMAN\win die Datei hm-launcher.bat und führen sie diese aus.
-
+2. Laden Sie die Zip Datei aus dem Release Feld von Github herunter und entpacken Sie den Ordner in *C:\HANGMAN*
+3. Suchen Sie im Ordner C:\HANGMAN die Verknüpfung zum Launcher hm-launcher.bat und führen sie diese aus.
 
 
 ## 5. Kurze Bedienungsanleitung
@@ -114,15 +113,15 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 | 10 | Als User möchte ich eine Meldung bei doppelter/ungültiger Dateneingabe. | Um zu sehen dass das Zeichen nicht geht oder schon benutzt worden ist. | mittel | 5 |
 | 11 | Als User möchte ich als Spielsprache DEUTSCH definieren. | Damit die Wortwahl in der Wortliste sicher eindeutig ist.  | mittel | 2 |
 | 12 | Als User möchte ich als Fehler-Anzahl für die Hangman Darstellung 11 definieren. Hügel, Pfahl, Pfahl, Querstrebe, Seil, Kopf, Körper, Arm, Arm, Bein, Bein | Damit klar ist wie viele Punkte dem Spieler noch fehlen. | mittel | 9 |
-| 20 | Erstellen eines Maven Projekts mit einer HelloWorld Anwendung. |  | hoch | 0 |
+| 20 | Erstellen eines Maven Projekts mit einer HelloWorld Anwendung. | Um ein Grundgerüst für das Projekt zu erstellen | tief | 2 |
 | 30 | Die verwendeten Buchstaben soll in einem Feld dargestellt werden. | Art der Umsetzung von US 06. | hoch | 8 |
 | 31 | Die Hangman Grafik soll Schrittweise in 11 Elementen auf dem Bildschirm dargestellt werden. | Art der Umsetzung von US 07. | mittel | 6 |
 | 32 | Die Darstellung der Buchstabenfelder soll durch ein Wort in Grossbuchstaben in einem Feld dargestellt werden | Art der Umsetzung von US 05. | hoch | 6 |
-| 65 | Spaghetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | tief | 0 |
-| 66 | Maven Test Projekt |  | tief | 0 |
-| 67 | Klasse zur Eingabe von neuen Wörtern | Um die Wortdatenbank direkt aus dem Programm erweitern zu können | tief | 0 |
-| 69 | UML |  | tief | 8 |
-| 77 | Build Projekt | Der Spieler soll eine ausführbare .jar Datei erhalten. | high | 8 |
+| 65 | Spaghetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | mittel | 7 |
+| 66 | Maven Test Projekt | Um Klassen und Methoden zu Testen | hoch | 08 |
+| 67 | Klasse zur Eingabe von neuen Wörtern | Um die Wortdatenbank direkt aus dem Programm erweitern zu können | tief | 4 |
+| 69 | UML | Um eine Übersicht über das Programm zu erhalten | tief | 8 |
+| 77 | Build Projekt | Um über die Kommandozeile oder über vorgefertigte ZIP-Datei das Programm zu bilden, respektive zu entpacken und laufen zu lassen. | high | 8 |
 
 
 
@@ -149,8 +148,13 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 US = User Storys
 
 
-
 ## 8. Dokumentation Sprint 1
+
+Zum Beginn des ersten Sprints hatten wir unser erstes Scrum-Meeting. Dabei ordneten wir unseren User Storys 
+UserPoints und Prioritäten zu. Danach teilten wir die User Storys immer einem Teammitglied zu, das die Hauptverantwortung für diese Stroy trug.
+Jede Story hatte 1-5 Tasks, die benötigt wurden, um die Story zu vervollständigen.
+Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte.
+Jeder der Teilnehmer konnte seine Aufgaben erfolgreich pünktlich erfüllen und teilweise konnten wir schon in ScreenBuilder Anwendungen vorgreifen.
 
 ### - Task Liste der User Storys
 
@@ -162,11 +166,18 @@ US = User Storys
 |    US 06   |  Kontrolle Buchstabe falsch, Eingabe Buchstabe in Vektor "Falsch"  | 150 |
 |    US 09   |  .txt file erstellen, zufälliges Auslesen eines Wortes   | 150 |
 |    US 10   |  Vergleich zu Wort/Falsch, Kontrolle Gültig/Ungültig, Ausgabe Fehler  | 60 |
-|    US 11   |  User Sprache Deutsch   | immer |
+|    US 11   |  User Sprache Deutsch   | 30 |
 |    US 20   |  Erstellen Maven Projekt zur Vorbereitung | 60 |
 
 
 ### - Anreicherung der User Storys für die Umsetzung
+
+Erstellen Eingabe für Wort:
+![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225309.jpg)
+
+Spiel gewonnen:
+![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225319.jpg)
+
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#9-dokumentation-sprint-2) für die Dokumentation von Package und Diagrammen.
@@ -193,6 +204,13 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 ## 9. Dokumentation Sprint 2
 
+Auch der Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere benötigte hinzufügen konnten.
+Das Vergeben von Punkten und Aufgaben lief analog zum ersten Sprint.
+Wir konnten auch in diesem Sprint unsere Ziele pünktlich erreichen.
+Die Aufwandseinschätzung war dabei in diesem Sprint nicht mehr ganz so präzise, jedoch war die Gesamtzeit ungefähr die gleiche, was dies ausglich.
+Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
+
+
 ### Task Liste der User Storys
 
 | User Story | Tasks | Geschätzter Aufwand in Minuten |
@@ -206,11 +224,15 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 |    US 65   |Aufräumen und Kürzen von längeren Code-Zeilen |120|
 |    US 66   |Erstellen von Tests für Programm |210|
 |    US 69   |Generieren von UML - Diagrammen der Programmstruktur|90|
-|    US 69   |Generieren von UML - Diagrammen der Programmstruktur|90|
+|    US 77   |Build Projekt|240|
 
 ### - Anreicherung der User Storys für die Umsetzung
 
+Startbildschirm:
+![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225357.jpg)
 
+Worteingabe:
+![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225324.jpg)
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 
@@ -269,9 +291,9 @@ Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen wer
             ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
             ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
 
-#### Beispiel aus der Testklasse GameEngineTest
+#### Beispiel aus der Testklasse VergleichTest
 
-Ein testword erstellen, dieses in einen char stecken, einen Buchstaben auswählen und seine Position im Wort notieren
+Um die Klasse Vergleich zu testen erstellen wir ein testword, dieses verpacken wir in einen char, suchen uns einen Buchstaben aus und notieren seine Position in einem Wort
 Grösse und Werte des Vektors holen und ints einfügen
 assertEquals mit Soll-Position und selbst eingegebener Position
 
