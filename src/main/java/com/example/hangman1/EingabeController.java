@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -23,7 +22,7 @@ public class EingabeController {
     private static final List<String> stringList = new ArrayList<>();
 
     // Wird in Klasse Wort verwendet
-    public static final String filePath = "src/main/resources/DATA/wortdatenbank.txt";
+    public static final String filePath = "C:\\HANGMAN\\DATAwords\\wortdatenbank.txt";
 
     @FXML
     public TextField eingabefeld;
