@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.7.1</junit.version>
+        <junit.version>5.8.1</junit.version>
     </properties>
 
     <dependencies>
@@ -51,16 +51,38 @@
                     <target>16</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.0.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.7</version>
+                <configuration>
+                    <mainClass>com.example.hangman1.RunGame</mainClass>
+                    <launcher>hm-launcher</launcher>
+                    <compress>2</compress>
+                    <jlinkZipName>hangman-win</jlinkZipName>
+                    <jlinkImageName>hangman-win</jlinkImageName>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <noManPages>true</noManPages>
+                </configuration>
                 <executions>
                     <execution>
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.hangman1/com.example.hangman1.HelloApplication</mainClass>
+                            <mainClass>com.example.hangman1/com.example.hangman1.RunGame</mainClass>
                         </configuration>
                     </execution>
                 </executions>
