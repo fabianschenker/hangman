@@ -22,7 +22,7 @@ public class EingabeController {
     private static final List<String> stringList = new ArrayList<>();
 
     // Wird in Klasse Wort verwendet
-    public static final String filePath = "C:\\HANGMAN\\DATAwords\\wortdatenbank.txt";
+    public static final String filePath = "C:\\HANGMAN\\wortdatenbank.txt";
 
     @FXML
     public TextField eingabefeld;

@@ -16,8 +16,6 @@ public class GameEngine {
         wordToGuess[0] = Controller.random;
         wordToGuess[1] = Controller.underlines;
         Vector<Integer> position;
-            System.out.println(wordToGuess[0]); //Konsole
-            System.out.println(wordToGuess[1]); //Konsole
 
         visible = new boolean[wordToGuess[0].length];
         char input = Controller.ein;

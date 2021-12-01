@@ -72,7 +72,6 @@ public class Controller {
     //Aktion wenn Enter gedrückt wird
     @FXML
     public void readEingabe() {
-        System.out.println("Enter gedrückt");
         if (counter < 11 && startProgramm && !fertig) {
             String e = meineEingabe.getText().toUpperCase();
             if(e.equals(String.valueOf(random))){
