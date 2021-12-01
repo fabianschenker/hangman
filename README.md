@@ -197,10 +197,12 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 **Überprüfung, ob der eingegebene Buchstabe bereits vorhanden ist** 
 ```Javascript
       static void doppelt(){
-      for (int i = 0; i < richtig.length(); i++) {
-      if (richtig.charAt(i) == Controller.ein) {
-      counter--;
-      }}}
+        for (int i = 0; i < richtig.length(); i++) {
+            if (richtig.charAt(i) == Controller.ein) {
+                counter--;
+                }
+            }
+        }
 ```
 
 **Überprüfen der Eingabe**
@@ -263,27 +265,36 @@ Klassendiagramm:
 
 **Aktion wenn Enter gedrückt wird** 
 ```Javascript
-      public void readEingabe(){
-      System.out.println("Enter gedrückt");
-      if (counter < 11 && startProgramm && !fertig) {
-      String e = meineEingabe.getText().toUpperCase();
-      ein = e.charAt(0);
-      aufraeumen();
-      eingabeKontrollieren();
-      progresImage();
-      erratenesWort.setText(GameEngine.richtig);
-      falscheBuchstaben.setText(GameEngine.falsch);
-      victory();
-      }}
+      public void readEingabe() {
+     if (counter < 11 && startProgramm && !fertig) {
+            String e = meineEingabe.getText().toUpperCase();
+            if(e.equals(String.valueOf(random))){
+                 GameEngine.counter = richtig.length();
+                victory();
+                erratenesWort.setText(String.valueOf(random));
+                meineEingabe.clear();
+            }else if(e.length()==1){
+                 ein = e.charAt(0);
+                aufraeumen();
+                eingabeKontrollieren();
+                erratenesWort.setText(GameEngine.richtig);
+                falscheBuchstaben.setText(GameEngine.falsch);
+                progresImage();
+                victory();
+            }else{
+                makeVisibleL(ungueltigeEingabe);
+                meineEingabe.clear();
+            }
+     }
 ```
 
 **Fortschritt der Hangman Figur**
 ```Javascript
       if (!falsch.contains(Character.toString(input))) {
-      Controller.counter++;
-      falseLetters.add(input);
-      falsch = ScreenOutput.buildFalse(falseLetters);
-      }
+            Controller.counter++;
+            falseLetters.add(input);
+            falsch = ScreenOutput.buildFalse(falseLetters);
+            }
 ```
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
@@ -295,15 +306,18 @@ Wir lassen die Klasse Test() mit den vorherigen Parametern laufen und lassen uns
 Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.
 Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen werden und keine ausgelassen werden kann
 ```Javascript
-      void test1() { 
-      Controller.random = "JAVATESTENISTSCHWER".toCharArray();
-      Controller.underlines = Wort.buildUnderlines(Controller.random); 
-      Controller.ein = 'A';
-      GameEngine.test();
-      assertAll(
-            ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"),
-            ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
-            ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
+         void test1() {
+            Controller.random = "JAVATESTENISTSCHWER".toCharArray();
+            Controller.underlines = Wort.buildUnderlines(Controller.random);
+            Controller.ein = 'A';
+            GameEngine.test();
+            assertAll(
+                    ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"),
+                    ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
+                     ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
+
+            );
+            }
 ```
 #### Beispiel aus der Testklasse VergleichTest
 
@@ -312,13 +326,13 @@ Den zu erratenden Buchstaben speichern wir in einem Vektor.
 Über assertEquals testen wir die richtige Grösse des Testvektors und ob die Positionen des zu testenden Buchstabens richtig erfasst wurden.
 ```Javascript
       void position() {
-      char[] testchar = "HUNDSGEMEIN".toCharArray();
-      Vector<Integer> testvector = Vergleich.position(testchar, 'E');
-      Assertions.assertAll(
-      () -> assertEquals(testvector.size(), 2, "Anzahl richtige Buchstaben stimmt nicht"),
-      //Integers in the vector "position" should be 6 and 8 =14
-      () -> assertEquals(testvector.get(0) + testvector.get(1), 14, "Position nicht richtig erfasst"));
-      }
+            char[] testchar = "HUNDSGEMEIN".toCharArray();
+            Vector<Integer> testvector = Vergleich.position(testchar, 'E');
+            Assertions.assertAll(
+            () -> assertEquals(testvector.size(), 2, "Anzahl richtige Buchstaben stimmt nicht"),
+            //Integers in the vector "position" should be 6 and 8 =14
+            () -> assertEquals(testvector.get(0) + testvector.get(1), 14, "Position nicht richtig erfasst"));
+            }
 ```
 
 ## 10. Fazit
