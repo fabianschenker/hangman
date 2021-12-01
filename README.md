@@ -1,5 +1,5 @@
 # Game Hangman
-###Informatik II & Software Engineering - Projekt
+### Informatik II & Software Engineering - Projekt
 
 **Team:** Mattéo Sophys, Lara Cotti, Fabian Schenker, Matthias Gass, Max Knauber, Romain Bornex
 
@@ -63,6 +63,32 @@ Der Aufwand des Projektes wird gleichmässig auf alle Studierenden verteilt.
 
 
 ## 4. Build Anleitung
+
+git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fabianschenker/hangman.git)
+#### Spiel mit IDE laufen lassen
+
+
+1. Git Link zu unserem Repository kopieren. (Bild 1)
+2. Im IntelliJ klicken sie auf File -> New -> Project from Version Control. (Bild 2)
+3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\ HANGMAN* und klonen sie das ganze.
+4. Wählen Sie den neusten Release-Branch.
+5. Stellen Sie sicher das im Terminal Java Version 16 aktiv ist.
+6. Kontrollieren Sie dass Sie sich im Terminal auf *C:\HANGMAN* befinden.
+7. Im Terminal, lassen Sie folgende Commands laufen:
+    ```Javascript
+        
+       mvn clean javafx:jlink
+       cd target/hangman-win/bin
+       ./java -m com.example.hangman1/com.example.hangman1.RunGame
+    
+   ```
+
+
+
+#### Spiel ohne IDE laufen lassen
+1. Erstellen Sie im C:\ einen Ordner mit dem Namen HANGMAN
+2. Laden Sie die Zip Datei von Github herunter und entpacken Sie den Ordner in C:\HANGMAN
+3. Suchen Sie im Ordner C:\HANGMAN\win die Datei hm-launcher.bat und führen sie diese aus.
 
 
 
@@ -165,11 +191,6 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#9-dokumentation-sprint-2) für die Dokumentation der Testfälle.
 
 
-
-
-
-
-
 ## 9. Dokumentation Sprint 2
 
 ### Task Liste der User Storys
@@ -188,15 +209,17 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 ### - Anreicherung der User Storys für die Umsetzung
 
+
+
 ### - UML Package, Klassen- und Sequenzdiagramm
 
-Bild 1
+Sequenzdiagramm
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
-Bild 2
+zweites Sequenzdiagramm
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
 
-Bild 3
+Klassendiagramm
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
 
 ### - Dokumentation wichtiger Code Snippets
@@ -227,14 +250,48 @@ Bild 3
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
+#### Beispiel aus der Testklasse GameEngineTest 
 
+Um die Klasse test() zu testen, erzeugen wir ein randomWort um die Benutzereingabe zu simulieren
+und lassen uns durch die entsprechende Funktion die Underlines anzeigen.
+Wir lassen die Klasse Test() mit den vorherigen Parametern laufen und lassen uns die Positionen der A's darstellen
+Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.
+Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen werden und keine ausgelassen werden kann
 
+      void test1() { 
+      Controller.random = "JAVATESTENISTSCHWER".toCharArray();
+      Controller.underlines = Wort.buildUnderlines(Controller.random); 
+      Controller.ein = 'A';
+      GameEngine.test();
+      assertAll(
+            ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"),
+            ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
+            ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
+
+#### Beispiel aus der Testklasse GameEngineTest
+
+Ein testword erstellen, dieses in einen char stecken, einen Buchstaben auswählen und seine Position im Wort notieren
+Grösse und Werte des Vektors holen und ints einfügen
+assertEquals mit Soll-Position und selbst eingegebener Position
+
+      void position() {
+      char[] testchar = "HUNDSGEMEIN".toCharArray();
+      Vector<Integer> testvector = Vergleich.position(testchar, 'E');
+      Assertions.assertAll(
+      () -> assertEquals(testvector.size(), 2, "Anzahl richtige Buchstaben stimmt nicht"),
+      //Integers in the vector "position" should be 6 and 8 =14
+      () -> assertEquals(testvector.get(0) + testvector.get(1), 14, "Position nicht richtig erfasst"));
+      }
 
 
 ## 10. Fazit
 
-Fazit hier
-
+Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden. 
+Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.
+Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele arbeiten an gleichen Themen,
+jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne verluste zu mergen.
+Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in anspruch namen wie z.B. das Einfügen des Logos für das Programm.
+Schlussendlich sind wir aber mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und dürfen nun unser fertiges Projekt präsentieren.
 
 
 ***
