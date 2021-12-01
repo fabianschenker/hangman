@@ -195,18 +195,18 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 ### - Dokumentation wichtiger Code Snippets 
 
 **Überprüfung, ob der eingegebene Buchstabe bereits vorhanden ist** 
-
+```Javascript
       static void doppelt(){
       for (int i = 0; i < richtig.length(); i++) {
       if (richtig.charAt(i) == Controller.ein) {
       counter--;
       }}}
-
+```
 
 **Überprüfen der Eingabe**
-
+```Javascript
       Pattern p = Pattern.compile("[^a-z]", Pattern.CASE_INSENSITIVE);
-
+```
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#9-dokumentation-sprint-2) für die Dokumentation der Testfälle.
@@ -262,7 +262,7 @@ Klassendiagramm:
 ### - Dokumentation wichtiger Code Snippets
 
 **Aktion wenn Enter gedrückt wird** 
-
+```Javascript
       public void readEingabe(){
       System.out.println("Enter gedrückt");
       if (counter < 11 && startProgramm && !fertig) {
@@ -275,16 +275,16 @@ Klassendiagramm:
       falscheBuchstaben.setText(GameEngine.falsch);
       victory();
       }}
-
+```
 
 **Fortschritt der Hangman Figur**
-
+```Javascript
       if (!falsch.contains(Character.toString(input))) {
       Controller.counter++;
       falseLetters.add(input);
       falsch = ScreenOutput.buildFalse(falseLetters);
       }
-
+```
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
 #### Beispiel aus der Testklasse GameEngineTest 
