@@ -294,7 +294,7 @@ und lassen uns durch die entsprechende Funktion die Underlines anzeigen.
 Wir lassen die Klasse Test() mit den vorherigen Parametern laufen und lassen uns die Positionen der A's darstellen
 Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.
 Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen werden und keine ausgelassen werden kann
-
+```Javascript
       void test1() { 
       Controller.random = "JAVATESTENISTSCHWER".toCharArray();
       Controller.underlines = Wort.buildUnderlines(Controller.random); 
@@ -304,13 +304,13 @@ Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen wer
             ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"),
             ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
             ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
-
+```
 #### Beispiel aus der Testklasse VergleichTest
 
 Um die Klasse Vergleich zu testen, erstellen wir ein testword, dieses verpacken wir in einen char, suchen uns einen Buchstaben aus und notieren seine Position im Wort. 
 Den zu erratenden Buchstaben speichern wir in einem Vektor. 
 Über assertEquals testen wir die richtige Grösse des Testvektors und ob die Positionen des zu testenden Buchstabens richtig erfasst wurden.
-
+```Javascript
       void position() {
       char[] testchar = "HUNDSGEMEIN".toCharArray();
       Vector<Integer> testvector = Vergleich.position(testchar, 'E');
@@ -319,7 +319,7 @@ Den zu erratenden Buchstaben speichern wir in einem Vektor.
       //Integers in the vector "position" should be 6 and 8 =14
       () -> assertEquals(testvector.get(0) + testvector.get(1), 14, "Position nicht richtig erfasst"));
       }
-
+```
 
 ## 10. Fazit
 
