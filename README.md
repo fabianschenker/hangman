@@ -265,27 +265,28 @@ Klassendiagramm:
 
 **Aktion wenn Enter gedrückt wird** 
 ```Javascript
-      public void readEingabe() {
-     if (counter < 11 && startProgramm && !fertig) {
-            String e = meineEingabe.getText().toUpperCase();
-            if(e.equals(String.valueOf(random))){
-                 GameEngine.counter = richtig.length();
-                victory();
-                erratenesWort.setText(String.valueOf(random));
-                meineEingabe.clear();
-            }else if(e.length()==1){
-                 ein = e.charAt(0);
-                aufraeumen();
-                eingabeKontrollieren();
-                erratenesWort.setText(GameEngine.richtig);
-                falscheBuchstaben.setText(GameEngine.falsch);
-                progresImage();
-                victory();
-            }else{
-                makeVisibleL(ungueltigeEingabe);
-                meineEingabe.clear();
+        public void readEingabe() {
+            if(counter < 11 && startProgramm && !fertig) {
+                    String e = meineEingabe.getText().toUpperCase();
+                    if(e.equals(String.valueOf(random))){
+                        GameEngine.counter = richtig.length();
+                        victory();
+                        erratenesWort.setText(String.valueOf(random));
+                        meineEingabe.clear();
+                    }else if(e.length()==1){
+                        ein = e.charAt(0);
+                        aufraeumen();
+                        eingabeKontrollieren();
+                        erratenesWort.setText(GameEngine.richtig);
+                        falscheBuchstaben.setText(GameEngine.falsch);
+                        progresImage();
+                        victory();
+                    }else{
+                        makeVisibleL(ungueltigeEingabe);
+                        meineEingabe.clear();
+                        }
+                    }
             }
-     }
 ```
 
 **Fortschritt der Hangman Figur**
