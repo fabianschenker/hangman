@@ -206,6 +206,7 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 |    US 65   |Aufräumen und Kürzen von längeren Code-Zeilen |120|
 |    US 66   |Erstellen von Tests für Programm |210|
 |    US 69   |Generieren von UML - Diagrammen der Programmstruktur|90|
+|    US 69   |Generieren von UML - Diagrammen der Programmstruktur|90|
 
 ### - Anreicherung der User Storys für die Umsetzung
 
@@ -213,8 +214,8 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 
-Sequenzdiagramm
-![Sequenzdiagramm](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
+erstes Sequenzdiagramm
+![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
 zweites Sequenzdiagramm
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
@@ -288,9 +289,9 @@ assertEquals mit Soll-Position und selbst eingegebener Position
 
 Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden. 
 Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.
-Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele arbeiten an gleichen Themen,
-jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne verluste zu mergen.
-Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in anspruch namen wie z.B. das Einfügen des Logos für das Programm.
+Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
+jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.
+Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm.
 Schlussendlich sind wir aber mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und dürfen nun unser fertiges Projekt präsentieren.
 
 
