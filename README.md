@@ -315,7 +315,7 @@ Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen wer
             assertAll(
                     ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"),
                     ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
-                     ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
+                    ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
 
             );
             }
