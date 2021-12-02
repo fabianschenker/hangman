@@ -72,10 +72,10 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 1. Git Link zu unserem Repository kopieren.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/1.jpg)$
 
-2. Im IntelliJ klicken sie auf File -> New -> Project from Version Control.  
+2. Im IntelliJ klicken Sie auf File -> New -> Project from Version Control.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/2.jpg)
 
-3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das ganze.  
+3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das Ganze.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/3.jpg)
 
 4. Wählen Sie den neusten Release-Branch.
@@ -163,7 +163,7 @@ Zu Beginn des ersten Sprints hatten wir unser erstes Scrum-Meeting. Dabei ordnet
 Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug.
 Jede Story hatte 1-5 Tasks, die benötigt wurden, um die Story zu vervollständigen.  
 Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte.  
-Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise konnten wir bereits in ScreenBuilder Anwendungen vorgreifen.
+Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise konnten wir bereits in SceneBuilder Anwendungen vorgreifen.
 
 ### - Task Liste der User Storys
 
@@ -257,10 +257,10 @@ Das Feld zur Worteingabe mit Anzeige der Eingabebedingungen.
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 
-**erstes Sequenzdiagramm:**  
+**Erstes Sequenzdiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
-**zweites Sequenzdiagramm:**  
+**Zweites Sequenzdiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
 
 **Klassendiagramm:**  
@@ -342,7 +342,7 @@ Den zu erratenden Buchstaben speichern wir in einem Vektor.
 
 ## 10. Fazit
 
-Durch das Projekt Hangman haben wir sehr viel Neues gelernt und konnten das gelernte auch gleich praktisch anwenden.  
+Durch das Projekt Hangman haben wir sehr viel Neues gelernt und konnten das Gelernte auch gleich praktisch anwenden.  
 Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.  
 Es erleichtert die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
 jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.
