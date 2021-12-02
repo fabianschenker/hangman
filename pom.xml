@@ -72,8 +72,8 @@
                     <mainClass>com.example.hangman1.RunGame</mainClass>
                     <launcher>hm-launcher</launcher>
                     <compress>2</compress>
-                    <jlinkZipName>hangman-win</jlinkZipName>
-                    <jlinkImageName>hangman-win</jlinkImageName>
+                    <jlinkZipName>hangman-spiel</jlinkZipName>
+                    <jlinkImageName>hangman-spiel</jlinkImageName>
                     <noHeaderFiles>true</noHeaderFiles>
                     <noManPages>true</noManPages>
                 </configuration>

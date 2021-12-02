@@ -74,6 +74,7 @@ public class Controller {
     public void readEingabe() {
         if (counter < 11 && startProgramm && !fertig) {
             String e = meineEingabe.getText().toUpperCase();
+            aufraeumen();
             if(e.equals(String.valueOf(random))){
                 GameEngine.counter = richtig.length();
                 victory();
@@ -81,7 +82,6 @@ public class Controller {
                 meineEingabe.clear();
             }else if(e.length()==1){
                 ein = e.charAt(0);
-                aufraeumen();
                 eingabeKontrollieren();
                 erratenesWort.setText(GameEngine.richtig);
                 falscheBuchstaben.setText(GameEngine.falsch);
