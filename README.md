@@ -31,17 +31,17 @@
 
 Dieses Git-Repository wurde zur Dokumentation und Zusammenarbeit 
 der Gruppe LAMAFAMAROMA in den Studienfächern Software Engineering
-und Informatik II erstellt. 
+und Informatik II erstellt.  
 Die Aufgabe war es, ein beliebiges Java Programm zu erstellen, das mit unseren Programmierungskenntnissen 
-umgesetzt werden kann. 
-Zudem soll mit JavaFX eine Benutzeroberfläche erstellt werden. 
+umgesetzt werden kann.
+Zudem soll mit JavaFX eine Benutzeroberfläche erstellt werden.  
 Als Gruppe haben wir uns entschieden, das Spiel Hangman umzusetzen.
 
 ## 2. Ziele
 
 Während des Projekts sollen wir lernen, wie wir die erworbenen Kompetenzen 
 aus den zwei Fächern Programmieren und Software Engineering zusammen
-verknüpfen können. 
+verknüpfen können.  
 Das Projekt soll in 2 Sprints umgesetzt werden
 und über Jira koordiniert werden. Zusätzlich sollen die Rollen
 Product Owner (PO) und Scrum Master (SM) von einem Gruppenmitglied übernommen
@@ -69,12 +69,15 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 #### Spiel mit IDE laufen lassen
 
 
-1. Git Link zu unserem Repository kopieren. 
-![](https://github.com/fabianschenker/hangman/blob/dev/images/1.jpg)
-2. Im IntelliJ klicken sie auf File -> New -> Project from Version Control. 
+1. Git Link zu unserem Repository kopieren.  
+![](https://github.com/fabianschenker/hangman/blob/dev/images/1.jpg)$
+
+2. Im IntelliJ klicken Sie auf File -> New -> Project from Version Control.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/2.jpg)
-3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das ganze. 
+
+3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das Ganze.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/3.jpg)
+
 4. Wählen Sie den neusten Release-Branch.
 5. Stellen Sie sicher das im Terminal Java Version 16 aktiv ist.
 6. Kontrollieren Sie dass Sie sich im Terminal auf *C:\HANGMAN* befinden.
@@ -82,7 +85,7 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
     ```Javascript
    
        mvn clean javafx:jlink
-       cd target/hangman-win/bin
+       cd target/hangman-spiel/bin
        ./java -m com.example.hangman1/com.example.hangman1.RunGame
     
    ```
@@ -98,11 +101,11 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 ## 5. Kurze Bedienungsanleitung
 
 Das Ziel des Spiels Hangman ist es, mit möglichst wenig Versuchen ein unbekanntes Wort zu erraten. 
-Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht. 
-Nun kann man versuchen mit den 26 Buchstaben des Alphabets das Wort zu erraten. 
-Wenn man einen richtigen Buchstaben erraten hat, dann wird die Position im Wort mit dem Buchstaben ersetzt. 
-Wenn man nun aber einen falschen Buchstaben versucht, so wird ein Teil einer Hangman Figur gezeichnet. 
-Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden. 
+Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht.  
+Nun kann man versuchen mit den 26 Buchstaben des Alphabets das Wort zu erraten.  
+Wenn man einen richtigen Buchstaben erraten hat, dann wird die Position im Wort mit dem Buchstaben ersetzt.  
+Wenn man nun aber einen falschen Buchstaben versucht, so wird ein Teil einer Hangman Figur gezeichnet.  
+Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden.
 Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 
 ## 6. User Storys
@@ -124,7 +127,7 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 | 31 | Die Hangman Grafik soll Schrittweise in 11 Elementen auf dem Bildschirm dargestellt werden. | Art der Umsetzung von US 07. | mittel | 6 |
 | 32 | Die Darstellung der Buchstabenfelder soll durch ein Wort in Grossbuchstaben in einem Feld dargestellt werden | Art der Umsetzung von US 05. | hoch | 6 |
 | 65 | Spaghetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | mittel | 7 |
-| 66 | Maven Test Projekt | Um Klassen und Methoden zu Testen | hoch | 08 |
+| 66 | Maven Test Projekt | Um Klassen und Methoden zu Testen | hoch | 8 |
 | 67 | Klasse zur Eingabe von neuen Wörtern | Um die Wortdatenbank direkt aus dem Programm erweitern zu können | tief | 4 |
 | 69 | UML | Um eine Übersicht über das Programm zu erhalten | tief | 8 |
 | 77 | Build Projekt | Um über die Kommandozeile oder über vorgefertigte ZIP-Datei das Programm zu bilden, respektive zu entpacken und laufen zu lassen. | high | 8 |
@@ -157,10 +160,10 @@ US = User Storys
 ## 8. Dokumentation Sprint 1
 
 Zu Beginn des ersten Sprints hatten wir unser erstes Scrum-Meeting. Dabei ordneten wir unseren User Storys StoryPoints und Prioritäten zu.  
-Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug. 
+Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug.
 Jede Story hatte 1-5 Tasks, die benötigt wurden, um die Story zu vervollständigen.  
-Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte. 
-Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise konnten wir bereits in ScreenBuilder Anwendungen vorgreifen.
+Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte.  
+Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise konnten wir bereits in SceneBuilder Anwendungen vorgreifen.
 
 ### - Task Liste der User Storys
 
@@ -178,14 +181,14 @@ Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise ko
 
 ### - Anreicherung der User Storys für die Umsetzung
 
-Erstellen Eingabe für Wort: 
+**Erstellen Eingabe für Wort:** 
 
-Das Eingabefeld und der Enter Button der funktioniert. Auch das Wort wird schon mit Underlines angezeigt. 
+Das Eingabefeld und der Enter Button der funktioniert. Auch das Wort wird schon mit Underlines angezeigt.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225309.jpg)
 
-Spiel gewonnen: 
+**Spiel gewonnen:** 
 
-Die Darstellungen für "gewonnen" werden beim richtigen Wort angezeigt. 
+Die Darstellungen für "gewonnen" werden beim richtigen Wort angezeigt.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225319.jpg)
 
 
@@ -196,18 +199,20 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 **Überprüfung, ob der eingegebene Buchstabe bereits vorhanden ist** 
 ```Javascript
-      static void doppelt(){
+    static void doppelt(){
         for (int i = 0; i < richtig.length(); i++) {
             if (richtig.charAt(i) == Controller.ein) {
                 counter--;
-                }
             }
         }
+    }
 ```
 
-**Überprüfen der Eingabe**
+**Überprüfen der Eingabe auf Sonderzeichen**
 ```Javascript
-      Pattern p = Pattern.compile("[^a-z]", Pattern.CASE_INSENSITIVE);
+    Pattern p = Pattern.compile("[^a-z]", Pattern.CASE_INSENSITIVE);
+    Matcher m = p.matcher(eingabe);
+    boolean b = m.find();
 ```
 
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
@@ -216,10 +221,10 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 ## 9. Dokumentation Sprint 2
 
-Auch den Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere hinzufügen konnten. 
-Das Vergeben von Punkten und Aufgaben lief analog zum ersten Sprint.
-Wir konnten auch in diesem Sprint unsere Ziele pünktlich erreichen.
-Die Aufwandseinschätzung war zwar in diesem Sprint nicht mehr ganz so präzise, jedoch war die Gesamtzeit ungefähr die gleiche, was dies ausglich. 
+Auch den Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere hinzufügen konnten.
+Das Vergeben von Punkten und Aufgaben lief analog zum ersten Sprint.  
+Wir konnten auch in diesem Sprint unsere Ziele pünktlich erreichen.  
+Die Aufwandseinschätzung war zwar in diesem Sprint nicht mehr ganz so präzise, jedoch war die Gesamtzeit ungefähr die gleiche, was dies ausglich.  
 Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
 
 
@@ -240,110 +245,115 @@ Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
 
 ### - Anreicherung der User Storys für die Umsetzung
 
-Startbildschirm: 
+**Startbildschirm:**
 
-Der Startbildschirm wurde erstellt, um ein neues Wort direkt zu Beginn in die Wortliste einzufügen. 
+Der Startbildschirm wurde erstellt, um ein neues Wort direkt zu Beginn in die Wortliste einzufügen.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225357.jpg)
 
-Worteingabe: 
+**Worteingabe:**
 
-Das Feld zur Worteingabe mit Anzeige der Eingabebedingungen. 
+Das Feld zur Worteingabe mit Anzeige der Eingabebedingungen.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225324.jpg)
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 
-erstes Sequenzdiagramm: 
+**Erstes Sequenzdiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
-zweites Sequenzdiagramm: 
+**Zweites Sequenzdiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
 
-Klassendiagramm: 
+**Klassendiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
 
 ### - Dokumentation wichtiger Code Snippets
 
 **Aktion wenn Enter gedrückt wird** 
 ```Javascript
-        public void readEingabe() {
-            if(counter < 11 && startProgramm && !fertig) {
-                    String e = meineEingabe.getText().toUpperCase();
-                    if(e.equals(String.valueOf(random))){
-                        GameEngine.counter = richtig.length();
-                        victory();
-                        erratenesWort.setText(String.valueOf(random));
-                        meineEingabe.clear();
-                    }else if(e.length()==1){
-                        ein = e.charAt(0);
-                        aufraeumen();
-                        eingabeKontrollieren();
-                        erratenesWort.setText(GameEngine.richtig);
-                        falscheBuchstaben.setText(GameEngine.falsch);
-                        progresImage();
-                        victory();
-                    }else{
-                        makeVisibleL(ungueltigeEingabe);
-                        meineEingabe.clear();
-                        }
-                    }
+    public void readEingabe() {
+        if (counter < 11 && startProgramm && !fertig) {
+            String e = meineEingabe.getText().toUpperCase();
+            aufraeumen();
+            if(e.equals(String.valueOf(random))){
+                GameEngine.counter = richtig.length();
+                victory();
+                erratenesWort.setText(String.valueOf(random));
+                meineEingabe.clear();
+            }else if(e.length()==1){
+                ein = e.charAt(0);
+                eingabeKontrollieren();
+                erratenesWort.setText(GameEngine.richtig);
+                falscheBuchstaben.setText(GameEngine.falsch);
+                progresImage();
+                victory();
+            }else{
+                makeVisibleL(ungueltigeEingabe);
+                meineEingabe.clear();
             }
+        }
+    }
 ```
 
 **Fortschritt der Hangman Figur**
 ```Javascript
-      if (!falsch.contains(Character.toString(input))) {
-            Controller.counter++;
-            falseLetters.add(input);
-            falsch = ScreenOutput.buildFalse(falseLetters);
-            }
+    if (!falsch.contains(Character.toString(input))) {
+        Controller.counter++;
+        falseLetters.add(input);
+        falsch = ScreenOutput.buildFalse(falseLetters);
+    }
 ```
 ### - Herleitung der Testfälle aus den Akzeptanzkriterien der User Storys
 
 #### Beispiel aus der Testklasse GameEngineTest 
 
 Um die Klasse test() zu testen, erzeugen wir ein randomWort um die Benutzereingabe zu simulieren
-und lassen uns durch die entsprechende Funktion die Underlines anzeigen.
+und lassen uns durch die entsprechende Funktion die Underlines anzeigen.  
 Wir lassen die Klasse Test() mit den vorherigen Parametern laufen und lassen uns die Positionen der A's darstellen
-Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.
+Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.  
 Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen werden und keine ausgelassen werden kann
 ```Javascript
-         void test1() {
-            Controller.random = "JAVATESTENISTSCHWER".toCharArray();
-            Controller.underlines = Wort.buildUnderlines(Controller.random);
-            Controller.ein = 'A';
-            GameEngine.test();
-            assertAll(
-                    ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"),
-                    ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
-                    ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
-
+    void test1() {
+        Controller.random = "JAVATESTENISTSCHWER".toCharArray();
+        Controller.underlines = Wort.buildUnderlines(Controller.random);
+        Controller.ein = 'A';
+        GameEngine.test();
+        assertAll(
+            ()-> assertEquals(GameEngine.richtig,"_A_A_______________","GameEngine.richtig nicht korrekt"), 
+            ()-> assertTrue(GameEngine.visible[1],"Erstes A nicht erkannt"),
+            ()-> assertTrue(GameEngine.visible[3],"Zweites A nicht erkannt")
             );
-            }
+    }
 ```
 #### Beispiel aus der Testklasse VergleichTest
 
 Um die Klasse Vergleich zu testen, erstellen wir ein testword, dieses verpacken wir in einen char, suchen uns einen Buchstaben aus und notieren seine Position im Wort. 
-Den zu erratenden Buchstaben speichern wir in einem Vektor. 
+Den zu erratenden Buchstaben speichern wir in einem Vektor.   
 Über assertEquals testen wir die richtige Grösse des Testvektors und ob die Positionen des zu testenden Buchstabens richtig erfasst wurden.
 ```Javascript
-      void position() {
-            char[] testchar = "HUNDSGEMEIN".toCharArray();
-            Vector<Integer> testvector = Vergleich.position(testchar, 'E');
-            Assertions.assertAll(
+    void position() {
+        char[] testchar = "HUNDSGEMEIN".toCharArray();
+        Vector<Integer> testvector = Vergleich.position(testchar, 'E');
+        Assertions.assertAll(
             () -> assertEquals(testvector.size(), 2, "Anzahl richtige Buchstaben stimmt nicht"),
             //Integers in the vector "position" should be 6 and 8 =14
             () -> assertEquals(testvector.get(0) + testvector.get(1), 14, "Position nicht richtig erfasst"));
-            }
+    }
 ```
 
 ## 10. Fazit
 
-Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden. 
-Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt. 
-Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
-jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen. 
-Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm. 
-Schlussendlich sind wir aber mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und dürfen nun unser fertiges Projekt präsentieren. 
+Durch das Projekt Hangman haben wir sehr viel Neues gelernt und konnten das Gelernte auch gleich praktisch anwenden.  
+Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.  
+Es erleichtert die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
+jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.
+Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm.  
+
+Als Reflexion haben wir auch ein paar Dinge, die wir bei einem nächsten Projekt anders machen würden.
+Zum einen wäre dies durchgehend klarere Variable-Bezeichnungen zu verwenden, die eindeutiger auf Ihre Funktion hinweisen.
+Auch die Mischung von englischen und deutschen Variablen-Bezeichnungen ist uns dabei noch aufgefallen. 
+Zum Schluss wäre da noch die hohe Anzahl von Variablen und Methoden die public gesetzt sind.  
+
+Schlussendlich sind wir mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und sind stolz unser fertiges Projekt präsentieren zu dürfen.
 
 
 ***
