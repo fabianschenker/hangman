@@ -33,7 +33,7 @@ Dieses Git-Repository wurde zur Dokumentation und Zusammenarbeit
 der Gruppe LAMAFAMAROMA in den Studienfächern Software Engineering
 und Informatik II erstellt.  
 Die Aufgabe war es, ein beliebiges Java Programm zu erstellen, das mit unseren Programmierungskenntnissen 
-umgesetzt werden kann.  
+umgesetzt werden kann.
 Zudem soll mit JavaFX eine Benutzeroberfläche erstellt werden.  
 Als Gruppe haben wir uns entschieden, das Spiel Hangman umzusetzen.
 
@@ -70,11 +70,14 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 
 
 1. Git Link zu unserem Repository kopieren.  
-![](https://github.com/fabianschenker/hangman/blob/dev/images/1.jpg)
+![](https://github.com/fabianschenker/hangman/blob/dev/images/1.jpg)$
+
 2. Im IntelliJ klicken sie auf File -> New -> Project from Version Control.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/2.jpg)
+
 3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das ganze.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/3.jpg)
+
 4. Wählen Sie den neusten Release-Branch.
 5. Stellen Sie sicher das im Terminal Java Version 16 aktiv ist.
 6. Kontrollieren Sie dass Sie sich im Terminal auf *C:\HANGMAN* befinden.
@@ -102,7 +105,7 @@ Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort bes
 Nun kann man versuchen mit den 26 Buchstaben des Alphabets das Wort zu erraten.  
 Wenn man einen richtigen Buchstaben erraten hat, dann wird die Position im Wort mit dem Buchstaben ersetzt.  
 Wenn man nun aber einen falschen Buchstaben versucht, so wird ein Teil einer Hangman Figur gezeichnet.  
-Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden.  
+Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden.
 Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 
 ## 6. User Storys
@@ -157,7 +160,7 @@ US = User Storys
 ## 8. Dokumentation Sprint 1
 
 Zu Beginn des ersten Sprints hatten wir unser erstes Scrum-Meeting. Dabei ordneten wir unseren User Storys StoryPoints und Prioritäten zu.  
-Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug.  
+Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug.
 Jede Story hatte 1-5 Tasks, die benötigt wurden, um die Story zu vervollständigen.  
 Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte.  
 Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise konnten wir bereits in ScreenBuilder Anwendungen vorgreifen.
@@ -178,12 +181,12 @@ Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise ko
 
 ### - Anreicherung der User Storys für die Umsetzung
 
-Erstellen Eingabe für Wort: 
+**Erstellen Eingabe für Wort:** 
 
 Das Eingabefeld und der Enter Button der funktioniert. Auch das Wort wird schon mit Underlines angezeigt.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225309.jpg)
 
-Spiel gewonnen: 
+**Spiel gewonnen:** 
 
 Die Darstellungen für "gewonnen" werden beim richtigen Wort angezeigt.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225319.jpg)
@@ -218,8 +221,8 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 ## 9. Dokumentation Sprint 2
 
-Auch den Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere hinzufügen konnten.  
-Das Vergeben von Punkten und Aufgaben lief analog zum ersten Sprint.
+Auch den Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere hinzufügen konnten.
+Das Vergeben von Punkten und Aufgaben lief analog zum ersten Sprint.  
 Wir konnten auch in diesem Sprint unsere Ziele pünktlich erreichen.  
 Die Aufwandseinschätzung war zwar in diesem Sprint nicht mehr ganz so präzise, jedoch war die Gesamtzeit ungefähr die gleiche, was dies ausglich.  
 Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
@@ -242,25 +245,25 @@ Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
 
 ### - Anreicherung der User Storys für die Umsetzung
 
-Startbildschirm: 
+**Startbildschirm:**
 
 Der Startbildschirm wurde erstellt, um ein neues Wort direkt zu Beginn in die Wortliste einzufügen.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225357.jpg)
 
-Worteingabe: 
+**Worteingabe:**
 
 Das Feld zur Worteingabe mit Anzeige der Eingabebedingungen.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225324.jpg)
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 
-erstes Sequenzdiagramm:  
+**erstes Sequenzdiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
-zweites Sequenzdiagramm:  
+**zweites Sequenzdiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
 
-Klassendiagramm:  
+**Klassendiagramm:**  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
 
 ### - Dokumentation wichtiger Code Snippets
@@ -342,9 +345,16 @@ Den zu erratenden Buchstaben speichern wir in einem Vektor.
 Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden.  
 Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.  
 Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
-jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.  
+jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.
 Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm.  
-Schlussendlich sind wir aber mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und dürfen nun unser fertiges Projekt präsentieren. 
+
+Als Reflexion haben wir auch ein paar Dinge, die wir bei einem nächsten Projekt anders machen würden.
+Zum einen wäre dies durchgehend bessere klarere Variabel-Bezeichnungen zu verwenden, die eindeutiger auf Ihre Funktion hinweisen.
+Auch die Mischung von Englischen und Deutschen Variabel-Bezeichnungen ist uns dabei noch aufgefallen. 
+Zum Schluss wäre da noch die hohe Anzahl von Variabeln und Methoden die public gesetzt sind.  
+
+Schlussendlich sind wir mit allen Aufgaben, die wir uns gestellt haben, fertig geworden.  
+Wir sind stolz unser fertiges Projekt präsentieren zu dürfen.
 
 
 ***
