@@ -31,17 +31,17 @@
 
 Dieses Git-Repository wurde zur Dokumentation und Zusammenarbeit 
 der Gruppe LAMAFAMAROMA in den Studienfächern Software Engineering
-und Informatik II erstellt. 
+und Informatik II erstellt.  
 Die Aufgabe war es, ein beliebiges Java Programm zu erstellen, das mit unseren Programmierungskenntnissen 
-umgesetzt werden kann. 
-Zudem soll mit JavaFX eine Benutzeroberfläche erstellt werden. 
+umgesetzt werden kann.  
+Zudem soll mit JavaFX eine Benutzeroberfläche erstellt werden.  
 Als Gruppe haben wir uns entschieden, das Spiel Hangman umzusetzen.
 
 ## 2. Ziele
 
 Während des Projekts sollen wir lernen, wie wir die erworbenen Kompetenzen 
 aus den zwei Fächern Programmieren und Software Engineering zusammen
-verknüpfen können. 
+verknüpfen können.  
 Das Projekt soll in 2 Sprints umgesetzt werden
 und über Jira koordiniert werden. Zusätzlich sollen die Rollen
 Product Owner (PO) und Scrum Master (SM) von einem Gruppenmitglied übernommen
@@ -98,11 +98,11 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 ## 5. Kurze Bedienungsanleitung
 
 Das Ziel des Spiels Hangman ist es, mit möglichst wenig Versuchen ein unbekanntes Wort zu erraten. 
-Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht. 
-Nun kann man versuchen mit den 26 Buchstaben des Alphabets das Wort zu erraten. 
-Wenn man einen richtigen Buchstaben erraten hat, dann wird die Position im Wort mit dem Buchstaben ersetzt. 
-Wenn man nun aber einen falschen Buchstaben versucht, so wird ein Teil einer Hangman Figur gezeichnet. 
-Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden. 
+Dabei wird zu Beginn nur die Anzahl Buchstaben angezeigt, aus denen das Wort besteht.  
+Nun kann man versuchen mit den 26 Buchstaben des Alphabets das Wort zu erraten.  
+Wenn man einen richtigen Buchstaben erraten hat, dann wird die Position im Wort mit dem Buchstaben ersetzt.  
+Wenn man nun aber einen falschen Buchstaben versucht, so wird ein Teil einer Hangman Figur gezeichnet.  
+Das Spiel ist gewonnen, wenn man das Wort errät, bevor die elf Elemente der Hangman Figur auf dem Bildschirm dargestellt werden.  
 Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 
 ## 6. User Storys
@@ -157,9 +157,9 @@ US = User Storys
 ## 8. Dokumentation Sprint 1
 
 Zu Beginn des ersten Sprints hatten wir unser erstes Scrum-Meeting. Dabei ordneten wir unseren User Storys StoryPoints und Prioritäten zu.  
-Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug. 
+Danach teilten wir die User Storys jeweils einem Teammitglied zu, welches die Hauptverantwortung für diese Story trug.  
 Jede Story hatte 1-5 Tasks, die benötigt wurden, um die Story zu vervollständigen.  
-Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte. 
+Wir kommunizierten untereinander welche Tasks eng miteinander zusammenarbeiteten und wer wen dadurch, falls nötig, unterstützen konnte.  
 Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise konnten wir bereits in ScreenBuilder Anwendungen vorgreifen.
 
 ### - Task Liste der User Storys
@@ -218,10 +218,10 @@ Wurde zu diesem Zeitpunkt noch nicht behandelt. Siehe [Dokumentation Sprint 2](#
 
 ## 9. Dokumentation Sprint 2
 
-Auch den Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere hinzufügen konnten. 
+Auch den Sprint 2 konnten wir mit einem erfolgreichen SCRUM Meeting starten, bei dem wir neben den aufgeteilten UserStorys noch weitere hinzufügen konnten.  
 Das Vergeben von Punkten und Aufgaben lief analog zum ersten Sprint.
-Wir konnten auch in diesem Sprint unsere Ziele pünktlich erreichen.
-Die Aufwandseinschätzung war zwar in diesem Sprint nicht mehr ganz so präzise, jedoch war die Gesamtzeit ungefähr die gleiche, was dies ausglich. 
+Wir konnten auch in diesem Sprint unsere Ziele pünktlich erreichen.  
+Die Aufwandseinschätzung war zwar in diesem Sprint nicht mehr ganz so präzise, jedoch war die Gesamtzeit ungefähr die gleiche, was dies ausglich.  
 Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
 
 
@@ -304,9 +304,9 @@ Klassendiagramm:
 #### Beispiel aus der Testklasse GameEngineTest 
 
 Um die Klasse test() zu testen, erzeugen wir ein randomWort um die Benutzereingabe zu simulieren
-und lassen uns durch die entsprechende Funktion die Underlines anzeigen.
+und lassen uns durch die entsprechende Funktion die Underlines anzeigen.  
 Wir lassen die Klasse Test() mit den vorherigen Parametern laufen und lassen uns die Positionen der A's darstellen
-Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.
+Durch AssertTrue sehen wir, ob die GameEngine.test() gut gelaufen ist.  
 Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen werden und keine ausgelassen werden kann
 ```Javascript
     void test1() {
@@ -324,7 +324,7 @@ Die Benutzung von assertAll() sorgt dafür, dass alle Funktionen durchlaufen wer
 #### Beispiel aus der Testklasse VergleichTest
 
 Um die Klasse Vergleich zu testen, erstellen wir ein testword, dieses verpacken wir in einen char, suchen uns einen Buchstaben aus und notieren seine Position im Wort. 
-Den zu erratenden Buchstaben speichern wir in einem Vektor. 
+Den zu erratenden Buchstaben speichern wir in einem Vektor.   
 Über assertEquals testen wir die richtige Grösse des Testvektors und ob die Positionen des zu testenden Buchstabens richtig erfasst wurden.
 ```Javascript
     void position() {
@@ -339,11 +339,11 @@ Den zu erratenden Buchstaben speichern wir in einem Vektor.
 
 ## 10. Fazit
 
-Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden. 
-Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt. 
+Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden.  
+Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.  
 Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
-jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen. 
-Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm. 
+jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.  
+Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm.  
 Schlussendlich sind wir aber mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und dürfen nun unser fertiges Projekt präsentieren. 
 
 
