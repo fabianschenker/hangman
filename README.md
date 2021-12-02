@@ -85,7 +85,7 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
     ```Javascript
    
        mvn clean javafx:jlink
-       cd target/hangman-win/bin
+       cd target/hangman-game/bin
        ./java -m com.example.hangman1/com.example.hangman1.RunGame
     
    ```
