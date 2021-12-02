@@ -342,9 +342,9 @@ Den zu erratenden Buchstaben speichern wir in einem Vektor.
 
 ## 10. Fazit
 
-Durch das Projekt Hangman haben wir sehr viel gelernt und wir sind mit dem Resultat sehr zufrieden.  
+Durch das Projekt Hangman haben wir sehr viel Neues gelernt und konnten das gelernte auch gleich praktisch anwenden.  
 Als besondere Herausforderung hat sich Github mit der Administration der ganzen Merges herausgestellt.  
-Es erleichterte besonders die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
+Es erleichtert die Zusammenarbeit zwischen den einzelnen Aufgaben und das parallele Arbeiten an gleichen Themen,
 jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles ohne Verluste zu mergen.
 Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm.  
 
