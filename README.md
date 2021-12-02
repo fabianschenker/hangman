@@ -69,11 +69,11 @@ git clone: [https://github.com/fabianschenker/hangman.git](https://github.com/fa
 #### Spiel mit IDE laufen lassen
 
 
-1. Git Link zu unserem Repository kopieren. 
+1. Git Link zu unserem Repository kopieren.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/1.jpg)
-2. Im IntelliJ klicken sie auf File -> New -> Project from Version Control. 
+2. Im IntelliJ klicken sie auf File -> New -> Project from Version Control.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/2.jpg)
-3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das ganze. 
+3. Fügen Sie die Repo URL in das Feld ein und speichern Sie sie in *C:\HANGMAN* und klonen sie das ganze.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/3.jpg)
 4. Wählen Sie den neusten Release-Branch.
 5. Stellen Sie sicher das im Terminal Java Version 16 aktiv ist.
@@ -180,12 +180,12 @@ Jeder der Teilnehmer konnte seine Aufgaben pünktlich erfüllen und teilweise ko
 
 Erstellen Eingabe für Wort: 
 
-Das Eingabefeld und der Enter Button der funktioniert. Auch das Wort wird schon mit Underlines angezeigt. 
+Das Eingabefeld und der Enter Button der funktioniert. Auch das Wort wird schon mit Underlines angezeigt.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225309.jpg)
 
 Spiel gewonnen: 
 
-Die Darstellungen für "gewonnen" werden beim richtigen Wort angezeigt. 
+Die Darstellungen für "gewonnen" werden beim richtigen Wort angezeigt.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225319.jpg)
 
 
@@ -244,23 +244,23 @@ Zudem hatten wir noch genug Zeit zur Verfügung um die Ausbaustufe 1 umzusetzen.
 
 Startbildschirm: 
 
-Der Startbildschirm wurde erstellt, um ein neues Wort direkt zu Beginn in die Wortliste einzufügen. 
+Der Startbildschirm wurde erstellt, um ein neues Wort direkt zu Beginn in die Wortliste einzufügen.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225357.jpg)
 
 Worteingabe: 
 
-Das Feld zur Worteingabe mit Anzeige der Eingabebedingungen. 
+Das Feld zur Worteingabe mit Anzeige der Eingabebedingungen.  
 ![](https://github.com/fabianschenker/hangman/blob/dev/images/Screenshot%202021-12-01%20225324.jpg)
 
 ### - UML Package, Klassen- und Sequenzdiagramm
 
-erstes Sequenzdiagramm: 
+erstes Sequenzdiagramm:  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_readEingabe.png)
 
-zweites Sequenzdiagramm: 
+zweites Sequenzdiagramm:  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/Controller_start.png)
 
-Klassendiagramm: 
+Klassendiagramm:  
 ![](https://github.com/fabianschenker/hangman/blob/dev/Diagrams/hangman1.png)
 
 ### - Dokumentation wichtiger Code Snippets
