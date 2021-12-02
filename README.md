@@ -127,7 +127,7 @@ Wenn die Hangman Figur zuvor fertiggestellt wird, ist das Spiel verloren.
 | 31 | Die Hangman Grafik soll Schrittweise in 11 Elementen auf dem Bildschirm dargestellt werden. | Art der Umsetzung von US 07. | mittel | 6 |
 | 32 | Die Darstellung der Buchstabenfelder soll durch ein Wort in Grossbuchstaben in einem Feld dargestellt werden | Art der Umsetzung von US 05. | hoch | 6 |
 | 65 | Spaghetti Code Aufräumen | Kommentare, logische Struktur, Code vereinfachen. | mittel | 7 |
-| 66 | Maven Test Projekt | Um Klassen und Methoden zu Testen | hoch | 08 |
+| 66 | Maven Test Projekt | Um Klassen und Methoden zu Testen | hoch | 8 |
 | 67 | Klasse zur Eingabe von neuen Wörtern | Um die Wortdatenbank direkt aus dem Programm erweitern zu können | tief | 4 |
 | 69 | UML | Um eine Übersicht über das Programm zu erhalten | tief | 8 |
 | 77 | Build Projekt | Um über die Kommandozeile oder über vorgefertigte ZIP-Datei das Programm zu bilden, respektive zu entpacken und laufen zu lassen. | high | 8 |
@@ -349,12 +349,11 @@ jedoch hat es sich für uns Beginner als knifflige Aufgabe herausgestellt alles 
 Des Weiteren waren es eher die kleinen Dinge, die am meisten Ehrgeiz in Anspruch nahmen wie z.B. das Einfügen des Logos für das Programm.  
 
 Als Reflexion haben wir auch ein paar Dinge, die wir bei einem nächsten Projekt anders machen würden.
-Zum einen wäre dies durchgehend bessere klarere Variabel-Bezeichnungen zu verwenden, die eindeutiger auf Ihre Funktion hinweisen.
-Auch die Mischung von Englischen und Deutschen Variabel-Bezeichnungen ist uns dabei noch aufgefallen. 
-Zum Schluss wäre da noch die hohe Anzahl von Variabeln und Methoden die public gesetzt sind.  
+Zum einen wäre dies durchgehend klarere Variable-Bezeichnungen zu verwenden, die eindeutiger auf Ihre Funktion hinweisen.
+Auch die Mischung von englischen und deutschen Variablen-Bezeichnungen ist uns dabei noch aufgefallen. 
+Zum Schluss wäre da noch die hohe Anzahl von Variablen und Methoden die public gesetzt sind.  
 
-Schlussendlich sind wir mit allen Aufgaben, die wir uns gestellt haben, fertig geworden.  
-Wir sind stolz unser fertiges Projekt präsentieren zu dürfen.
+Schlussendlich sind wir mit allen Aufgaben, die wir uns gestellt haben, fertig geworden und sind stolz unser fertiges Projekt präsentieren zu dürfen.
 
 
 ***
